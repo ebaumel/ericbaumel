@@ -1,1 +1,1 @@
-Sitemap: https://ericbaumel.com/sitemap.xml
+Sitemap: http://ericbaumel.com/sitemap.xml

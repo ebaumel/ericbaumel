@@ -1,1 +1,1 @@
-Sitemap: https://ebaumel.github.io/ericbaumel/sitemap.xml
+Sitemap: https://www.ericbaumel.com/sitemap.xml

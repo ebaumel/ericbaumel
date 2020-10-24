@@ -1,8 +1,12 @@
 ---
+toc: true
+layout: post
+description: A good rule of thumb. My first post using markdown with fastpages.
 title: "Think globally, act locally"
 categories: [ethics]
 toc: true
 ---
+
 
 
 # Think globally, act locally

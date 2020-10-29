@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: A good rule of thumb. My first post using markdown with fastpages.
+description: A list of open source datasets for COVID-19.
 title: "COVID-19 Datasets"
 categories: [COVID-19, datasets, radiology]
 toc: true

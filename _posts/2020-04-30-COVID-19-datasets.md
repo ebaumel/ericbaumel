@@ -10,7 +10,7 @@ toc: true
 
 # COVID-19 Datasets
 
-#### written 30 April 2020 by Eric M. Baumel, MD
+written 30 April 2020 by Eric M. Baumel, MD
 
 If you are interested in exploring the data yourself for visualization, research, educational or machine learning purposes, here are a list of sources.
 

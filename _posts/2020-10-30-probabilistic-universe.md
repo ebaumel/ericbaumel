@@ -1,9 +1,14 @@
-# "Probabilistic Universe"
-
-
-- toc:true- branch: master- badges: true- comments: true
+---
+- toc:true
+- branch: master
+- badges: true
+- comments: true
 - author: Eric M. Baumel, MD
+- title: "Probabilistic Universe"
 - categories: [markets, risk]
+---
+
+# Probabilistic Universe
 
 We live in a probabilistic universe, with the obvious  exception of death. Even taxes are probability weighted. 
 

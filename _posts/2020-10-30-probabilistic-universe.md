@@ -1,11 +1,10 @@
 ---
-- toc:true
-- branch: master
-- badges: true
-- comments: true
-- author: Eric M. Baumel, MD
-- title: "Probabilistic Universe"
-- categories: [markets, risk]
+toc: true
+layout: post
+description: Between 0.0 and 1.0.
+title: "Probabilistic Universe"
+author: Eric M. Baumel, MD
+categories: [markets, risk]
 ---
 
 # Probabilistic Universe

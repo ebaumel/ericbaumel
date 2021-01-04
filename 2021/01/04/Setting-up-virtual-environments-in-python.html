@@ -1,0 +1,35 @@
+<h1 id="setting-up-virtual-environments-in-python">Setting up virtual environments in Python</h1>
+
+<p>This is an opinionated set of instructions to set up virtual environments for each project. 
+Know that venv is not the only method of setting up virtual environments, 
+but is the official suggested method by the folks at <a href="https://docs.python.org/3/tutorial/venv.html">python.org</a>.</p>
+
+<p>Install python on computer.</p>
+
+<p>Check instillation of python on a clean Terminal window with ‘python —version’ (that is a double dash).</p>
+
+<p>Check instillation of pip with ‘pip —version’.</p>
+
+<p>Install virtualenv with ‘pip install virtualenv’.</p>
+
+<p>Check the instillation with ‘virtualenv —version’.</p>
+
+<p>In your development directory of choice (ex.: the Desktop or /Dev or/Documents etc.).</p>
+
+<p>Create a new directory with ‘mkdir <Project_Name>'.</Project_Name></p>
+
+<p>Navigate to the new project directory ‘cd <Project_Name>'.</Project_Name></p>
+
+<p>Create a new env environment with ‘python -m venv venv’.</p>
+
+<p>Activate with ‘. venv/bin/activate’ (don’t forget the ‘dot space’). You should see ‘(venv) ‘ before the terminal prompt confirming that you are in the active virtual environment.</p>
+
+<p>Add new packages with ‘pip install ChosenPackage’.</p>
+
+<p>Upgrade a package with ‘pip install –upgrade ChosenPackage’.</p>
+
+<p>After installing dependencies use ‘pip freeze &gt; requirements.txt’ to list the requirements and version numbers for that project.</p>
+
+<p>You can view the installed dependencies with ‘cat requirements.txt’.</p>
+
+<p>Deactivate the virtual environment with ‘deactivate venv’.</p>

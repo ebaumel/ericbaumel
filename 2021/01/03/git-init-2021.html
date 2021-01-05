@@ -1,0 +1,44 @@
+<h1 id="git-init-2021">git init 2021</h1>
+
+<p>By Eric M. Baumel</p>
+
+<blockquote>
+  <p>This is the first of a series of mini-posts of various computer housekeeping tips for my own use. Hopefully these may also be some some benefit for others.</p>
+</blockquote>
+
+<p>Source control with git serves several functions:</p>
+<ul>
+  <li>It provides a method of keeping track of changes made to your code, so you can roll back to a previous save if needed.</li>
+  <li>If used with a remote hosting service such as GitHub, gives a convenient back up of your code in the cloud.</li>
+  <li>Allows easy collaboration with other developers.</li>
+  <li>Can be used by many providers for managing deployment.</li>
+</ul>
+
+<h3 id="lets-get-started">Let’s get started:</h3>
+
+<p>Install git on your system, if not alread done. <a href="https://github.com/git-guides/install-git">Git Install</a></p>
+
+<p>Make directory to hold project</p>
+
+<p>Create Xcode Project - start with appropriate project</p>
+
+<p>Navigate to your project folder using the command line. In Terminal put project under source control
+	git init
+	git add .
+	git commit -m “Project setup”</p>
+
+<p>Add a .gitignore</p>
+<blockquote>
+  <p>A .gitignore file</p>
+</blockquote>
+
+<p>Test that project will build and run. Then:</p>
+
+<p>Create new repository on GitHub</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin &lt;URL&gt;
+git push origin main
+</code></pre></div></div>
+
+<p>Work in dev brach. Only push commits for the project that will build and run.</p>
+

@@ -121,9 +121,7 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="git-init-2021">git init 2021</h1>
-
-<p>written 03 January 2021 by Eric M. Baumel</p>
+    <p>by Eric M. Baumel</p>
 
 <h2 id="putting-your-project-under-source-control-with-github">Putting your project under source control with GitHub</h2>
 
@@ -147,14 +145,17 @@ window.onload = wrap_img;
 
 <p>Create Xcode Project - start with appropriate project</p>
 
-<p>Navigate to your project folder using the command line. In Terminal put project under source control
-	git init
-	git add .
-	git commit -m “Project setup”</p>
+<p>Navigate to your project folder using the command line. In Terminal put project under source control</p>
 
-<p>Add a .gitignore</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'''git init
+git add .
+git commit -m “Project setup” '''
+</code></pre></div></div>
+
+<p>Add a .gitignore file</p>
+
 <blockquote>
-  <p>A .gitignore file</p>
+  <p>A .gitignore file lists the files and directories you do <em>not</em> want under source control, such as yhidden files, secure credentials, venv and test directories, etc.</p>
 </blockquote>
 
 <p>Test that project will build and run. Then:</p>
@@ -165,7 +166,9 @@ window.onload = wrap_img;
 git push origin main
 </code></pre></div></div>
 
-<p>Work in dev brach. Only push commits for the project that will build and run.</p>
+<p>Work in dev brach.</p>
+
+<p>Only push commits for the project that will build and run.</p>
 
 
   </div><a class="u-url" href="/python/data%20science/development/2021/01/03/git-init-2021.html" hidden></a>

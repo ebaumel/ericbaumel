@@ -4,19 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Setting up virtual environments in Python | Eric M. Baumel, MD</title>
+<title>Setting Up Virtual Environments in Python | Eric M. Baumel, MD</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Setting up virtual environments in Python" />
+<meta property="og:title" content="Setting Up Virtual Environments in Python" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A receipe for setting up a virtual environment for python projects." />
-<meta property="og:description" content="A receipe for setting up a virtual environment for python projects." />
+<meta name="description" content="A receipe for setting up a virtual environment for Python projects." />
+<meta property="og:description" content="A receipe for setting up a virtual environment for Python projects." />
 <link rel="canonical" href="http://ericbaumel.com/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html" />
 <meta property="og:url" content="http://ericbaumel.com/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html" />
 <meta property="og:site_name" content="Eric M. Baumel, MD" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-01-04T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"http://ericbaumel.com/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html","@type":"BlogPosting","headline":"Setting up virtual environments in Python","dateModified":"2021-01-04T00:00:00-06:00","datePublished":"2021-01-04T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://ericbaumel.com/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html"},"description":"A receipe for setting up a virtual environment for python projects.","@context":"https://schema.org"}</script>
+{"url":"http://ericbaumel.com/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html","@type":"BlogPosting","headline":"Setting Up Virtual Environments in Python","dateModified":"2021-01-04T00:00:00-06:00","datePublished":"2021-01-04T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://ericbaumel.com/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html"},"description":"A receipe for setting up a virtual environment for Python projects.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://ericbaumel.com/feed.xml" title="Eric M. Baumel, MD" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -93,7 +93,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Setting up virtual environments in Python</h1><p class="page-description">A receipe for setting up a virtual environment for python projects.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-04T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Setting Up Virtual Environments in Python</h1><p class="page-description">A receipe for setting up a virtual environment for Python projects.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-04T00:00:00-06:00" itemprop="datePublished">
         Jan 4, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -143,13 +143,13 @@ window.onload = wrap_img;
   <p>This is an opinionated set of instructions to set up virtual environments for each project.</p>
 </blockquote>
 
-<p>A virtual environement is a clean sandbox without any installeed python libraries. This allows you to use the libraries you need for your project, without conflicts from packages installed for other, unrelated projects on your system. This also helps you containerize you projects so they can be deployed cleanly or shared with other developers.</p>
+<p>A virtual environement is a clean sandbox without any installed python libraries. This allows you to add the libraries you need for your project, without conflicts from packages installed for other, unrelated projects on your system. This also helps you containerize you projects so they can be deployed cleanly or shared with other developers.</p>
 
 <p>After several other explorations, I use venv to manage the environments for all my projects. 
 Know that venv is not the only method of setting up virtual environments, 
-but is the official suggested method by the folks at <a href="https://docs.python.org/3/tutorial/venv.html">python.org</a>.</p>
+but is the officially suggested method by the folks at <a href="https://docs.python.org/3/tutorial/venv.html">python.org</a>.</p>
 
-<p>There are several other methods, such as using the Anaconda Navigator or conda via the command line, pipenv and  pyenv.</p>
+<p>There are several other methods, such as using the Anaconda Navigator or conda via the command line, pipenv and pyenv.</p>
 
 <h3 id="to-get-started">
 <a class="anchor" href="#to-get-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>To get started:</h3>
@@ -168,7 +168,7 @@ but is the official suggested method by the folks at <a href="https://docs.pytho
     <p>Install virtualenv with <code class="language-plaintext highlighter-rouge">pip install virtualenv</code>.</p>
   </li>
   <li>
-    <p>Check the instillation with <code class="language-plaintext highlighter-rouge">virtualenv —version</code>.</p>
+    <p>Confirm the instillation with <code class="language-plaintext highlighter-rouge">virtualenv —version</code>.</p>
   </li>
   <li>
     <p>In your development directory of choice (ex.: the Desktop, /Dev, /Documents, etc.), create a new directory with <code class="language-plaintext highlighter-rouge">mkdir &lt;Project_Name&gt;</code>.</p>
@@ -200,6 +200,7 @@ but is the official suggested method by the folks at <a href="https://docs.pytho
 <ul>
   <li>Deactivate the virtual environment with <code class="language-plaintext highlighter-rouge">deactivate venv</code>.</li>
 </ul>
+
 
   </div><a class="u-url" href="/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html" hidden></a>
 </article>

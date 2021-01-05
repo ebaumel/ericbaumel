@@ -4,14 +4,14 @@ layout: post
 description: A receipe for setting up a virtual environment for Python projects.
 title: "Setting Up Virtual Environments in Python"
 categories: [python, data science, development]
-toc: true
+toc: false
 ---
 
 # Setting up virtual environments in Python
 
 ## A Clean, Well-Lighted Place
 
-written 04 January 2021 by Eric M. Baumel, MD
+written 04 January 2021 by Eric M. Baumel
 
 > This is an opinionated set of instructions to set up virtual environments for each project. 
 

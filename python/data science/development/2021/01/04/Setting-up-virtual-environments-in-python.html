@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Setting up virtual environments in Python | Eric M. Baumel, MD</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Setting up virtual environments in Python" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A receipe for setting up a virtual environment for python projects." />
+<meta property="og:description" content="A receipe for setting up a virtual environment for python projects." />
+<link rel="canonical" href="http://ericbaumel.com/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html" />
+<meta property="og:url" content="http://ericbaumel.com/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html" />
+<meta property="og:site_name" content="Eric M. Baumel, MD" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-04T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"http://ericbaumel.com/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html","@type":"BlogPosting","headline":"Setting up virtual environments in Python","dateModified":"2021-01-04T00:00:00-06:00","datePublished":"2021-01-04T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://ericbaumel.com/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html"},"description":"A receipe for setting up a virtual environment for python projects.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://ericbaumel.com/feed.xml" title="Eric M. Baumel, MD" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-41211249-7','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Eric M. Baumel, MD</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About Me</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Setting up virtual environments in Python</h1><p class="page-description">A receipe for setting up a virtual environment for python projects.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-04T00:00:00-06:00" itemprop="datePublished">
+        Jan 4, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#python">python</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/categories/#data science">data science</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/categories/#development">development</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#setting-up-virtual-environments-in-python">Setting up virtual environments in Python</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#to-get-started">To get started:</a></li>
+</ul>
+</li>
+</ul><h1 id="setting-up-virtual-environments-in-python">
+<a class="anchor" href="#setting-up-virtual-environments-in-python" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting up virtual environments in Python</h1>
+
+<p>written 04 January 2021 by Eric M. Baumel, MD</p>
+
+<blockquote>
+  <p>This is an opinionated set of instructions to set up virtual environments for each project.</p>
+</blockquote>
+
+<p>A virtual environement is a clean sandbox without any installeed python libraries. This allows you to use the libraries you need for your project, without conflicts from packages installed for other, unrelated projects on your system. This also helps you containerize you projects so they can be deployed cleanly or shared with other developers.</p>
+
+<p>After several other explorations, I use venv to manage the environments for all my projects. 
+Know that venv is not the only method of setting up virtual environments, 
+but is the official suggested method by the folks at <a href="https://docs.python.org/3/tutorial/venv.html">python.org</a>.</p>
+
+<p>There are several other methods, such as using the Anaconda Navigator or conda via the command line, pipenv and  pyenv.</p>
+
+<h2 id="to-get-started">
+<a class="anchor" href="#to-get-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>To get started:</h2>
+
+<ul>
+  <li>
+    <p>Install python on computer, if this isn’t already installed.</p>
+  </li>
+  <li>
+    <p>Check instillation of python on a clean Terminal window with <code class="language-plaintext highlighter-rouge">python —version</code> (that is a double dash).</p>
+  </li>
+  <li>
+    <p>Check instillation of pip with <code class="language-plaintext highlighter-rouge">pip —version</code>.</p>
+  </li>
+  <li>
+    <p>Install virtualenv with <code class="language-plaintext highlighter-rouge">pip install virtualenv</code>.</p>
+  </li>
+  <li>
+    <p>Check the instillation with <code class="language-plaintext highlighter-rouge">virtualenv —version</code>.</p>
+  </li>
+  <li>
+    <p>In your development directory of choice (ex.: the Desktop or /Dev or/Documents etc.).</p>
+  </li>
+  <li>
+    <p>Create a new directory with <code class="language-plaintext highlighter-rouge">mkdir &lt;Project_Name&gt;</code>.</p>
+  </li>
+  <li>
+    <p>Navigate to the new project directory <code class="language-plaintext highlighter-rouge">cd &lt;Project_Name&gt;</code>.</p>
+  </li>
+  <li>
+    <p>Create a new env environment with <code class="language-plaintext highlighter-rouge">python -m venv venv</code>.</p>
+  </li>
+  <li>
+    <p>Activate with <code class="language-plaintext highlighter-rouge">. venv/bin/activate</code> (don’t forget the ‘dot space’). You should see <code class="language-plaintext highlighter-rouge">(venv) </code> before the terminal prompt confirming that you are in the active virtual environment.</p>
+  </li>
+  <li>
+    <p>Add new packages with <code class="language-plaintext highlighter-rouge">pip install ChosenPackage</code>.</p>
+  </li>
+</ul>
+
+<p>U* pgrade a package with <code class="language-plaintext highlighter-rouge">pip install --upgrade ChosenPackage</code>.</p>
+
+<ul>
+  <li>After installing dependencies use <code class="language-plaintext highlighter-rouge">pip freeze &gt; requirements.txt</code> to list the requirements and version numbers for that project. For a clean install of all of these dependencies into another fresh environment, use <code class="language-plaintext highlighter-rouge">pip iinstall -r requirements.txt</code>
+</li>
+</ul>
+
+<blockquote>
+  <p>You can view the installed dependencies with <code class="language-plaintext highlighter-rouge">cat requirements.txt</code>.</p>
+</blockquote>
+
+<ul>
+  <li>Deactivate the virtual environment with <code class="language-plaintext highlighter-rouge">deactivate venv</code>.</li>
+</ul>
+
+  </div><a class="u-url" href="/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Diagnostic radiologist, software developer, explorer of machine learning, medical 3D printing innovator and entrepreneur.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/ebaumel" title="ebaumel"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/ericbaumel" title="ericbaumel"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

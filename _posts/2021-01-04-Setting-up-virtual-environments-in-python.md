@@ -9,6 +9,8 @@ toc: true
 
 # Setting up virtual environments in Python
 
+## A Clean, Well-Lighted Place
+
 written 04 January 2021 by Eric M. Baumel, MD
 
 > This is an opinionated set of instructions to set up virtual environments for each project. 
@@ -21,11 +23,11 @@ but is the official suggested method by the folks at [python.org](https://docs.p
 
 There are several other methods, such as using the Anaconda Navigator or conda via the command line, pipenv and  pyenv.
 
-## To get started:
+### To get started:
 
-* Install python on computer, if this isn't already installed.
+* Install Python on computer, if this isn't already installed.
 
-* Check instillation of python on a clean Terminal window with `python —version` (that is a double dash).
+* Check instillation of Python on a clean Terminal window with `python —version` _(that is a double dash)_.
 
 * Check instillation of pip with `pip —version`.
 
@@ -33,21 +35,19 @@ There are several other methods, such as using the Anaconda Navigator or conda v
 
 * Check the instillation with `virtualenv —version`.
 
-* In your development directory of choice (ex.: the Desktop or /Dev or/Documents etc.). 
-
-* Create a new directory with `mkdir <Project_Name>`.
+* In your development directory of choice (ex.: the Desktop or /Dev or/Documents etc.), create a new directory with `mkdir <Project_Name>`.
 
 * Navigate to the new project directory `cd <Project_Name>`.
 
 * Create a new env environment with `python -m venv venv`. 
 
-* Activate with `. venv/bin/activate` (don’t forget the ‘dot space’). You should see `(venv) ` before the terminal prompt confirming that you are in the active virtual environment.
+* Activate with `. venv/bin/activate` _(don’t forget the ‘dot space’)_. You should see `(venv) ` before the terminal prompt, confirming that you are in the active virtual environment.
 
 * Add new packages with `pip install ChosenPackage`.
 
-U* pgrade a package with `pip install --upgrade ChosenPackage`.
+* Upgrade a package with `pip install --upgrade ChosenPackage`.
 
-* After installing dependencies use `pip freeze > requirements.txt` to list the requirements and version numbers for that project. For a clean install of all of these dependencies into another fresh environment, use `pip iinstall -r requirements.txt`
+* After installing dependencies, use `pip freeze > requirements.txt` to list the requirements and version numbers for that project. For a clean install of all of these dependencies into another fresh environment, use `pip iinstall -r requirements.txt`
 
 > You can view the installed dependencies with `cat requirements.txt`.
 

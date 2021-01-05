@@ -1,35 +1,41 @@
 <h1 id="setting-up-virtual-environments-in-python">Setting up virtual environments in Python</h1>
 
-<p>This is an opinionated set of instructions to set up virtual environments for each project. 
+<p>This is an opinionated set of instructions to set up virtual environments for each project.</p>
+
+<p>After several other explorations, I use venv to manage the environments for my projects. 
 Know that venv is not the only method of setting up virtual environments, 
 but is the official suggested method by the folks at <a href="https://docs.python.org/3/tutorial/venv.html">python.org</a>.</p>
 
-<p>Install python on computer.</p>
+<p>There are several other methods, such as using the Anaconda Navigator or conda via the command line, pipenv and  pyenv.</p>
 
-<p>Check instillation of python on a clean Terminal window with ‘python —version’ (that is a double dash).</p>
+<h2 id="to-get-started">To get started:</h2>
 
-<p>Check instillation of pip with ‘pip —version’.</p>
+<p>Install python on computer, if this isn’t already installed.</p>
 
-<p>Install virtualenv with ‘pip install virtualenv’.</p>
+<p>Check instillation of python on a clean Terminal window with <code class="language-plaintext highlighter-rouge">python —version</code> (that is a double dash).</p>
 
-<p>Check the instillation with ‘virtualenv —version’.</p>
+<p>Check instillation of pip with <code class="language-plaintext highlighter-rouge">pip —version</code>.</p>
+
+<p>Install virtualenv with <code class="language-plaintext highlighter-rouge">pip install virtualenv</code>.</p>
+
+<p>Check the instillation with <code class="language-plaintext highlighter-rouge">virtualenv —version</code>.</p>
 
 <p>In your development directory of choice (ex.: the Desktop or /Dev or/Documents etc.).</p>
 
-<p>Create a new directory with ‘mkdir <Project_Name>'.</Project_Name></p>
+<p>Create a new directory with <code class="language-plaintext highlighter-rouge">mkdir &lt;Project_Name&gt;</code>.</p>
 
-<p>Navigate to the new project directory ‘cd <Project_Name>'.</Project_Name></p>
+<p>Navigate to the new project directory <code class="language-plaintext highlighter-rouge">cd &lt;Project_Name&gt;</code>.</p>
 
-<p>Create a new env environment with ‘python -m venv venv’.</p>
+<p>Create a new env environment with <code class="language-plaintext highlighter-rouge">python -m venv venv</code>.</p>
 
-<p>Activate with ‘. venv/bin/activate’ (don’t forget the ‘dot space’). You should see ‘(venv) ‘ before the terminal prompt confirming that you are in the active virtual environment.</p>
+<p>Activate with <code class="language-plaintext highlighter-rouge">. venv/bin/activate</code> (don’t forget the ‘dot space’). You should see <code class="language-plaintext highlighter-rouge">(venv) </code> before the terminal prompt confirming that you are in the active virtual environment.</p>
 
-<p>Add new packages with ‘pip install ChosenPackage’.</p>
+<p>Add new packages with <code class="language-plaintext highlighter-rouge">pip install ChosenPackage</code>.</p>
 
-<p>Upgrade a package with ‘pip install –upgrade ChosenPackage’.</p>
+<p>Upgrade a package with <code class="language-plaintext highlighter-rouge">pip install --upgrade ChosenPackage</code>.</p>
 
-<p>After installing dependencies use ‘pip freeze &gt; requirements.txt’ to list the requirements and version numbers for that project.</p>
+<p>After installing dependencies use <code class="language-plaintext highlighter-rouge">pip freeze &gt; requirements.txt</code> to list the requirements and version numbers for that project. For a clean install of all of these dependencies into another fresh environment, use <code class="language-plaintext highlighter-rouge">pip iinstall -r requirements.txt</code></p>
 
-<p>You can view the installed dependencies with ‘cat requirements.txt’.</p>
+<p>You can view the installed dependencies with <code class="language-plaintext highlighter-rouge">cat requirements.txt</code>.</p>
 
-<p>Deactivate the virtual environment with ‘deactivate venv’.</p>
+<p>Deactivate the virtual environment with <code class="language-plaintext highlighter-rouge">deactivate venv</code>.</p>

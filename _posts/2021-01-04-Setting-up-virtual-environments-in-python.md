@@ -1,8 +1,8 @@
 ---
 toc: true
 layout: post
-description: A receipe for setting up a virtual environment for python projects.
-title: "Setting up virtual environments in Python"
+description: A receipe for setting up a virtual environment for Python projects.
+title: "Setting Up Virtual Environments in Python"
 categories: [python, data science, development]
 toc: true
 ---
@@ -15,13 +15,13 @@ written 04 January 2021 by Eric M. Baumel, MD
 
 > This is an opinionated set of instructions to set up virtual environments for each project. 
 
-A virtual environement is a clean sandbox without any installeed python libraries. This allows you to use the libraries you need for your project, without conflicts from packages installed for other, unrelated projects on your system. This also helps you containerize you projects so they can be deployed cleanly or shared with other developers.
+A virtual environement is a clean sandbox without any installed python libraries. This allows you to add the libraries you need for your project, without conflicts from packages installed for other, unrelated projects on your system. This also helps you containerize you projects so they can be deployed cleanly or shared with other developers.
 
 After several other explorations, I use venv to manage the environments for all my projects. 
 Know that venv is not the only method of setting up virtual environments, 
-but is the official suggested method by the folks at [python.org](https://docs.python.org/3/tutorial/venv.html).
+but is the officially suggested method by the folks at [python.org](https://docs.python.org/3/tutorial/venv.html).
 
-There are several other methods, such as using the Anaconda Navigator or conda via the command line, pipenv and  pyenv.
+There are several other methods, such as using the Anaconda Navigator or conda via the command line, pipenv and pyenv.
 
 ### To get started:
 
@@ -33,7 +33,7 @@ There are several other methods, such as using the Anaconda Navigator or conda v
 
 * Install virtualenv with `pip install virtualenv`.
 
-* Check the instillation with `virtualenv —version`.
+* Confirm the instillation with `virtualenv —version`.
 
 * In your development directory of choice (ex.: the Desktop, /Dev, /Documents, etc.), create a new directory with `mkdir <Project_Name>`.
 
@@ -51,4 +51,5 @@ There are several other methods, such as using the Anaconda Navigator or conda v
 
 > You can view the installed dependencies with `cat requirements.txt`.
 
-* Deactivate the virtual environment with `deactivate venv`.
+* Deactivate the virtual environment with `deactivate venv`.  
+

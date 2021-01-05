@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Git Init 2021",
-            "content": "git init 2021 . By Eric M. Baumel . This is the first of a series of mini-posts of various computer housekeeping tips for my own use. Hopefully these may also be some some benefit for others. . Source control with git serves several functions: . It provides a method of keeping track of changes made to your code, so you can roll back to a previous save if needed. | If used with a remote hosting service such as GitHub, gives a convenient back up of your code in the cloud. | Allows easy collaboration with other developers. | Can be used by many providers for managing deployment. | . Let’s get started: . Install git on your system, if not alread done. Git Install . Make directory to hold project . Create Xcode Project - start with appropriate project . Navigate to your project folder using the command line. In Terminal put project under source control git init git add . git commit -m “Project setup” . Add a .gitignore . A .gitignore file . Test that project will build and run. Then: . Create new repository on GitHub . git remote add origin &lt;URL&gt; git push origin main . Work in dev brach. Only push commits for the project that will build and run. .",
-            "url": "http://ericbaumel.com/2021/01/03/git-init-2021.html",
-            "relUrl": "/2021/01/03/git-init-2021.html",
+            "title": "git init 2021",
+            "content": "git init 2021 . written 03 January 2021 by Eric M. Baumel . Putting your project under source control with GitHub . This is the first of a series of mini-posts of various computer housekeeping tips for my own use. Hopefully these may also be some some benefit for others. . Source control with git serves several functions: . It provides a method of keeping track of changes made to your code, so you can roll back to a previous save if needed. | If used with a remote hosting service such as GitHub, gives a convenient back up of your code in the cloud. | Allows easy collaboration with other developers. | Can be used by many providers for managing deployment. | . Let’s get started: . Install git on your system, if not alread done. Git Install . Make directory to hold project . Create Xcode Project - start with appropriate project . Navigate to your project folder using the command line. In Terminal put project under source control git init git add . git commit -m “Project setup” . Add a .gitignore . A .gitignore file . Test that project will build and run. Then: . Create new repository on GitHub . git remote add origin &lt;URL&gt; git push origin main . Work in dev brach. Only push commits for the project that will build and run. .",
+            "url": "http://ericbaumel.com/python/data%20science/development/2021/01/03/git-init-2021.html",
+            "relUrl": "/python/data%20science/development/2021/01/03/git-init-2021.html",
             "date": " • Jan 3, 2021"
         }
         

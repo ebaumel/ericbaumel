@@ -4,17 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Tags | Eric M. Baumel, MD</title>
+<title>git init 2021 | Eric M. Baumel, MD</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Tags" />
+<meta property="og:title" content="git init 2021" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Diagnostic radiologist, software developer, explorer of machine learning, medical 3D printing innovator and entrepreneur." />
-<meta property="og:description" content="Diagnostic radiologist, software developer, explorer of machine learning, medical 3D printing innovator and entrepreneur." />
-<link rel="canonical" href="http://ericbaumel.com/categories/" />
-<meta property="og:url" content="http://ericbaumel.com/categories/" />
+<meta name="description" content="First of a series of receipes. Putting your project under source control with GitHub." />
+<meta property="og:description" content="First of a series of receipes. Putting your project under source control with GitHub." />
+<link rel="canonical" href="http://ericbaumel.com/python/data%20science/development/2021/01/03/git-init-2021.html" />
+<meta property="og:url" content="http://ericbaumel.com/python/data%20science/development/2021/01/03/git-init-2021.html" />
 <meta property="og:site_name" content="Eric M. Baumel, MD" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-03T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"http://ericbaumel.com/categories/","@type":"WebPage","headline":"Tags","description":"Diagnostic radiologist, software developer, explorer of machine learning, medical 3D printing innovator and entrepreneur.","@context":"https://schema.org"}</script>
+{"url":"http://ericbaumel.com/python/data%20science/development/2021/01/03/git-init-2021.html","@type":"BlogPosting","headline":"git init 2021","dateModified":"2021-01-03T00:00:00-06:00","datePublished":"2021-01-03T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://ericbaumel.com/python/data%20science/development/2021/01/03/git-init-2021.html"},"description":"First of a series of receipes. Putting your project under source control with GitHub.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://ericbaumel.com/feed.xml" title="Eric M. Baumel, MD" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -88,150 +90,86 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">git init 2021</h1><p class="page-description">First of a series of receipes. Putting your project under source control with GitHub.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-03T00:00:00-06:00" itemprop="datePublished">
+        Jan 3, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#python">python</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/categories/#data science">data science</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/categories/#development">development</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="git-init-2021">git init 2021</h1>
+
+<p>written 03 January 2021 by Eric M. Baumel</p>
+
+<h2 id="putting-your-project-under-source-control-with-github">Putting your project under source control with GitHub</h2>
+
+<blockquote>
+  <p>This is the first of a series of mini-posts of various computer housekeeping tips for my own use. Hopefully these may also be some some benefit for others.</p>
+</blockquote>
+
+<p>Source control with git serves several functions:</p>
+<ul>
+  <li>It provides a method of keeping track of changes made to your code, so you can roll back to a previous save if needed.</li>
+  <li>If used with a remote hosting service such as GitHub, gives a convenient back up of your code in the cloud.</li>
+  <li>Allows easy collaboration with other developers.</li>
+  <li>Can be used by many providers for managing deployment.</li>
+</ul>
+
+<h3 id="lets-get-started">Let’s get started:</h3>
+
+<p>Install git on your system, if not alread done. <a href="https://github.com/git-guides/install-git">Git Install</a></p>
+
+<p>Make directory to hold project</p>
+
+<p>Create Xcode Project - start with appropriate project</p>
+
+<p>Navigate to your project folder using the command line. In Terminal put project under source control
+	git init
+	git add .
+	git commit -m “Project setup”</p>
+
+<p>Add a .gitignore</p>
+<blockquote>
+  <p>A .gitignore file</p>
+</blockquote>
+
+<p>Test that project will build and run. Then:</p>
+
+<p>Create new repository on GitHub</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin &lt;URL&gt;
+git push origin main
+</code></pre></div></div>
+
+<p>Work in dev brach. Only push commits for the project that will build and run.</p>
 
 
-<h2>Contents</h2>
-
-  
-  
-  
-
-  <ul>
-  
-    <li><a href="#COVID-19">COVID-19</a></li>
-  
-    <li><a href="#data science">data science</a></li>
-  
-    <li><a href="#datasets">datasets</a></li>
-  
-    <li><a href="#development">development</a></li>
-  
-    <li><a href="#ethics">ethics</a></li>
-  
-    <li><a href="#jupyter">jupyter</a></li>
-  
-    <li><a href="#markets">markets</a></li>
-  
-    <li><a href="#python">python</a></li>
-  
-    <li><a href="#radiology">radiology</a></li>
-  
-    <li><a href="#risk">risk</a></li>
-  
-  </ul>
-
-  
-      <h3 id ="COVID-19"><i class="fas fa-tags category-tags-icon"></i></i> COVID-19</h3>
-      <a name="COVID-19"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/covid-19/datasets/radiology/2020/04/30/COVID-19-datasets.html">COVID-19 Datasets</a>  • Apr 30, 2020</p>
-        </article>
-        
-      
-  
-      <h3 id ="data science"><i class="fas fa-tags category-tags-icon"></i></i> data science</h3>
-      <a name="data science"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html">Setting Up Virtual Environments in Python</a>  • Jan 4, 2021</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/python/data%20science/development/2021/01/03/git-init-2021.html">git init 2021</a>  • Jan 3, 2021</p>
-        </article>
-        
-      
-  
-      <h3 id ="datasets"><i class="fas fa-tags category-tags-icon"></i></i> datasets</h3>
-      <a name="datasets"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/covid-19/datasets/radiology/2020/04/30/COVID-19-datasets.html">COVID-19 Datasets</a>  • Apr 30, 2020</p>
-        </article>
-        
-      
-  
-      <h3 id ="development"><i class="fas fa-tags category-tags-icon"></i></i> development</h3>
-      <a name="development"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html">Setting Up Virtual Environments in Python</a>  • Jan 4, 2021</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/python/data%20science/development/2021/01/03/git-init-2021.html">git init 2021</a>  • Jan 3, 2021</p>
-        </article>
-        
-      
-  
-      <h3 id ="ethics"><i class="fas fa-tags category-tags-icon"></i></i> ethics</h3>
-      <a name="ethics"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/ethics/2020/04/11/think-globally.html">Think globally, act locally</a>  • Apr 11, 2020</p>
-        </article>
-        
-      
-  
-      <h3 id ="jupyter"><i class="fas fa-tags category-tags-icon"></i></i> jupyter</h3>
-      <a name="jupyter"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/jupyter/2020/02/20/test.html">Fastpages Notebook Blog Post</a>  • Feb 20, 2020</p>
-        </article>
-        
-      
-  
-      <h3 id ="markets"><i class="fas fa-tags category-tags-icon"></i></i> markets</h3>
-      <a name="markets"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/markets/risk/2020/10/30/probabilistic-universe.html">Probabilistic Universe</a>  • Oct 30, 2020</p>
-        </article>
-        
-      
-  
-      <h3 id ="python"><i class="fas fa-tags category-tags-icon"></i></i> python</h3>
-      <a name="python"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/python/data%20science/development/2021/01/04/Setting-up-virtual-environments-in-python.html">Setting Up Virtual Environments in Python</a>  • Jan 4, 2021</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/python/data%20science/development/2021/01/03/git-init-2021.html">git init 2021</a>  • Jan 3, 2021</p>
-        </article>
-        
-      
-  
-      <h3 id ="radiology"><i class="fas fa-tags category-tags-icon"></i></i> radiology</h3>
-      <a name="radiology"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/covid-19/datasets/radiology/2020/04/30/COVID-19-datasets.html">COVID-19 Datasets</a>  • Apr 30, 2020</p>
-        </article>
-        
-      
-  
-      <h3 id ="risk"><i class="fas fa-tags category-tags-icon"></i></i> risk</h3>
-      <a name="risk"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/markets/risk/2020/10/30/probabilistic-universe.html">Probabilistic Universe</a>  • Oct 30, 2020</p>
-        </article>
-        
-      
-  
-
-
-
-
-</div>
+  </div><a class="u-url" href="/python/data%20science/development/2021/01/03/git-init-2021.html" hidden></a>
+</article>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>

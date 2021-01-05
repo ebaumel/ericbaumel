@@ -124,11 +124,18 @@ window.onload = wrap_img;
     <ul class="section-nav">
 <li class="toc-entry toc-h1"><a href="#setting-up-virtual-environments-in-python">Setting up virtual environments in Python</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#to-get-started">To get started:</a></li>
+<li class="toc-entry toc-h2"><a href="#a-clean-well-lighted-place">A Clean, Well-Lighted Place</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#to-get-started">To get started:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul><h1 id="setting-up-virtual-environments-in-python">
 <a class="anchor" href="#setting-up-virtual-environments-in-python" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting up virtual environments in Python</h1>
+
+<h2 id="a-clean-well-lighted-place">
+<a class="anchor" href="#a-clean-well-lighted-place" aria-hidden="true"><span class="octicon octicon-link"></span></a>A Clean, Well-Lighted Place</h2>
 
 <p>written 04 January 2021 by Eric M. Baumel, MD</p>
 
@@ -144,15 +151,15 @@ but is the official suggested method by the folks at <a href="https://docs.pytho
 
 <p>There are several other methods, such as using the Anaconda Navigator or conda via the command line, pipenv and  pyenv.</p>
 
-<h2 id="to-get-started">
-<a class="anchor" href="#to-get-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>To get started:</h2>
+<h3 id="to-get-started">
+<a class="anchor" href="#to-get-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>To get started:</h3>
 
 <ul>
   <li>
-    <p>Install python on computer, if this isn’t already installed.</p>
+    <p>Install Python on computer, if this isn’t already installed.</p>
   </li>
   <li>
-    <p>Check instillation of python on a clean Terminal window with <code class="language-plaintext highlighter-rouge">python —version</code> (that is a double dash).</p>
+    <p>Check instillation of Python on a clean Terminal window with <code class="language-plaintext highlighter-rouge">python —version</code> <em>(that is a double dash)</em>.</p>
   </li>
   <li>
     <p>Check instillation of pip with <code class="language-plaintext highlighter-rouge">pip —version</code>.</p>
@@ -164,10 +171,7 @@ but is the official suggested method by the folks at <a href="https://docs.pytho
     <p>Check the instillation with <code class="language-plaintext highlighter-rouge">virtualenv —version</code>.</p>
   </li>
   <li>
-    <p>In your development directory of choice (ex.: the Desktop or /Dev or/Documents etc.).</p>
-  </li>
-  <li>
-    <p>Create a new directory with <code class="language-plaintext highlighter-rouge">mkdir &lt;Project_Name&gt;</code>.</p>
+    <p>In your development directory of choice (ex.: the Desktop or /Dev or/Documents etc.), create a new directory with <code class="language-plaintext highlighter-rouge">mkdir &lt;Project_Name&gt;</code>.</p>
   </li>
   <li>
     <p>Navigate to the new project directory <code class="language-plaintext highlighter-rouge">cd &lt;Project_Name&gt;</code>.</p>
@@ -176,18 +180,17 @@ but is the official suggested method by the folks at <a href="https://docs.pytho
     <p>Create a new env environment with <code class="language-plaintext highlighter-rouge">python -m venv venv</code>.</p>
   </li>
   <li>
-    <p>Activate with <code class="language-plaintext highlighter-rouge">. venv/bin/activate</code> (don’t forget the ‘dot space’). You should see <code class="language-plaintext highlighter-rouge">(venv) </code> before the terminal prompt confirming that you are in the active virtual environment.</p>
+    <p>Activate with <code class="language-plaintext highlighter-rouge">. venv/bin/activate</code> <em>(don’t forget the ‘dot space’)</em>. You should see <code class="language-plaintext highlighter-rouge">(venv) </code> before the terminal prompt, confirming that you are in the active virtual environment.</p>
   </li>
   <li>
     <p>Add new packages with <code class="language-plaintext highlighter-rouge">pip install ChosenPackage</code>.</p>
   </li>
-</ul>
-
-<p>U* pgrade a package with <code class="language-plaintext highlighter-rouge">pip install --upgrade ChosenPackage</code>.</p>
-
-<ul>
-  <li>After installing dependencies use <code class="language-plaintext highlighter-rouge">pip freeze &gt; requirements.txt</code> to list the requirements and version numbers for that project. For a clean install of all of these dependencies into another fresh environment, use <code class="language-plaintext highlighter-rouge">pip iinstall -r requirements.txt</code>
-</li>
+  <li>
+    <p>Upgrade a package with <code class="language-plaintext highlighter-rouge">pip install --upgrade ChosenPackage</code>.</p>
+  </li>
+  <li>
+    <p>After installing dependencies, use <code class="language-plaintext highlighter-rouge">pip freeze &gt; requirements.txt</code> to list the requirements and version numbers for that project. For a clean install of all of these dependencies into another fresh environment, use <code class="language-plaintext highlighter-rouge">pip iinstall -r requirements.txt</code></p>
+  </li>
 </ul>
 
 <blockquote>

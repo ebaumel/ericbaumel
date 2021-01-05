@@ -35,7 +35,7 @@ There are several other methods, such as using the Anaconda Navigator or conda v
 
 * Check the instillation with `virtualenv —version`.
 
-* In your development directory of choice (ex.: the Desktop or /Dev or/Documents etc.), create a new directory with `mkdir <Project_Name>`.
+* In your development directory of choice (ex.: the Desktop, /Dev, /Documents, etc.), create a new directory with `mkdir <Project_Name>`.
 
 * Navigate to the new project directory `cd <Project_Name>`.
 
@@ -47,7 +47,7 @@ There are several other methods, such as using the Anaconda Navigator or conda v
 
 * Upgrade a package with `pip install --upgrade ChosenPackage`.
 
-* After installing dependencies, use `pip freeze > requirements.txt` to list the requirements and version numbers for that project. For a clean install of all of these dependencies into another fresh environment, use `pip iinstall -r requirements.txt`
+* After installing dependencies, use `pip freeze > requirements.txt` to list the requirements and version numbers for that project. For a clean install of all of these dependencies into another fresh environment, use `pip install -r requirements.txt`
 
 > You can view the installed dependencies with `cat requirements.txt`.
 

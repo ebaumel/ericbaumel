@@ -4,12 +4,8 @@ layout: post
 description: A good rule of thumb. My first post using markdown with fastpages.
 title: "Think globally, act locally"
 categories: [ethics]
-toc: true
+toc: false
 ---
-
-
-
-# Think globally, act locally
 
 
 This expression originated in urban planning and environmentalism, but is can be applied broadly in many diciplines including business, politics and computer science.

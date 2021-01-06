@@ -3,11 +3,10 @@ toc: true
 layout: post
 description: A receipe for setting up a virtual environment for Python projects.
 title: "Setting Up Virtual Environments in Python"
+author: Eric M. Baumel
 categories: [python, data science, development]
 toc: false
 ---
-
-# Setting up virtual environments in Python
 
 ## A Clean, Well-Lighted Place
 
@@ -51,5 +50,7 @@ There are several other methods, such as using the Anaconda Navigator or conda v
 
 > You can view the installed dependencies with `cat requirements.txt`.
 
-* Deactivate the virtual environment with `deactivate venv`.  
+* Deactivate the virtual environment with `deactivate venv`.
+
+
 

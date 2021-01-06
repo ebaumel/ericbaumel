@@ -7,16 +7,17 @@
 <title>git init 2021 | Eric M. Baumel, MD</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="git init 2021" />
+<meta name="author" content="Eric M. Baumel" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="First of a series of receipes. Putting your project under source control with GitHub." />
 <meta property="og:description" content="First of a series of receipes. Putting your project under source control with GitHub." />
-<link rel="canonical" href="http://ericbaumel.com/python/data%20science/development/2021/01/03/git-init-2021.html" />
-<meta property="og:url" content="http://ericbaumel.com/python/data%20science/development/2021/01/03/git-init-2021.html" />
+<link rel="canonical" href="http://ericbaumel.com/python/swift/data%20science/development/2021/01/03/git-init-2021.html" />
+<meta property="og:url" content="http://ericbaumel.com/python/swift/data%20science/development/2021/01/03/git-init-2021.html" />
 <meta property="og:site_name" content="Eric M. Baumel, MD" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-01-03T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"http://ericbaumel.com/python/data%20science/development/2021/01/03/git-init-2021.html","@type":"BlogPosting","headline":"git init 2021","dateModified":"2021-01-03T00:00:00-06:00","datePublished":"2021-01-03T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://ericbaumel.com/python/data%20science/development/2021/01/03/git-init-2021.html"},"description":"First of a series of receipes. Putting your project under source control with GitHub.","@context":"https://schema.org"}</script>
+{"url":"http://ericbaumel.com/python/swift/data%20science/development/2021/01/03/git-init-2021.html","@type":"BlogPosting","headline":"git init 2021","dateModified":"2021-01-03T00:00:00-06:00","datePublished":"2021-01-03T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://ericbaumel.com/python/swift/data%20science/development/2021/01/03/git-init-2021.html"},"author":{"@type":"Person","name":"Eric M. Baumel"},"description":"First of a series of receipes. Putting your project under source control with GitHub.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://ericbaumel.com/feed.xml" title="Eric M. Baumel, MD" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -95,7 +96,9 @@ window.onload = wrap_img;
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">git init 2021</h1><p class="page-description">First of a series of receipes. Putting your project under source control with GitHub.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-03T00:00:00-06:00" itemprop="datePublished">
         Jan 3, 2021
-      </time>
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Eric M. Baumel</span></span>
        • <span class="read-time" title="Estimated read time">
     
     
@@ -107,6 +110,9 @@ window.onload = wrap_img;
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
         <a class="category-tags-link" href="/categories/#python">python</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/categories/#swift">swift</a>
         &nbsp;
       
         <a class="category-tags-link" href="/categories/#data science">data science</a>
@@ -126,7 +132,7 @@ window.onload = wrap_img;
 <h2 id="putting-your-project-under-source-control-with-github">Putting your project under source control with GitHub</h2>
 
 <blockquote>
-  <p>This is the first of a series of mini-posts of various computer housekeeping tips for my own use. Hopefully these may also be some some benefit for others.</p>
+  <p>This is the first of a series of mini-posts of various computer housekeeping tips, initially for my own use. Hopefully these may also be some some benefit for others.</p>
 </blockquote>
 
 <p>Source control with git serves several functions:</p>
@@ -141,24 +147,50 @@ window.onload = wrap_img;
 
 <p>Install git on your system, if not alread done. <a href="https://github.com/git-guides/install-git">Git Install</a></p>
 
-<p>Make directory to hold project</p>
-
-<p>Create Xcode Project - start with appropriate project</p>
-
-<p>Navigate to your project folder using the command line. In Terminal put project under source control</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'''git init
-git add .
-git commit -m “Project setup” '''
-</code></pre></div></div>
-
-<p>Add a .gitignore file</p>
+<ul>
+  <li>Make directory to hold project</li>
+</ul>
 
 <blockquote>
-  <p>A .gitignore file lists the files and directories you do <em>not</em> want under source control, such as yhidden files, secure credentials, venv and test directories, etc.</p>
+  <p>For iOS development: Create Xcode Project - start with appropriate project type</p>
 </blockquote>
 
-<p>Test that project will build and run. Then:</p>
+<ul>
+  <li>
+    <p>Navigate to your project folder using the command line.</p>
+  </li>
+  <li>
+    <p>In Terminal put project under source control</p>
+
+    <p>git init</p>
+  </li>
+  <li>
+    <p>Once you have files reeady to place under source control, list the files that have been created or changed.</p>
+
+    <p>git status</p>
+  </li>
+  <li>
+    <p>Track these files so they can be commited.</p>
+
+    <p>git add .</p>
+  </li>
+  <li>
+    <p>Commit the waiting files.</p>
+
+    <p>git commit -m “Project setup”</p>
+  </li>
+  <li>
+    <p>Add a .gitignore file</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>A .gitignore file lists the files and directories you do <em>not</em> want under source control, such as hidden files, secure credentials, venv and test directories, etc.</p>
+</blockquote>
+
+<ul>
+  <li>Test that project will build and run. Then:</li>
+</ul>
 
 <p>Create new repository on GitHub</p>
 
@@ -171,7 +203,7 @@ git push origin main
 <p>Only push commits for the project that will build and run.</p>
 
 
-  </div><a class="u-url" href="/python/data%20science/development/2021/01/03/git-init-2021.html" hidden></a>
+  </div><a class="u-url" href="/python/swift/data%20science/development/2021/01/03/git-init-2021.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">

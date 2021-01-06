@@ -10,7 +10,6 @@ toc: false
 
 ## A Clean, Well-Lighted Place
 
-written 04 January 2021 by Eric M. Baumel
 
 > This is an opinionated set of instructions to set up virtual environments for each project. 
 

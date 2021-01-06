@@ -1,5 +1,5 @@
 ---
-toc: true
+toc: false
 layout: post
 description: Between 0.0 and 1.0.
 title: "Probabilistic Universe"
@@ -7,7 +7,6 @@ author: Eric M. Baumel, MD
 categories: [markets, risk]
 ---
 
-# Probabilistic Universe
 
 We live in a probabilistic universe, with the obvious  exception of death. Even taxes are probability weighted. 
 

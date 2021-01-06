@@ -145,10 +145,13 @@ window.onload = wrap_img;
 
 <h3 id="lets-get-started">Let’s get started:</h3>
 
-<p>Install git on your system, if not alread done. <a href="https://github.com/git-guides/install-git">Git Install</a></p>
-
 <ul>
-  <li>Make directory to hold project</li>
+  <li>
+    <p>Install git on your system, if not alread done: <a href="https://github.com/git-guides/install-git">Git Install</a></p>
+  </li>
+  <li>
+    <p>Make directory to hold project</p>
+  </li>
 </ul>
 
 <blockquote>
@@ -162,8 +165,18 @@ window.onload = wrap_img;
   <li>
     <p>In Terminal put project under source control</p>
 
-    <p>git init</p>
+    <p><code class="language-plaintext highlighter-rouge">git init</code></p>
   </li>
+  <li>
+    <p>Add a <code class="language-plaintext highlighter-rouge">.gitignore</code> file</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>A .gitignore file lists the files and directories you do <em>not</em> want under source control, such as hidden files (.DS_Store on MacOS) , environment files (.env), secure credentials, venv and test directories, etc.</p>
+</blockquote>
+
+<ul>
   <li>
     <p>Once you have files reeady to place under source control, list the files that have been created or changed.</p>
 
@@ -177,19 +190,11 @@ window.onload = wrap_img;
   <li>
     <p>Commit the waiting files.</p>
 
-    <p>git commit -m “Project setup”</p>
+    <p><code class="language-plaintext highlighter-rouge">git commit -m “Project setup”</code></p>
   </li>
   <li>
-    <p>Add a <code class="language-plaintext highlighter-rouge">.gitignore</code> file</p>
+    <p>Test that project will build and run. Then:</p>
   </li>
-</ul>
-
-<blockquote>
-  <p>A .gitignore file lists the files and directories you do <em>not</em> want under source control, such as hidden files (.DS_Store on MacOS) , environment files (.env), secure credentials, venv and test directories, etc.</p>
-</blockquote>
-
-<ul>
-  <li>Test that project will build and run. Then:</li>
 </ul>
 
 <p>Create new repository on GitHub</p>

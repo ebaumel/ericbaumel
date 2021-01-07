@@ -143,7 +143,7 @@ window.onload = wrap_img;
   <li>Can be used by many providers for managing deployment.</li>
 </ul>
 
-<h3 id="lets-get-started">Let’s get started:</h3>
+<h3 id="lets-get-started">Let’s Get Started</h3>
 
 <ul>
   <li>
@@ -163,12 +163,13 @@ window.onload = wrap_img;
     <p>Navigate to your project folder using the command line.</p>
   </li>
   <li>
-    <p>In Terminal put project under source control</p>
+    <p>In Terminal, put project under source control.</p>
 
-    <p><code class="language-plaintext highlighter-rouge">git init</code></p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git init
+</code></pre></div>    </div>
   </li>
   <li>
-    <p>Add a <code class="language-plaintext highlighter-rouge">.gitignore</code> file</p>
+    <p>Create a <code class="language-plaintext highlighter-rouge">.gitignore</code> file.</p>
   </li>
 </ul>
 
@@ -178,7 +179,7 @@ window.onload = wrap_img;
 
 <ul>
   <li>
-    <p>Once you have files reeady to place under source control, list the files that have been created or changed.</p>
+    <p>Once you have files ready to be placed under source control, view the files that have been created or changed.</p>
 
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git status
 </code></pre></div>    </div>
@@ -186,33 +187,43 @@ window.onload = wrap_img;
   <li>
     <p>Track these files so they can be commited.</p>
 
-    <p><code class="language-plaintext highlighter-rouge">git add .</code></p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git add .
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Commit the waiting files.</p>
 
-    <p><code class="language-plaintext highlighter-rouge">git commit -m “Project setup”</code></p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git commit -m “Project setup”
+</code></pre></div>    </div>
   </li>
 </ul>
 
-<p>Only push commits that will build and run.</p>
+<blockquote>
+  <p>Only push commits that will build and run.</p>
+</blockquote>
 
 <ul>
-  <li>Test that project will build and run. Then:</li>
+  <li>
+    <p>Now that you have a local git repo on your system, get ready to save it on GitHub:</p>
+  </li>
+  <li>
+    <p>Create new repository on GitHub. <a href="https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo">GitHub: Create a repo</a></p>
+  </li>
+  <li>
+    <p>Push your local repo to the remote main branch.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git remote add origin &lt;URL&gt;
+  git push origin main
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Continue your work in a <code class="language-plaintext highlighter-rouge">dev</code> brach.</p>
+
+  		git checkout -b <new-branch>
+</new-branch>  </li>
 </ul>
 
-<p>Create new repository on GitHub</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin &lt;URL&gt;
-git push origin main
-</code></pre></div></div>
-
-<p>Work in dev brach.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -b &lt;new-branch&gt;
-</code></pre></div></div>
-
-<p>Only push commits that will build and run.</p>
+<h3 id="other-useful-git-commands">Other Useful Git Commands</h3>
 
 
   </div><a class="u-url" href="/python/swift/data%20science/development/2021/01/03/git-init-2021.html" hidden></a>

@@ -43,7 +43,7 @@ There are several other methods, such as using the Anaconda Navigator or conda v
 
 * Add new packages with `pip install SomePackage`.
 
-* Upgrade a package with `pip install --upgrade SOmePackage`.
+* Upgrade a package with `pip install --upgrade SomePackage`.
 
 * After installing dependencies, use `pip freeze > requirements.txt` to list the requirements and version numbers for that project. For a clean install of all of these dependencies into another fresh environment, use `pip install -r requirements.txt`
 

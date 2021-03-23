@@ -8,7 +8,7 @@ toc: false
 ---
 
 
-This expression originated in urban planning and environmentalism, but is can be applied broadly in many diciplines including business, politics and computer science.
+This expression originated in urban planning and environmentalism, but is can be applied broadly in many disciplines including business, politics and computer science.
 
 I like to think it also can be viewed with regards to our conduct towards our own family and our personal inner lives.
 

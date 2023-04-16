@@ -1,0 +1,54 @@
+---
+title: "Eric M. Baumel, MD"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+::: {.grid}
+
+::: {.g-col-6}
+![](Eric_Baumel.png)
+
+
+#### Board-certified diagnostic radiologist, award winning app developer, medical 3D printing innovator and digital health entrepreneur
+
+:::
+
+::: {.g-col-6}
+
+### Mobile Apps:
+
+[Radiology Toolbox Pro for iOS](https://apps.apple.com/us/app/radiology-toolbox-pro/id466281848) / 
+[Radiology Toolbox for Google Play](https://play.google.com/store/apps/details?id=com.softcode.ebaumel.radiologytoolbox&hl=en_US)
+
+Winner 2014 Minnie Award - Best Mobile Radiology App
+
+### Other Blogs:
+
+*Towards Data Science*
+
+[Machine Learning for Radiology — Where to Begin](https://towardsdatascience.com/machine-learning-for-radiology-where-to-begin-3a205db8718f)
+
+
+*embodi3D*
+
+[Desktop 3D Printing of CT Scan Images](https://www.embodi3d.com/blogs/entry/124-desktop-3d-printing-of-ct-scan-images/)
+
+[3D Printing of Renal Mass from MRI Images](https://www.embodi3d.com/blogs/entry/268-3d-printing-of-renal-mass-from-mri-images/)
+
+This site is built with [Quarto](https://quarto.org/), An easy to use blogging platform with extra features for Jupyter Notebooks.
+:::
+
+
+:::
+
+
+
+# Posts

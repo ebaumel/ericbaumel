@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2022-01-22">
+<meta name="description" content="Tips and tricks for the next stup in Project Jupyter evolution.">
+
+<title>Eric M. Baumel, MD - JupyterLab Cheat Sheet</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Eric M. Baumel, MD</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ebaumel"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/ericbaumel"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">JupyterLab Cheat Sheet</h1>
+                  <div>
+        <div class="description">
+          Tips and tricks for the next stup in Project Jupyter evolution.
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 22, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="jupyterlab-cheat-sheet" class="level1">
+<h1>JupyterLab Cheat Sheet</h1>
+<section id="by-eric-m.-baumel" class="level3">
+<h3 class="anchored" data-anchor-id="by-eric-m.-baumel">by Eric M. Baumel</h3>
+<p>JupyterLab is the latest iteration of the popular interactive Python notebook environment, inheriting from iPython and Jupyter Notebooks. See <a href="https://jupyter.org">Project Jupyter</a>.<br>
+JupyterLab provides the interactive notebook format of Jupyter Notebooks, with an integrated file borwser, console and more.</p>
+<p>You install JupyterLab either from Anaconda or via pip with: <code>pip install jupyterlab</code>.</p>
+<p>You launch the JupyterLab server from the command line with <code>jupyter lab</code>.</p>
+<p>If your browser doesn’t launch by itself, you go to <code>http://localhost:8888/lab</code></p>
+<p>A iPython notebook file <code>.ipynb</code> can be opened with either Jupyter Notebok or JupyterLab.</p>
+</section>
+<section id="jupyterlab-interface-shortcuts" class="level2">
+<h2 class="anchored" data-anchor-id="jupyterlab-interface-shortcuts">JupyterLab Interface Shortcuts</h2>
+<ul>
+<li>Toggle the sidebar with <code>Cmd + B</code></li>
+<li>Save the notebook with <code>Cmd + S</code></li>
+<li>Save As with <code>Shift + Cmd + S</code></li>
+<li>Close a tab with <code>Option + W</code> or <code>Alt + W</code></li>
+</ul>
+</section>
+<section id="running-a-cell" class="level2">
+<h2 class="anchored" data-anchor-id="running-a-cell">Running a Cell</h2>
+<ul>
+<li><p>To execute a cell and move tho the next cell in command mode click the run button <code>▸</code> in the toolbar or use <code>Shift + Enter</code> on the keyboard</p></li>
+<li><p>To execute the cell and stay on that cell use <code>Ctl + Enter</code></p></li>
+<li><p>Interupt a Running Cell with <code>II</code></p></li>
+</ul>
+</section>
+<section id="toggle-between-command-and-edit-modes" class="level2">
+<h2 class="anchored" data-anchor-id="toggle-between-command-and-edit-modes">Toggle Between Command and Edit Modes</h2>
+<ul>
+<li>Change to Command mode with the <code>ESC</code> key</li>
+<li>Change to the Edit mode with the <code>Enter</code> key</li>
+</ul>
+<section id="command-mode-keyboard-shortcuts" class="level3">
+<h3 class="anchored" data-anchor-id="command-mode-keyboard-shortcuts">Command Mode Keyboard Shortcuts</h3>
+<p>Move between cells with the up <code>↑</code> and down <code>↓</code> arrow keys</p>
+<ul>
+<li><p>Create a cell <em>above</em> the active cell with the <code>A</code> key</p></li>
+<li><p>Create a cell <em>below</em> the active cell with the <code>B</code> key</p></li>
+<li><p>Delete the active cell with <code>DD</code></p></li>
+<li><p>Undo a cell with the <code>Z</code> key</p></li>
+<li><p>Copy a cell with the <code>C</code> key</p></li>
+<li><p>Paste a cell with the <code>V</code> key</p></li>
+<li><p>Change to <em>markdown</em> mode with the <code>M</code> key</p></li>
+<li><p>Change to <em>code</em> mode with the <code>Y</code> key</p></li>
+</ul>
+</section>
+</section>
+<section id="code-completion" class="level2">
+<h2 class="anchored" data-anchor-id="code-completion">Code Completion</h2>
+<p>The <code>Tab</code> key gives you a list of possible class or function choices.</p>
+<p><code>Shift + Tab</code> shows a tooltip of the fucion or class the cursor is on.</p>
+</section>
+<section id="markdown-basics" class="level2">
+<h2 class="anchored" data-anchor-id="markdown-basics">Markdown Basics</h2>
+<p>Adapted from: https://www.markdownguide.org/basic-syntax/</p>
+<section id="headings" class="level3">
+<h3 class="anchored" data-anchor-id="headings">Headings</h3>
+<p>To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level.</p>
+<p>For compatibility, always put a space between the number signs and the heading name. Also, put blank lines before and after a heading for compatibility.</p>
+<p>Example:</p>
+<p><code># Heading 1: Document Title</code></p>
+<p><code>## Heading 2: A subtitle</code></p>
+</section>
+</section>
+</section>
+<section id="heading-1-document-title" class="level1">
+<h1>Heading 1: Document Title</h1>
+<section id="heading-2-a-subtitle" class="level2">
+<h2 class="anchored" data-anchor-id="heading-2-a-subtitle">Heading 2: A subtitle</h2>
+<section id="line-breaks" class="level3">
+<h3 class="anchored" data-anchor-id="line-breaks">Line Breaks</h3>
+<p>To create a line break or new line <code>&lt;br&gt;</code>, end a line with two or more spaces, and then type return.</p>
+<p>Example:<br>
+<code>A line break &lt;br&gt; here.</code><br>
+A line break <br> here.</p>
+</section>
+<section id="text-formatting" class="level3">
+<h3 class="anchored" data-anchor-id="text-formatting">Text Formatting</h3>
+<p><strong>Bold Text</strong> - <code>**Bold Text**</code><br>
+<em>Italics Text</em> - <code>*Italic Text*</code><br>
+<strong><em>BoldItalics</em></strong> - <code>***BoldItalic Text***</code></p>
+</section>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<p>To show a word or phrase as code, enclose it in backticks (`).</p>
+<p>Example:</p>
+<p>Install a library with, <code>pip install jupyterlabs</code>.</p>
+<p>Code blocks are normally indented four spaces or one tab. When they’re in a list, indent them eight spaces or two tabs. You can also enclose the codeblock thith three backticks (``<code>), or three tildes</code>~~~`.</p>
+<pre><code># Imports
+import pandas
+import numpy</code></pre>
+</section>
+<section id="links" class="level3">
+<h3 class="anchored" data-anchor-id="links">Links</h3>
+<p><code>[title](https://www.example.com)</code></p>
+</section>
+<section id="images" class="level3">
+<h3 class="anchored" data-anchor-id="images">Images</h3>
+<p><code>![alt text](image.jpg)</code></p>
+</section>
+<section id="blockquotes" class="level3">
+<h3 class="anchored" data-anchor-id="blockquotes">Blockquotes</h3>
+<p>The <em>Greater Than</em> sign <code>&gt;</code> offsets blockquotes.</p>
+<p><code>&gt; Think globally, act locally.</code> is rendered as: &gt; Think globally, act locally.</p>
+</section>
+<section id="lists" class="level3">
+<h3 class="anchored" data-anchor-id="lists">Lists</h3>
+<section id="unordered-lists" class="level4">
+<h4 class="anchored" data-anchor-id="unordered-lists">Unordered Lists</h4>
+<p>Use a dash <code>-</code> for unorderd list:</p>
+<ul>
+<li>An Unordered List Item <code>- An Unordered List Item</code>
+<ul>
+<li>Another List Item <code>- Another List Item</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="ordered-lists" class="level4">
+<h4 class="anchored" data-anchor-id="ordered-lists">Ordered Lists</h4>
+<ol type="1">
+<li>To create an order list, start the line with a number and a period. <code>1. To create an order list...</code></li>
+<li>If you need to use a number at the start of a list item, you <em>escape</em> the period by adding a backslash character <code>\</code> after the number, but before the period: <code>2022\. That's the year I wrote this.</code></li>
+</ol>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

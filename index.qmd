@@ -13,15 +13,15 @@ title-block-banner: true
 
 ::: {.grid}
 
-::: {.g-col-6}
+::: {.g-col-4}
 ![](Eric_Baumel.png)
 
 
-#### Board-certified diagnostic radiologist, award winning app developer, medical 3D printing innovator and digital health entrepreneur
+##### Board-certified diagnostic radiologist, award winning app developer, medical 3D printing innovator and digital health entrepreneur
 
 :::
 
-::: {.g-col-6}
+::: {.g-col-8}
 
 ### Mobile Apps:
 

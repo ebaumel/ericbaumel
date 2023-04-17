@@ -3,6 +3,8 @@ project:
 
 website:
   title: "Eric M. Baumel, MD"
+  site-url: https://ericbaumel.com
+  favicon: favicon.ico
   navbar:
     right:
       - about.qmd

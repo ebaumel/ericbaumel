@@ -53,7 +53,7 @@ This string will become the .__doc__ attribute of your function and will officia
 There are tools (e.g., pdoc https://pdoc3.github.io/pdoc and pydoc https://docs.python.org/3/library/pydoc.html) that allow you to generate documentation from the multiline docstrings in your code.
 
 Imports
-(Not really about comments, but this is also good code hygiene.) 
+(Not really about comments, but this is also good code hygiene.)
 Imports should be grouped from most generic to least generic:
 Python standard library imports
 third-party module or package imports

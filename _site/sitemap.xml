@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ericbaumel.com/posts/2021-01-25-built-by-docs.html</loc>
+    <lastmod>2023-11-18T23:29:43.336Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ericbaumel.com/posts/2021-11-16-code-comments.html</loc>
+    <lastmod>2023-11-18T23:29:43.963Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ericbaumel.com/posts/2020-04-11-think-globally.html</loc>
+    <lastmod>2023-11-18T23:29:44.262Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ericbaumel.com/posts/2023-04-21-software-development-is-magic.html</loc>
+    <lastmod>2023-11-18T23:29:44.552Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ericbaumel.com/posts/2020-04-30-COVID-19-datasets.html</loc>
+    <lastmod>2023-11-18T23:29:45.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ericbaumel.com/posts/2022-01-22-jupyterlab-cheatsheet.html</loc>
+    <lastmod>2023-11-18T23:29:45.459Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ericbaumel.com/posts/2021-01-03-git-init-2021.html</loc>
+    <lastmod>2023-11-18T23:29:45.761Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ericbaumel.com/posts/2020-10-30-probabilistic-universe.html</loc>
+    <lastmod>2023-11-18T23:29:46.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ericbaumel.com/posts/2021-01-04-Setting-up-virtual-environments-in-python.html</loc>
+    <lastmod>2023-11-18T23:29:46.353Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ericbaumel.com/posts/2023-04-16-exploring-a-dicom-dataset.html</loc>
+    <lastmod>2023-11-18T23:29:46.780Z</lastmod>
+  </url>
+  <url>
     <loc>https://ericbaumel.com/index.html</loc>
-    <lastmod>2023-04-17T03:05:22.382Z</lastmod>
+    <lastmod>2023-11-18T23:29:47.169Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ericbaumel.com/about.html</loc>
+    <lastmod>2023-11-18T23:29:47.466Z</lastmod>
   </url>
 </urlset>

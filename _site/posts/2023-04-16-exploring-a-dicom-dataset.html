@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Eric M. Baumel">
+<meta name="dcterms.date" content="2023-04-16">
+<meta name="description" content="Tips and tricks for the next stup in Project Jupyter evolution.">
 
-<title>Eric M. Baumel, MD – dicom</title>
+<title>Eric M. Baumel, MD - Exploring a DICOM dataset</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,6 +96,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -167,7 +171,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Exploring a DICOM dataset</h1>
+                  <div>
+        <div class="description">
+          Tips and tricks for the next stup in Project Jupyter evolution.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">python</div>
+                <div class="quarto-category">development</div>
+                <div class="quarto-category">DICOM</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Eric M. Baumel </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 16, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -176,10 +218,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
+
+<section id="dicom-introduction" class="level1">
+<h1>DICOM Introduction</h1>
 <p>Exploring a DICOM dataset</p>
-<p>Adapted from the Kaggle Kernel: Getting to know DICOM and the Data by schlerp</p>
+<p>Adapted from :</p>
+<p>Kaggle Kernel: Getting to know DICOM and the Data by schlerp</p>
 <p>https://www.kaggle.com/schlerp/getting-to-know-dicom-and-the-data/notebook</p>
 <p>A Multi-platform DICOM Toolbox for Academic Radiologists by</p>
 <p>http://uwmsk.org/jupyter/Jupyter_DICOM_toolbox.html</p>
@@ -676,77 +720,12 @@ minimum value =  0
 maximum value =  248</code></pre>
 </div>
 </div>
-</section>
-</section>
-<section id="view-multiplanar-datasets" class="level1">
-<h1>View Multiplanar Datasets</h1>
-<div class="cell" data-execution_count="34">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interact, Dropdown, IntSlider</span>
-<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib notebook</span>
-<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'grayscale'</span>)</span>
-<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>train_abnl <span class="op">=</span> pd.read_csv(<span class="st">'../MRNet/MRNet-v1.0/train-abnormal.csv'</span>, header<span class="op">=</span><span class="va">None</span>,</span>
-<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>                        names<span class="op">=</span>[<span class="st">'Case'</span>, <span class="st">'Abnormal'</span>],</span>
-<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>                        dtype<span class="op">=</span>{<span class="st">'Case'</span>: <span class="bu">str</span>, <span class="st">'Abnormal'</span>: np.int64})</span>
-<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>train_path<span class="op">=</span><span class="st">'../MRNet/MRNet-v1.0/train'</span></span>
-<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Data loading functions</span></span>
-<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_one_stack(case, data_path<span class="op">=</span>train_path, plane<span class="op">=</span><span class="st">'coronal'</span>):</span>
-<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a>    fpath <span class="op">=</span> data_path<span class="op">/</span>plane<span class="op">/</span><span class="st">'</span><span class="sc">{}</span><span class="st">.npy'</span>.<span class="bu">format</span>(case)</span>
-<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.load(fpath)</span>
-<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_stacks(case, data_path<span class="op">=</span>train_path):</span>
-<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> {}</span>
-<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a>    planes <span class="op">=</span> [<span class="st">'coronal'</span>, <span class="st">'sagital'</span>, <span class="st">'axial'</span>]</span>
-<span id="cb50-22"><a href="#cb50-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, plane <span class="kw">in</span> <span class="bu">enumerate</span>(planes):</span>
-<span id="cb50-23"><a href="#cb50-23" aria-hidden="true" tabindex="-1"></a>        x[plane] <span class="op">=</span> load_one_stack(case, plane<span class="op">=</span>plane)</span>
-<span id="cb50-24"><a href="#cb50-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
-<span id="cb50-25"><a href="#cb50-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-26"><a href="#cb50-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Interactive viewer</span></span>
-<span id="cb50-27"><a href="#cb50-27" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> KneePlot():</span>
-<span id="cb50-28"><a href="#cb50-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">10</span>)):</span>
-<span id="cb50-29"><a href="#cb50-29" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.x <span class="op">=</span> x</span>
-<span id="cb50-30"><a href="#cb50-30" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.planes <span class="op">=</span> <span class="bu">list</span>(x.keys())</span>
-<span id="cb50-31"><a href="#cb50-31" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.slice_nums <span class="op">=</span> {plane: <span class="va">self</span>.x[plane].shape[<span class="dv">0</span>] <span class="cf">for</span> plane <span class="kw">in</span> <span class="va">self</span>.planes}</span>
-<span id="cb50-32"><a href="#cb50-32" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.figsize <span class="op">=</span> figsize</span>
-<span id="cb50-33"><a href="#cb50-33" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb50-34"><a href="#cb50-34" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> _plot_slices(<span class="va">self</span>, plane, im_slice):</span>
-<span id="cb50-35"><a href="#cb50-35" aria-hidden="true" tabindex="-1"></a>        fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span><span class="va">self</span>.figsize)</span>
-<span id="cb50-36"><a href="#cb50-36" aria-hidden="true" tabindex="-1"></a>        ax.imshow(<span class="va">self</span>.x[plane][im_slice, :, :])</span>
-<span id="cb50-37"><a href="#cb50-37" aria-hidden="true" tabindex="-1"></a>        plt.show()</span>
-<span id="cb50-38"><a href="#cb50-38" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb50-39"><a href="#cb50-39" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
-<span id="cb50-40"><a href="#cb50-40" aria-hidden="true" tabindex="-1"></a>        planes_widget <span class="op">=</span> Dropdown(options<span class="op">=</span><span class="va">self</span>.planes)</span>
-<span id="cb50-41"><a href="#cb50-41" aria-hidden="true" tabindex="-1"></a>        plane_init <span class="op">=</span> <span class="va">self</span>.planes[<span class="dv">0</span>]</span>
-<span id="cb50-42"><a href="#cb50-42" aria-hidden="true" tabindex="-1"></a>        slice_init <span class="op">=</span> <span class="va">self</span>.slice_nums[plane_init] <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb50-43"><a href="#cb50-43" aria-hidden="true" tabindex="-1"></a>        slices_widget <span class="op">=</span> IntSlider(<span class="bu">min</span><span class="op">=</span><span class="dv">0</span>, <span class="bu">max</span><span class="op">=</span>slice_init, value<span class="op">=</span>slice_init<span class="op">//</span><span class="dv">2</span>)</span>
-<span id="cb50-44"><a href="#cb50-44" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> update_slices_widget(<span class="op">*</span>args):</span>
-<span id="cb50-45"><a href="#cb50-45" aria-hidden="true" tabindex="-1"></a>            slices_widget.<span class="bu">max</span> <span class="op">=</span> <span class="va">self</span>.slice_nums[planes_widget.value] <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb50-46"><a href="#cb50-46" aria-hidden="true" tabindex="-1"></a>            slices_widget.value <span class="op">=</span> slices_widget.<span class="bu">max</span> <span class="op">//</span> <span class="dv">2</span></span>
-<span id="cb50-47"><a href="#cb50-47" aria-hidden="true" tabindex="-1"></a>        planes_widget.observe(update_slices_widget, <span class="st">'value'</span>)</span>
-<span id="cb50-48"><a href="#cb50-48" aria-hidden="true" tabindex="-1"></a>        interact(<span class="va">self</span>._plot_slices, plane<span class="op">=</span>planes_widget, im_slice<span class="op">=</span>slices_widget)</span>
-<span id="cb50-49"><a href="#cb50-49" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb50-50"><a href="#cb50-50" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> resize(<span class="va">self</span>, figsize):</span>
-<span id="cb50-51"><a href="#cb50-51" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.figsize <span class="op">=</span> figsize</span>
-<span id="cb50-52"><a href="#cb50-52" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb50-53"><a href="#cb50-53" aria-hidden="true" tabindex="-1"></a><span class="co">#example use</span></span>
-<span id="cb50-54"><a href="#cb50-54" aria-hidden="true" tabindex="-1"></a>case <span class="op">=</span> train_abnl.Case[<span class="dv">0</span>]</span>
-<span id="cb50-55"><a href="#cb50-55" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> load_stacks(case)</span>
-<span id="cb50-56"><a href="#cb50-56" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> KneePlot(x, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
-<span id="cb50-57"><a href="#cb50-57" aria-hidden="true" tabindex="-1"></a>plot.draw()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>FileNotFoundError: [Errno 2] No such file or directory: '../MRNet/MRNet-v1.0/train-abnormal.csv'</code></pre>
-</div>
-</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

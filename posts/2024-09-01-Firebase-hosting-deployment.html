@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Eric M. Baumel">
-<meta name="dcterms.date" content="2023-04-21">
-<meta name="description" content="Developers as Wizards with GitHub.">
+<meta name="dcterms.date" content="2021-09-09">
+<meta name="description" content="A receipe for deploying your website to Firebase Hosting.">
 
-<title>Eric M. Baumel, MD - Software Development is Magic</title>
+<title>Eric M. Baumel, MD - Firebase Hosting Deployment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,13 +107,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Software Development is Magic</h1>
+      <h1 class="title">Firebase Hosting Deployment</h1>
                   <div>
         <div class="description">
-          Developers as Wizards with GitHub.
+          A receipe for deploying your website to Firebase Hosting.
         </div>
       </div>
                           <div class="quarto-categories">
+                <div class="quarto-category">html</div>
                 <div class="quarto-category">development</div>
               </div>
                   </div>
@@ -132,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 21, 2023</p>
+        <p class="date">September 9, 2021</p>
       </div>
     </div>
     
@@ -151,18 +152,35 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>by Eric M. Baumel</p>
-<section id="software-development-is-magic" class="level1">
-<h1>Software Development is Magic</h1>
-<p>Developers are magicians \ Asking sand to do their bidding \</p>
-<p>You speak aloud your desire (or type, or click) and it is made manifest \ The right spell and you house lights up when it’s dark \ The right spell and you house cools down when the outside world is hot \ The correct spell and money moves accounts and (hopefully) makes you even more money \</p>
-<p>These are the spells that magicians have crafted so that non magicians can indirectly ask Sand to grant their desires \</p>
-<p>The magicians themselves know that you have to be very careful what you wish for \ The Sand is a fickle genie \ A mis-cast spell can have consequences \</p>
-<p>We call objects into being by calling them by a name \ Give them inheritance, properties and abilities \</p>
-<p>But like the Sorcerer’s Apprentice, we can create magic beyond our ability to control. \</p>
-<p>A little humility \ And an understanding that our spells can have consequences \ Is what separates a true wizard from an acolyte \</p>
-<p>Remember to be careful what you wish for \</p>
+<section id="deploying-your-website-on-firebase-hosting" class="level2">
+<h2 class="anchored" data-anchor-id="deploying-your-website-on-firebase-hosting">Deploying your website on Firebase Hosting</h2>
+<blockquote class="blockquote">
+<p>This is another of a series of mini-posts, mostly cheatsheets for my own use. Maybe of some value for others.</p>
+</blockquote>
+<section id="firebase-hosting-deployment" class="level3">
+<h3 class="anchored" data-anchor-id="firebase-hosting-deployment">Firebase Hosting Deployment</h3>
+<p>Update the website in your text editor of choice, such as VSCode.</p>
+<p>Open the Terminal and navigate to the directory containing the website.</p>
+<p><code>npm install firebase</code></p>
+<p><code>firebase init hosting</code></p>
+<p>If you get a “Failed to get Firebase project <em>&lt;project name&gt;</em>. Please make sure the project exists and your account has permission to access it.” error message run</p>
+<p><code>firebase logout</code></p>
+<p>Followed by</p>
+<p><code>firebase login</code></p>
+<p>Firebase will then ask you to login to your account on your browser. After authentication you will be able to log in.</p>
+<p><code>firebase init hosting</code></p>
+<p>Firebase will ask a few setup question.</p>
+<p>What do you want to use as your public directory? <em>public</em></p>
+<p>Configure as a single-page app (rewrite all urls to /index.html)? <em>No</em></p>
+<p>Set up automatic builds and deploys with GitHub? No</p>
+<p>If you already have a deployment for this project, it will ask if you want to overwrite your 404.html and index.html files.</p>
+<p><code>firebase serve</code></p>
+<p>Will setup a local test server on you computer at http://localhost:5002 where you can view your site before deployment.</p>
+<p>Deploy the site to the Firebase Hosting server with <code>firebase deploy</code></p>
+<p>After you are done editing your deployment, don’t forget to save your changes to GitHub.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

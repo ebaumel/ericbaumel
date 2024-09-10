@@ -5,7 +5,7 @@ author: Eric M. Baumel
 categories:
 - html
 - development
-date: '2021-09-01'
+date: '2024-09-01'
 description: A receipe for deploying your website to Firebase Hosting.
 layout: post
 title: Firebase Hosting Deployment

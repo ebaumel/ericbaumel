@@ -15,6 +15,9 @@ toc: false
 ## GitHub Pages Blog with Quarto
 
 
+> This is another of a series of mini-posts, mostly cheatsheets for my own use. Maybe of some value for others.
+
+
 Inspired by the fastpages blogs
 
 nbdev and Quarto an [End-To-End Walkthrough

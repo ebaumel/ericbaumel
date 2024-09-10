@@ -32,7 +32,7 @@
     "href": "posts/2024-09-09-publish-github-pages-blog-with-quarto.html",
     "title": "Publishing a GitHub Pages Blog with Quarto",
     "section": "",
-    "text": "Inspired by the fastpages blogs\nnbdev and Quarto an End-To-End Walkthrough\nFrom Christian Wittmann - How I created this Blog\nInstall the Quarto extension for VS Code.\nYou can preview on your local system with\nquarto preview <full/path/file.name> --no-browser --no-watch-inputs\nWhen you run\nquarto publish gh-pages\nyour blog posts are rendered, and the rendered versions are pushed to git in branch gh-pages\nTo backup your local copy of the unrendered files, save to the git main branch. For details see the GitHub cheatsheet, git init 2021\n[Markdown Cheat Sheet(]https://www.markdownguide.org/cheat-sheet/)"
+    "text": "This is another of a series of mini-posts, mostly cheatsheets for my own use. Maybe of some value for others.\n\nInspired by the fastpages blogs\nnbdev and Quarto an End-To-End Walkthrough\nFrom Christian Wittmann - How I created this Blog\nInstall the Quarto extension for VS Code.\nYou can preview on your local system with\nquarto preview <full/path/file.name> --no-browser --no-watch-inputs\nWhen you run\nquarto publish gh-pages\nyour blog posts are rendered, and the rendered versions are pushed to git in branch gh-pages\nTo backup your local copy of the unrendered files, save to the git main branch. For details see the GitHub cheatsheet, git init 2021\n[Markdown Cheat Sheet(]https://www.markdownguide.org/cheat-sheet/)"
   },
   {
     "objectID": "posts/2024-09-01-Firebase-hosting-deployment.html",

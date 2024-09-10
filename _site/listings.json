@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2024-09-09-publish-github-pages-blog-with-quarto.html",
       "/posts/2023-04-21-software-development-is-magic.html",
       "/posts/2023-04-16-exploring-a-dicom-dataset.html",
       "/posts/2022-01-22-jupyterlab-cheatsheet.html",

@@ -5,7 +5,7 @@ author: Eric M. Baumel
 categories:
 - html
 - development
-date: '2021-09-09'
+date: '2024-09-09'
 description: Adding to you GitHub Pages blog ith Jupyter Notebooks or Markdown generated HTML *à la* Fastpages using Quarto.
 layout: post
 title: Publishing a GitHub Pages Blog with Quarto

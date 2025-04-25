@@ -10,6 +10,8 @@ website:
       - about.qmd
       - icon: github
         href: https://github.com/ebaumel
+      - icon: bluesky
+        href: https://bsky.app/profile/ebaumel.bsky.social
 format:
   html:
     theme: cosmo

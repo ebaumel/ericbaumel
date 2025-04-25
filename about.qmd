@@ -10,7 +10,7 @@ about:
     - icon: github
       text: Github
       href: https://github.com/ebaumel
-    - text: Bluesky {{< fa brands bluesky >}}
+    - text: Bluesky "{{< iconify simplee-icons bluesky >}}"
       href: https://bsky.app/profile/ebaumel.bsky.social
 
 ---

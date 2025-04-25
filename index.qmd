@@ -23,18 +23,20 @@ title-block-banner: true
 
 ::: {.g-col-8}
 
-### Mobile Apps:
+### Mobile App:
 
 [Radiology Toolbox Pro for iOS](https://apps.apple.com/us/app/radiology-toolbox-pro/id466281848) / 
-[Radiology Toolbox for Google Play](https://play.google.com/store/apps/details?id=com.softcode.ebaumel.radiologytoolbox&hl=en_US)
 
 Winner 2014 Minnie Award - Best Mobile Radiology App
+
+### YouTube Channel
+[Coding4Docs](https://www.youtube.com/channel/UC2zrSPvTm1Kf5_CgaTAvMiA)
 
 ### Other Blogs:
 
 *Towards Data Science*
 
-[Machine Learning for Radiology — Where to Begin](https://towardsdatascience.com/machine-learning-for-radiology-where-to-begin-3a205db8718f)
+[Machine Learning for Radiology — Where to Begin](https://medium.com/data-science/machine-learning-for-radiology-where-to-begin-3a205db8718f)
 
 
 *embodi3D*

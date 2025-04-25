@@ -42,7 +42,7 @@ To backup your local copy of the unrendered files, save to the git main branch. 
 
 
 
-[Markdown Cheat Sheet(]https://www.markdownguide.org/cheat-sheet/)
+[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
 
 

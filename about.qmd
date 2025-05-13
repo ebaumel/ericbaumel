@@ -10,8 +10,12 @@ about:
     - icon: github
       text: Github
       href: https://github.com/ebaumel
-    - text: Bluesky "{{< iconify simplee-icons bluesky >}}"
+    - text: "{{< fa brands bluesky >}} Bluesky"
+      icon: fa-brands fa-bluesky
       href: https://bsky.app/profile/ebaumel.bsky.social
+    - text: "{{< fa brands orcid >}} ORCID"
+      icon: fa-brands fa-orcid
+      href: https://orcid.org/0009-0006-0567-8250
 
 ---
 # Eric M. Baumel, MD
@@ -19,15 +23,17 @@ Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, m
 
 Dr. Baumel has active medical licenses in CA, DC, DE, MD, NJ, NY, and VA. He has extensive practice experience in all modalities of radiology, including PET/CT, digital mammography/tomosynthesis, CT and MR angiography and 3D reconstructions, as well as radiography, CT, MRI, ultrasound, and nuclear medicine.
 
-He has been involved for several years with on-going clinical trials utilizing PET/CT in the diagnosis of Alzheimer’s Disease. He is on the medical advisory board of Wexma, a digital health innovations company based in Helsinki, Finland.
+He has been involved for several years with on-going clinical trials utilizing PET/CT in the diagnosis of Alzheimer’s Disease. He has previously served on the medical advisory board of Wexma, a digital health innovations company based in Helsinki, Finland.
 
 Dr. Baumel and his partners developed, operated and sold three full-service outpatient diagnostic centers. He spearheaded the construction of two commercial real estate projects, including a 20,000 sq. ft. two-story professional office building.
 
-Dr. Baumel is the founder of Softcode Systems, LLC, creators of digital tools for health. He has developed three medical education/reference mobile apps available in the [Apple iTunes App Store](https://apps.apple.com/us/developer/softcode-systems-inc/id415176376) and one in the [Google Play Store](https://play.google.com/store/apps/details?id=com.softcode.ebaumel.radiologytoolbox&hl=en_US). His app, Radiology Toolbox Pro was awarded the 2014 Minnie Award for [Best Radiology Mobile App](https://www.auntminnie.com/index.aspx?sec=rca&sub=rsna_2014&pag=pho&photoID=2117) by the leading medical imaging trade website, AuntMinnie.com.
+Eric is currently producing a series of YouTube tutorials, [Coding4Docs](https://www.youtube.com/channel/UC2zrSPvTm1Kf5_CgaTAvMiA) to teach the basics of computers and machine learning to healthcare professionals.
+
+Dr. Baumel is the founder of Softcode Systems, LLC, creators of digital tools for health. He has developed three medical education/reference mobile apps available in the [Apple iTunes App Store](https://apps.apple.com/us/developer/softcode-systems-inc/id415176376). His app, Radiology Toolbox Pro was awarded the 2014 Minnie Award for [Best Radiology Mobile App](https://www.auntminnie.com/index.aspx?sec=rca&sub=rsna_2014&pag=pho&photoID=2117) by the leading medical imaging trade website, AuntMinnie.com.
 
 He is currently developing Tap-Rx, a medication compliance and accountability app for the Apple Watch and iPhone. Eric is involved in medical 3D printing, having written two blog posts for the Embodi3D.com site on desktop medical 3D printing. He is a founding member of the RSNA 3D Printing Special Interest Group and is a member of the Augmented Reality committee.
 
-Dr. Baumel has held leadership positions in two hospital-based radiology practices, and is currently the co-founder and medical director of Digital Imaging Diagnostics, PLC, a radiology services provider based in Wellington, FL.
+Dr. Baumel has held leadership positions in two hospital-based radiology practices, and is currently the co-founder and medical director of Digital Imaging Diagnostics, PLC, a radiology services provider based in Wellington, FL. He currently provides ddiagnostic radiology services for George Washington University Hospital and Howard University Hospital and several local imaging centers.
 
 
 

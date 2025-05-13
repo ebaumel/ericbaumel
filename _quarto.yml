@@ -8,9 +8,11 @@ website:
   navbar:
     right:
       - about.qmd
+      - icon: linkedin
+        href: https://linkedin.com/in/ericbaumel/
       - icon: github
         href: https://github.com/ebaumel
-      - icon: bluesky
+      - icon: fa-brands fa-bluesky
         href: https://bsky.app/profile/ebaumel.bsky.social
 format:
   html:

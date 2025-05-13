@@ -25,12 +25,15 @@ title-block-banner: true
 
 ### Mobile App:
 
-[Radiology Toolbox Pro for iOS](https://apps.apple.com/us/app/radiology-toolbox-pro/id466281848) / 
+[Radiology Toolbox Pro for iOS](https://apps.apple.com/us/app/radiology-toolbox-pro/id466281848) 
+
+![](RadTools_logo.png){width=150 fig-alt="Radiology Toolbox Pro icon"}
 
 Winner 2014 Minnie Award - Best Mobile Radiology App
 
 ### YouTube Channel
 [Coding4Docs](https://www.youtube.com/channel/UC2zrSPvTm1Kf5_CgaTAvMiA)
+{{< video https://www.youtube.com/embed/54I_ZMan7Hw >}}
 
 ### Other Blogs:
 

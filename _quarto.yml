@@ -12,7 +12,7 @@ website:
         href: https://linkedin.com/in/ericbaumel/
       - icon: github
         href: https://github.com/ebaumel
-      - icon: fa-brands fa-bluesky
+      - icon: bluesky
         href: https://bsky.app/profile/ebaumel.bsky.social
 format:
   html:

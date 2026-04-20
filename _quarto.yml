@@ -5,6 +5,14 @@ website:
   title: "Eric M. Baumel, MD"
   site-url: https://ericbaumel.com
   favicon: favicon.ico
+  open-graph:
+    title: "Eric M. Baumel, MD"
+    description: "Radiologist, app developer, and medical 3D printing innovator. Blog covering coding, data science, and digital health."
+    image: Eric_Baumel.png
+  twitter-card:
+    title: "Eric M. Baumel, MD"
+    description: "Radiologist, app developer, and medical 3D printing innovator. Blog covering coding, data science, and digital health."
+    image: Eric_Baumel.png
   navbar:
     right:
       - about.qmd

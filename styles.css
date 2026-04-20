@@ -1,1 +1,8 @@
-/* css styles */
+body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.column-body {
+  max-width: 740px;
+}

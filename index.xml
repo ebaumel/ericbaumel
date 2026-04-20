@@ -1,0 +1,1864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Eric M. Baumel, MD</title>
+<link>https://ericbaumel.com/</link>
+<atom:link href="https://ericbaumel.com/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.6.32</generator>
+<lastBuildDate>Mon, 09 Sep 2024 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Publishing a GitHub Pages Blog with Quarto</title>
+  <dc:creator>Eric M. Baumel</dc:creator>
+  <link>https://ericbaumel.com/posts/2024-09-09-publish-github-pages-blog-with-quarto.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="github-pages-blog-with-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="github-pages-blog-with-quarto">GitHub Pages Blog with Quarto</h2>
+<blockquote class="blockquote">
+<p>This is another of a series of mini-posts, mostly cheatsheets for my own use. Maybe of some value for others.</p>
+</blockquote>
+<p>Inspired by the fastpages blogs</p>
+<p>nbdev and Quarto an <a href="https://nbdev.fast.ai/tutorials/tutorial.html#install-nbdev">End-To-End Walkthrough</a></p>
+<p>From Christian Wittmann - <a href="https://chrwittm.github.io/posts/2022-10-21-how-i-created-this-blog/">How I created this Blog</a></p>
+<p>Install the Quarto extension for VS Code.</p>
+<p>You can preview on your local system with</p>
+<p><code>quarto preview &lt;full/path/file.name&gt; --no-browser --no-watch-inputs</code></p>
+<p>When you run</p>
+<p><code>quarto publish gh-pages</code></p>
+<p>your blog posts are rendered, and the rendered versions are pushed to git in branch <em>gh-pages</em></p>
+<p>To backup your local copy of the unrendered files, save to the git main branch. For details see the GitHub cheatsheet, <a href="https://www.ericbaumel.com/posts/2021-01-03-git-init-2021.html">git init 2021</a></p>
+<p><a href="https://www.markdownguide.org/cheat-sheet/">Markdown Cheat Sheet</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>html</category>
+  <category>development</category>
+  <guid>https://ericbaumel.com/posts/2024-09-09-publish-github-pages-blog-with-quarto.html</guid>
+  <pubDate>Mon, 09 Sep 2024 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Firebase Hosting Deployment</title>
+  <dc:creator>Eric M. Baumel</dc:creator>
+  <link>https://ericbaumel.com/posts/2024-09-01-Firebase-hosting-deployment.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>by Eric M. Baumel</p>
+<section id="deploying-your-website-on-firebase-hosting" class="level2">
+<h2 class="anchored" data-anchor-id="deploying-your-website-on-firebase-hosting">Deploying your website on Firebase Hosting</h2>
+<blockquote class="blockquote">
+<p>This is another of a series of mini-posts, mostly cheatsheets for my own use. Maybe of some value for others.</p>
+</blockquote>
+<section id="firebase-hosting-deployment" class="level3">
+<h3 class="anchored" data-anchor-id="firebase-hosting-deployment">Firebase Hosting Deployment</h3>
+<p>Update the website in your text editor of choice, such as VSCode.</p>
+<p>Open the Terminal and navigate to the directory containing the website.</p>
+<p><code>npm install firebase</code></p>
+<p><code>firebase init hosting</code></p>
+<p>If you get a “Failed to get Firebase project <em>&lt;project name&gt;</em>. Please make sure the project exists and your account has permission to access it.” error message run</p>
+<p><code>firebase logout</code></p>
+<p>Followed by</p>
+<p><code>firebase login</code></p>
+<p>Firebase will then ask you to login to your account on your browser. After authentication you will be able to log in.</p>
+<p><code>firebase init hosting</code></p>
+<p>Firebase will ask a few setup question.</p>
+<p>What do you want to use as your public directory? <em>public</em></p>
+<p>Configure as a single-page app (rewrite all urls to /index.html)? <em>No</em></p>
+<p>Set up automatic builds and deploys with GitHub? No</p>
+<p>If you already have a deployment for this project, it will ask if you want to overwrite your 404.html and index.html files.</p>
+<p><code>firebase serve</code></p>
+<p>Will setup a local test server on you computer at http://localhost:5002 where you can view your site before deployment.</p>
+<p>Deploy the site to the Firebase Hosting server with <code>firebase deploy</code></p>
+<p>After you are done editing your deployment, don’t forget to save your changes to GitHub.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>html</category>
+  <category>development</category>
+  <guid>https://ericbaumel.com/posts/2024-09-01-Firebase-hosting-deployment.html</guid>
+  <pubDate>Sun, 01 Sep 2024 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Software Development is Magic</title>
+  <dc:creator>Eric M. Baumel</dc:creator>
+  <link>https://ericbaumel.com/posts/2023-04-21-software-development-is-magic.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>by Eric M. Baumel</p>
+<section id="software-development-is-magic" class="level1">
+<h1>Software Development is Magic</h1>
+<p>Developers are magicians<br>
+Asking sand to do their bidding<br>
+</p>
+<p>You speak aloud your desire (or type, or click) and it is made manifest<br>
+The right spell and you house lights up when it’s dark<br>
+The right spell and you house cools down when the outside world is hot<br>
+The correct spell and money moves accounts and (hopefully) makes you even more money<br>
+</p>
+<p>These are the spells that magicians have crafted so that non magicians can indirectly ask Sand to grant their desires<br>
+</p>
+<p>The magicians themselves know that you have to be very careful what you wish for<br>
+The Sand is a fickle genie<br>
+A mis-cast spell can have consequences<br>
+</p>
+<p>We call objects into being by calling them by a name<br>
+Give them inheritance, properties and abilities<br>
+</p>
+<p>But like the Sorcerer’s Apprentice, we can create magic beyond our ability to control.<br>
+</p>
+<p>A little humility<br>
+And an understanding that our spells can have consequences<br>
+Is what separates a true wizard from an acolyte<br>
+</p>
+<p>Remember to be careful what you wish for<br>
+</p>
+
+
+</section>
+
+ ]]></description>
+  <category>development</category>
+  <guid>https://ericbaumel.com/posts/2023-04-21-software-development-is-magic.html</guid>
+  <pubDate>Fri, 21 Apr 2023 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Exploring a DICOM dataset</title>
+  <dc:creator>Eric M. Baumel</dc:creator>
+  <link>https://ericbaumel.com/posts/2023-04-16-exploring-a-dicom-dataset.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="dicom-introduction" class="level1">
+<h1>DICOM Introduction</h1>
+<p>Exploring a DICOM dataset</p>
+<p>Adapted from :</p>
+<p>Kaggle Kernel: Getting to know DICOM and the Data by schlerp</p>
+<p>https://www.kaggle.com/schlerp/getting-to-know-dicom-and-the-data/notebook</p>
+<p>A Multi-platform DICOM Toolbox for Academic Radiologists by</p>
+<p>http://uwmsk.org/jupyter/Jupyter_DICOM_toolbox.html</p>
+<p>A Radiologist’s Exploration of the Stanford ML Group’s MRNet data by Walter Wiggins</p>
+<p>https://towardsdatascience.com/a-radiologists-exploration-of-the-stanford-ml-group-s-mrnet-data-8e2374e11bfb</p>
+<section id="imports" class="level3">
+<h3 class="anchored" data-anchor-id="imports">Imports</h3>
+<p>Import libraries and write settings here.</p>
+<div id="cell-2" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># File handling</span></span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> os</span>
+<span id="cb1-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> glob</span>
+<span id="cb1-4"></span>
+<span id="cb1-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Data manipulation</span></span>
+<span id="cb1-6"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd</span>
+<span id="cb1-7"></span>
+<span id="cb1-8"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb1-9"></span>
+<span id="cb1-10"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Data visualization</span></span>
+<span id="cb1-11"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib</span>
+<span id="cb1-12"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> matplotlib <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb1-13"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> matplotlib <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> image <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> mpimage</span>
+<span id="cb1-14"></span>
+<span id="cb1-15"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> seaborn <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> sns</span>
+<span id="cb1-16"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> tqdm <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> tqdm</span>
+<span id="cb1-17"></span>
+<span id="cb1-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Date manipulation</span></span>
+<span id="cb1-19"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> datetime</span>
+<span id="cb1-20"></span>
+<span id="cb1-21"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># DICOM format reader</span></span>
+<span id="cb1-22"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pydicom</span></code></pre></div>
+</div>
+<div id="cell-3" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> show_dcm_info(ds):</span>
+<span id="cb2-2">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>()</span>
+<span id="cb2-3">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Filename.........: "</span>, file_path)</span>
+<span id="cb2-4">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Storage type.....: "</span>, ds.SOPClassUID)</span>
+<span id="cb2-5">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>()</span>
+<span id="cb2-6">    </span>
+<span id="cb2-7">    pat_name <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ds.PatientName</span>
+<span id="cb2-8">    display_name <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pat_name.family_name <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">", "</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> pat_name.given_name</span>
+<span id="cb2-9">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Patient name.....: "</span>, display_name)</span>
+<span id="cb2-10">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Patient ID.......: "</span>, ds.PatientID)</span>
+<span id="cb2-11">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Patient Age......: "</span>, ds.PatientAge)</span>
+<span id="cb2-12">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Patient Sex......: "</span>, ds.PatientSex)</span>
+<span id="cb2-13">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Modality.........: "</span>, ds.Modality)</span>
+<span id="cb2-14">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Body Part........: "</span>, ds.BodyPartExamined)</span>
+<span id="cb2-15">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"View Position....: "</span>, ds.ViewPosition)</span>
+<span id="cb2-16">    </span>
+<span id="cb2-17">    </span>
+<span id="cb2-18">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'PixelData'</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> ds:</span>
+<span id="cb2-19">        rows <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>(ds.Rows)</span>
+<span id="cb2-20">        cols <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>(ds.Columns)</span>
+<span id="cb2-21">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Image size.......:  </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{rows:d}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> x </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{cols:d}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">, </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{size:d}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> bytes"</span>.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">format</span>(</span>
+<span id="cb2-22">            rows<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>rows, cols<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>cols, size<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(ds.PixelData)))</span>
+<span id="cb2-23">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'PixelSpacing'</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> ds:</span>
+<span id="cb2-24">            <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Pixel spacing....: "</span>, ds.PixelSpacing)</span></code></pre></div>
+</div>
+<div id="cell-4" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> plot_pixel_array(ds, figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)):</span>
+<span id="cb3-2">    plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>figsize)</span>
+<span id="cb3-3">    plt.imshow(ds.pixel_array, cmap<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>plt.cm.bone)</span>
+<span id="cb3-4">    plt.show()</span></code></pre></div>
+</div>
+<div id="cell-5" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb4-2">num_to_plot <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span></span>
+<span id="cb4-3">path <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'../dicom/train_images/'</span></span>
+<span id="cb4-4"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> file_name <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> os.listdir(path):</span>
+<span id="cb4-5">    file_path <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> os.path.join(path, file_name)</span>
+<span id="cb4-6">    ds <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pydicom.dcmread(file_path)</span>
+<span id="cb4-7">    show_dcm_info(ds)</span>
+<span id="cb4-8">    plot_pixel_array(ds)</span>
+<span id="cb4-9">    </span>
+<span id="cb4-10">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> num_to_plot:</span>
+<span id="cb4-11">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">break</span></span>
+<span id="cb4-12">        </span>
+<span id="cb4-13">    i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Filename.........:  ../dicom/train_images/1.2.276.0.7230010.3.1.4.8323329.300.1517875162.258081.dcm
+Storage type.....:  1.2.840.10008.5.1.4.1.1.7
+
+Patient name.....:  88c14312-3265-4a3f-b7bb-41818107d607, 
+Patient ID.......:  88c14312-3265-4a3f-b7bb-41818107d607
+Patient Age......:  58
+Patient Sex......:  F
+Modality.........:  CR
+Body Part........:  CHEST
+View Position....:  AP
+Image size.......:  1024 x 1024, 154050 bytes
+Pixel spacing....:  [0.139, 0.139]</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Filename.........:  ../dicom/train_images/1.2.276.0.7230010.3.1.4.8323329.304.1517875162.301989.dcm
+Storage type.....:  1.2.840.10008.5.1.4.1.1.7
+
+Patient name.....:  fa43083b-0d94-4849-a5c4-40120c380164, 
+Patient ID.......:  fa43083b-0d94-4849-a5c4-40120c380164
+Patient Age......:  60
+Patient Sex......:  M
+Modality.........:  CR
+Body Part........:  CHEST
+View Position....:  PA
+Image size.......:  1024 x 1024, 150238 bytes
+Pixel spacing....:  [0.14300000000000002, 0.14300000000000002]</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Filename.........:  ../dicom/train_images/1.2.276.0.7230010.3.1.4.8323329.301.1517875162.280319.dcm
+Storage type.....:  1.2.840.10008.5.1.4.1.1.7
+
+Patient name.....:  97d32841-8836-4630-873c-be0b4d2e5478, 
+Patient ID.......:  97d32841-8836-4630-873c-be0b4d2e5478
+Patient Age......:  50
+Patient Sex......:  F
+Modality.........:  CR
+Body Part........:  CHEST
+View Position....:  PA
+Image size.......:  1024 x 1024, 159756 bytes
+Pixel spacing....:  [0.14300000000000002, 0.14300000000000002]</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-6.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Filename.........:  ../dicom/train_images/1.2.276.0.7230010.3.1.4.8323329.303.1517875162.295039.dcm
+Storage type.....:  1.2.840.10008.5.1.4.1.1.7
+
+Patient name.....:  019a6d6a-4eac-4372-a1d4-fe9193826333, 
+Patient ID.......:  019a6d6a-4eac-4372-a1d4-fe9193826333
+Patient Age......:  44
+Patient Sex......:  M
+Modality.........:  CR
+Body Part........:  CHEST
+View Position....:  PA
+Image size.......:  1024 x 1024, 130602 bytes
+Pixel spacing....:  [0.171, 0.171]</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-8.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Filename.........:  ../dicom/train_images/1.2.276.0.7230010.3.1.4.8323329.302.1517875162.286330.dcm
+Storage type.....:  1.2.840.10008.5.1.4.1.1.7
+
+Patient name.....:  e6f57005-8262-46ac-92ab-7c858e4ae126, 
+Patient ID.......:  e6f57005-8262-46ac-92ab-7c858e4ae126
+Patient Age......:  74
+Patient Sex......:  M
+Modality.........:  CR
+Body Part........:  CHEST
+View Position....:  PA
+Image size.......:  1024 x 1024, 136118 bytes
+Pixel spacing....:  [0.171, 0.171]</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-10.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Data in DICOM header</p>
+<div id="cell-7" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1">ds</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>Dataset.file_meta -------------------------------
+(0002, 0000) File Meta Information Group Length  UL: 200
+(0002, 0001) File Meta Information Version       OB: b'\x00\x01'
+(0002, 0002) Media Storage SOP Class UID         UI: Secondary Capture Image Storage
+(0002, 0003) Media Storage SOP Instance UID      UI: 1.2.276.0.7230010.3.1.4.8323329.302.1517875162.286330
+(0002, 0010) Transfer Syntax UID                 UI: JPEG Baseline (Process 1)
+(0002, 0012) Implementation Class UID            UI: 1.2.276.0.7230010.3.0.3.6.0
+(0002, 0013) Implementation Version Name         SH: 'OFFIS_DCMTK_360'
+-------------------------------------------------
+(0008, 0005) Specific Character Set              CS: 'ISO_IR 100'
+(0008, 0016) SOP Class UID                       UI: Secondary Capture Image Storage
+(0008, 0018) SOP Instance UID                    UI: 1.2.276.0.7230010.3.1.4.8323329.302.1517875162.286330
+(0008, 0020) Study Date                          DA: '19010101'
+(0008, 0030) Study Time                          TM: '000000.00'
+(0008, 0050) Accession Number                    SH: ''
+(0008, 0060) Modality                            CS: 'CR'
+(0008, 0064) Conversion Type                     CS: 'WSD'
+(0008, 0090) Referring Physician's Name          PN: ''
+(0008, 103e) Series Description                  LO: 'view: PA'
+(0010, 0010) Patient's Name                      PN: 'e6f57005-8262-46ac-92ab-7c858e4ae126'
+(0010, 0020) Patient ID                          LO: 'e6f57005-8262-46ac-92ab-7c858e4ae126'
+(0010, 0030) Patient's Birth Date                DA: ''
+(0010, 0040) Patient's Sex                       CS: 'M'
+(0010, 1010) Patient's Age                       AS: '74'
+(0018, 0015) Body Part Examined                  CS: 'CHEST'
+(0018, 5101) View Position                       CS: 'PA'
+(0020, 000d) Study Instance UID                  UI: 1.2.276.0.7230010.3.1.2.8323329.302.1517875162.286329
+(0020, 000e) Series Instance UID                 UI: 1.2.276.0.7230010.3.1.3.8323329.302.1517875162.286328
+(0020, 0010) Study ID                            SH: ''
+(0020, 0011) Series Number                       IS: '1'
+(0020, 0013) Instance Number                     IS: '1'
+(0020, 0020) Patient Orientation                 CS: ''
+(0028, 0002) Samples per Pixel                   US: 1
+(0028, 0004) Photometric Interpretation          CS: 'MONOCHROME2'
+(0028, 0010) Rows                                US: 1024
+(0028, 0011) Columns                             US: 1024
+(0028, 0030) Pixel Spacing                       DS: [0.171, 0.171]
+(0028, 0100) Bits Allocated                      US: 8
+(0028, 0101) Bits Stored                         US: 8
+(0028, 0102) High Bit                            US: 7
+(0028, 0103) Pixel Representation                US: 0
+(0028, 2110) Lossy Image Compression             CS: '01'
+(0028, 2114) Lossy Image Compression Method      CS: 'ISO_10918_1'
+(7fe0, 0010) Pixel Data                          OB: Array of 136118 elements</code></pre>
+</div>
+</div>
+<p>Info about undelying pixel data</p>
+<div id="cell-9" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1">im <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ds.pixel_array</span>
+<span id="cb12-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">type</span>(im))</span>
+<span id="cb12-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(im.dtype)</span>
+<span id="cb12-4"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(im.shape)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'numpy.ndarray'&gt;
+uint8
+(1024, 1024)</code></pre>
+</div>
+</div>
+<p>Convert DICOM to JPG/PNG</p>
+<div id="cell-11" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> cv2</span></code></pre></div>
+</div>
+<div id="cell-12" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> dicom_to_jpg():</span>
+<span id="cb15-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Change to True to make PNG format</span></span>
+<span id="cb15-3">    PNG <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span></span>
+<span id="cb15-4">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># DICOM folder path</span></span>
+<span id="cb15-5">    folder_path <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'../dicom/train_images/'</span></span>
+<span id="cb15-6">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Output path</span></span>
+<span id="cb15-7">    output_path <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'../dicom/converted/'</span></span>
+<span id="cb15-8">    images_path <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> os.listdir(folder_path)</span>
+<span id="cb15-9">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> n, image <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">enumerate</span>(images_path):</span>
+<span id="cb15-10">        ds <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pydicom.dcmread(os.path.join(folder_path, image))</span>
+<span id="cb15-11">        pixel_array_numpy <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ds.pixel_array</span>
+<span id="cb15-12">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> PNG <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>:</span>
+<span id="cb15-13">            image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> image.replace(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'.dcm'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'.jpg'</span>)</span>
+<span id="cb15-14">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">else</span>:</span>
+<span id="cb15-15">            image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> image.replace(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'.dcm'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'.png'</span>)</span>
+<span id="cb15-16">        cv2.imwrite(os.path.join(output_path, image), pixel_array_numpy)</span>
+<span id="cb15-17">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:</span>
+<span id="cb15-18">            <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> image converted'</span>.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">format</span>(n))</span></code></pre></div>
+</div>
+<div id="cell-13" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1">dicom_to_jpg()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0 image converted</code></pre>
+</div>
+</div>
+<p><strong>Patient Demographics</strong></p>
+<div id="cell-15" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Load functions from scikit-image library</span></span>
+<span id="cb18-2"></span>
+<span id="cb18-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> skimage <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> exposure</span>
+<span id="cb18-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> skimage.morphology <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> morp</span>
+<span id="cb18-5"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> skimage.filters <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> rank</span>
+<span id="cb18-6"></span>
+<span id="cb18-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># For date functions</span></span>
+<span id="cb18-8"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> datetime <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> datetime</span></code></pre></div>
+</div>
+<div id="cell-16" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1">ds.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">dir</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'patient'</span>)</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>['PatientAge',
+ 'PatientBirthDate',
+ 'PatientID',
+ 'PatientName',
+ 'PatientOrientation',
+ 'PatientSex']</code></pre>
+</div>
+</div>
+<div id="cell-17" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1">ds.PatientName</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>'e6f57005-8262-46ac-92ab-7c858e4ae126'</code></pre>
+</div>
+</div>
+<div id="cell-18" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Change Patient Name</span></span>
+<span id="cb23-2"></span>
+<span id="cb23-3">AKA <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Blaine, Richard"</span></span>
+<span id="cb23-4">ds.PatientName <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> AKA</span>
+<span id="cb23-5">ds.PatientName</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>'Blaine, Richard'</code></pre>
+</div>
+</div>
+<div id="cell-19" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Change DOB</span></span>
+<span id="cb25-2"></span>
+<span id="cb25-3">epoch <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'19700101'</span></span>
+<span id="cb25-4">ds.PatientBirthDate <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> epoch</span>
+<span id="cb25-5"></span>
+<span id="cb25-6">ds.PatientBirthDate</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>'19700101'</code></pre>
+</div>
+</div>
+<div id="cell-20" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span> python <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">--</span>version</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Python 3.9.7</code></pre>
+</div>
+</div>
+<div id="cell-21" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Calculate patient age at time of scan</span></span>
+<span id="cb29-2">dob <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> datetime.strptime(ds.PatientBirthDate, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'%Y%m</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%d</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>)</span>
+<span id="cb29-3">study_date <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> datetime.strptime(ds.StudyDate, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'%Y%m</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%d</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>)</span>
+<span id="cb29-4">age <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (study_date <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> dob).days<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">365</span></span>
+<span id="cb29-5"></span>
+<span id="cb29-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span> (<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Age = "</span>, age)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Age =  -69.04657534246576</code></pre>
+</div>
+</div>
+<div id="cell-22" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Calculate current age</span></span>
+<span id="cb31-2">dob <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> datetime.strptime(ds.PatientBirthDate, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'%Y%m</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%d</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>)</span>
+<span id="cb31-3">now <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> datetime.now()</span>
+<span id="cb31-4">current_age <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (now <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> dob).days<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">365</span></span>
+<span id="cb31-5"></span>
+<span id="cb31-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Current age = "</span>, current_age)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Current age =  53.25205479452055</code></pre>
+</div>
+</div>
+<div id="cell-23" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Change study date</span></span>
+<span id="cb33-2"></span>
+<span id="cb33-3">fictional <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'20210504'</span></span>
+<span id="cb33-4">ds.StudyDate <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> fictional</span>
+<span id="cb33-5"></span>
+<span id="cb33-6">ds.StudyDate</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<pre><code>'20210504'</code></pre>
+</div>
+</div>
+<p><strong>Anonymizing a folder of DICOM images</strong></p>
+<div id="cell-25" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> filename <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> glob.iglob(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'cleft/*.DCM'</span>, recursive<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>):</span>
+<span id="cb35-2">    ds <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pydicom.read_file(filename, force<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb35-3">    </span>
+<span id="cb35-4">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Obtain the name of the folder containing the DICOM files</span></span>
+<span id="cb35-5">    foldername<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>os.path.basename(os.path.dirname(os.path.dirname(filename)))</span>
+<span id="cb35-6">    </span>
+<span id="cb35-7">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Delete patient name, patientID, accession number and patient birthdate</span></span>
+<span id="cb35-8">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">del</span> ds.PatientName</span>
+<span id="cb35-9">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">del</span> ds.PatientID</span>
+<span id="cb35-10">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">del</span> ds.AccessionNumber</span>
+<span id="cb35-11">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">del</span> ds.PatientBirthDate</span>
+<span id="cb35-12">    </span>
+<span id="cb35-13">    pydicom.write_file(filename,ds)</span>
+<span id="cb35-14">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(filename)</span></code></pre></div>
+</div>
+<p><strong>iPython Widgets</strong></p>
+<div id="cell-27" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> ipywidgets <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> interactive, interact, widgets, Layout, Button, Box, Dropdown, IntSlider</span>
+<span id="cb36-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> IPython.display <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> display</span></code></pre></div>
+</div>
+<div id="cell-28" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Turn off warnings</span></span>
+<span id="cb37-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> warnings</span>
+<span id="cb37-3">warnings.filterwarnings(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ignore'</span>)</span></code></pre></div>
+</div>
+<div id="cell-29" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> contrast_adjust(image_name, percentile_lo, percentile_hi):</span>
+<span id="cb38-2">    </span>
+<span id="cb38-3">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># save optimized image array to global vaiable so that other functions can use</span></span>
+<span id="cb38-4">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">global</span> img_rescale_interactive, image_name_global</span>
+<span id="cb38-5">    </span>
+<span id="cb38-6">    image_name_global <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> image_name</span>
+<span id="cb38-7">    p_lo, p_hi <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.percentile(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">eval</span>(image_name), (percentile_lo, percentile_hi))</span>
+<span id="cb38-8">    </span>
+<span id="cb38-9">    img_rescale <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> exposure.rescale_intensity(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">eval</span>(image_name), in_range<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(p_lo, p_hi))</span>
+<span id="cb38-10">    </span>
+<span id="cb38-11">    </span>
+<span id="cb38-12">    img_rescale_interactive <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> img_rescale</span>
+<span id="cb38-13">    </span>
+<span id="cb38-14">    plt.figure(figsize <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>), dpi<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span>
+<span id="cb38-15">    plt.imshow(img_rescale, cmap<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>plt.cm.gray)</span>
+<span id="cb38-16">    </span>
+<span id="cb38-17">    plt.show()</span></code></pre></div>
+</div>
+<div id="cell-30" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Widget to save image in differnt formats</span></span>
+<span id="cb39-2"></span>
+<span id="cb39-3">button_jpg <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> widgets.Button(description <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Save .jpg version"</span>)</span>
+<span id="cb39-4">button_png <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> widgets.Button(description <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Save .png version"</span>)</span>
+<span id="cb39-5">button_tiff <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> widgets.Button(description <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Save .tiff version"</span>)</span>
+<span id="cb39-6"></span>
+<span id="cb39-7">items <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [</span>
+<span id="cb39-8">    button_jpg,</span>
+<span id="cb39-9">    button_png,</span>
+<span id="cb39-10">    button_tiff</span>
+<span id="cb39-11">]</span>
+<span id="cb39-12"></span>
+<span id="cb39-13">box_layout <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Layout(display <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'flex'</span>,</span>
+<span id="cb39-14">                   flex_flow <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'row'</span>,</span>
+<span id="cb39-15">                   align_items <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'stretch'</span></span>
+<span id="cb39-16">                   )</span>
+<span id="cb39-17"></span>
+<span id="cb39-18">box <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Box(children <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> items, layout <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> box_layout)</span>
+<span id="cb39-19"></span>
+<span id="cb39-20"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> jpg_button_clicked(b):</span>
+<span id="cb39-21">    plt.imsave(image_name_global <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'.jpg'</span>, img_rescale_interactive, cmap<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>plt.cm.gray)</span>
+<span id="cb39-22">    </span>
+<span id="cb39-23"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> png_button_clicked(b):</span>
+<span id="cb39-24">    plt.imsave(image_name_global <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'.png'</span>, img_rescale_interactive, cmap<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>plt.cm.gray)</span>
+<span id="cb39-25">    </span>
+<span id="cb39-26"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> tiff_button_clicked(b):</span>
+<span id="cb39-27">    plt.imsave(image_name_global <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'.tiff'</span>, img_rescale_interactive, cmap<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>plt.cm.gray)</span>
+<span id="cb39-28">    </span>
+<span id="cb39-29">button_jpg.on_click(jpg_button_clicked)</span>
+<span id="cb39-30">button_png.on_click(png_button_clicked)</span>
+<span id="cb39-31">button_tiff.on_click(tiff_button_clicked)</span></code></pre></div>
+</div>
+<div id="cell-31" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb40" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1">w <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> interactive(contrast_adjust, image_name<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ds.pixel_array'</span>, percentile_lo<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>,<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">.5</span>), percentile_hi<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>,<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">.5</span>))</span>
+<span id="cb40-2"></span>
+<span id="cb40-3">display(w)</span>
+<span id="cb40-4"></span>
+<span id="cb40-5">box</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"cea77e16d2d946fb98c4b9fd5ad3168c","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"c947d25f947f49869a48c9c3f19015dc","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+<div id="cell-32" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1">image_name_global</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+<pre><code>'ds.pixel_array'</code></pre>
+</div>
+</div>
+<p>Invert Image</p>
+<div id="cell-34" class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1">plt.figure(figsize <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>), dpi<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span>
+<span id="cb43-2">figure <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.imshow(ds.pixel_array, cmap<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>plt.cm.gist_yarg)</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-27-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Mirror Image R &gt; L</p>
+<div id="cell-36" class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1">plt.imshow(np.fliplr(ds.pixel_array), cmap<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>plt.cm.gray)</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-28-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Flip Image</p>
+<div id="cell-38" class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1">plt.imshow(np.flipud(ds.pixel_array), cmap<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>plt.cm.gray)</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-29-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Histogram</strong></p>
+<div id="cell-40" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1">plt.hist(ds.pixel_array.flatten(), bins<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">64</span>)</span>
+<span id="cb46-2">plt.show()</span>
+<span id="cb46-3"></span>
+<span id="cb46-4"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"pixel array = "</span>, ds.pixel_array.shape)</span>
+<span id="cb46-5"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"minimum value = "</span>, np.amin(ds.pixel_array)) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Find minimum value in pixel array</span></span>
+<span id="cb46-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"maximum value = "</span>, np.amax(ds.pixel_array)) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Find maximum value in pixel array</span></span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-30-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>pixel array =  (1024, 1024)
+minimum value =  0
+maximum value =  248</code></pre>
+</div>
+</div>
+<div id="cell-42" class="cell">
+<div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"></span></code></pre></div>
+</div>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>python</category>
+  <category>development</category>
+  <category>DICOM</category>
+  <guid>https://ericbaumel.com/posts/2023-04-16-exploring-a-dicom-dataset.html</guid>
+  <pubDate>Sun, 16 Apr 2023 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>JupyterLab Cheat Sheet</title>
+  <link>https://ericbaumel.com/posts/2022-01-22-jupyterlab-cheatsheet.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="jupyterlab-cheat-sheet" class="level1">
+<h1>JupyterLab Cheat Sheet</h1>
+<section id="by-eric-m.-baumel" class="level3">
+<h3 class="anchored" data-anchor-id="by-eric-m.-baumel">by Eric M. Baumel</h3>
+<p>JupyterLab is the latest iteration of the popular interactive Python notebook environment, inheriting from iPython and Jupyter Notebooks. See <a href="https://jupyter.org">Project Jupyter</a>.<br>
+JupyterLab provides the interactive notebook format of Jupyter Notebooks, with an integrated file borwser, console and more.</p>
+<p>You install JupyterLab either from Anaconda or via pip with: <code>pip install jupyterlab</code>.</p>
+<p>You launch the JupyterLab server from the command line with <code>jupyter lab</code>.</p>
+<p>If your browser doesn’t launch by itself, you go to <code>http://localhost:8888/lab</code></p>
+<p>A iPython notebook file <code>.ipynb</code> can be opened with either Jupyter Notebok or JupyterLab.</p>
+</section>
+<section id="jupyterlab-interface-shortcuts" class="level2">
+<h2 class="anchored" data-anchor-id="jupyterlab-interface-shortcuts">JupyterLab Interface Shortcuts</h2>
+<ul>
+<li>Toggle the sidebar with <code>Cmd + B</code></li>
+<li>Save the notebook with <code>Cmd + S</code></li>
+<li>Save As with <code>Shift + Cmd + S</code></li>
+<li>Close a tab with <code>Option + W</code> or <code>Alt + W</code></li>
+</ul>
+</section>
+<section id="running-a-cell" class="level2">
+<h2 class="anchored" data-anchor-id="running-a-cell">Running a Cell</h2>
+<ul>
+<li><p>To execute a cell and move tho the next cell in command mode click the run button <code>▸</code> in the toolbar or use <code>Shift + Enter</code> on the keyboard</p></li>
+<li><p>To execute the cell and stay on that cell use <code>Ctl + Enter</code></p></li>
+<li><p>Interupt a Running Cell with <code>II</code></p></li>
+</ul>
+</section>
+<section id="toggle-between-command-and-edit-modes" class="level2">
+<h2 class="anchored" data-anchor-id="toggle-between-command-and-edit-modes">Toggle Between Command and Edit Modes</h2>
+<ul>
+<li>Change to Command mode with the <code>ESC</code> key</li>
+<li>Change to the Edit mode with the <code>Enter</code> key</li>
+</ul>
+<section id="command-mode-keyboard-shortcuts" class="level3">
+<h3 class="anchored" data-anchor-id="command-mode-keyboard-shortcuts">Command Mode Keyboard Shortcuts</h3>
+<p>Move between cells with the up <code>↑</code> and down <code>↓</code> arrow keys</p>
+<ul>
+<li><p>Create a cell <em>above</em> the active cell with the <code>A</code> key</p></li>
+<li><p>Create a cell <em>below</em> the active cell with the <code>B</code> key</p></li>
+<li><p>Delete the active cell with <code>DD</code></p></li>
+<li><p>Undo a cell with the <code>Z</code> key</p></li>
+<li><p>Copy a cell with the <code>C</code> key</p></li>
+<li><p>Paste a cell with the <code>V</code> key</p></li>
+<li><p>Change to <em>markdown</em> mode with the <code>M</code> key</p></li>
+<li><p>Change to <em>code</em> mode with the <code>Y</code> key</p></li>
+</ul>
+</section>
+</section>
+<section id="code-completion" class="level2">
+<h2 class="anchored" data-anchor-id="code-completion">Code Completion</h2>
+<p>The <code>Tab</code> key gives you a list of possible class or function choices.</p>
+<p><code>Shift + Tab</code> shows a tooltip of the fucion or class the cursor is on.</p>
+</section>
+<section id="markdown-basics" class="level2">
+<h2 class="anchored" data-anchor-id="markdown-basics">Markdown Basics</h2>
+<p>Adapted from: <a href="https://www.markdownguide.org/basic-syntax/">Markdown Guide</a></p>
+<section id="headings" class="level3">
+<h3 class="anchored" data-anchor-id="headings">Headings</h3>
+<p>To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level.</p>
+<p>For compatibility, always put a space between the number signs and the heading name. Also, put blank lines before and after a heading for compatibility.</p>
+<p>Example:</p>
+<p><code># Heading 1: Document Title</code></p>
+<p><code>## Heading 2: A subtitle</code></p>
+</section>
+</section>
+</section>
+<section id="heading-1-document-title" class="level1">
+<h1>Heading 1: Document Title</h1>
+<section id="heading-2-a-subtitle" class="level2">
+<h2 class="anchored" data-anchor-id="heading-2-a-subtitle">Heading 2: A subtitle</h2>
+<section id="line-breaks" class="level3">
+<h3 class="anchored" data-anchor-id="line-breaks">Line Breaks</h3>
+<p>To create a line break or new line <code>&lt;br&gt;</code>, end a line with two or more spaces, and then type return.</p>
+<p>Example:<br>
+<code>A line break &lt;br&gt; here.</code><br>
+A line break <br> here.</p>
+</section>
+<section id="text-formatting" class="level3">
+<h3 class="anchored" data-anchor-id="text-formatting">Text Formatting</h3>
+<p><strong>Bold Text</strong> - <code>**Bold Text**</code><br>
+<em>Italics Text</em> - <code>*Italic Text*</code><br>
+<strong><em>BoldItalics</em></strong> - <code>***BoldItalic Text***</code></p>
+</section>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<p>To show a word or phrase as code, enclose it in backticks (`).</p>
+<p>Example:</p>
+<p>Install a library with, <code>pip install jupyterlabs</code>.</p>
+<p>Code blocks are normally indented four spaces or one tab. When they’re in a list, indent them eight spaces or two tabs. You can also enclose the codeblock thith three backticks (``<code>), or three tildes</code>~~~`.</p>
+<pre><code># Imports
+import pandas
+import numpy</code></pre>
+</section>
+<section id="links" class="level3">
+<h3 class="anchored" data-anchor-id="links">Links</h3>
+<p><code>[title](https://www.example.com)</code></p>
+</section>
+<section id="images" class="level3">
+<h3 class="anchored" data-anchor-id="images">Images</h3>
+<p><code>![alt text](image.jpg)</code></p>
+</section>
+<section id="blockquotes" class="level3">
+<h3 class="anchored" data-anchor-id="blockquotes">Blockquotes</h3>
+<p>The <em>Greater Than</em> sign <code>&gt;</code> offsets blockquotes.</p>
+<p><code>&gt; Think globally, act locally.</code> is rendered as: &gt; Think globally, act locally.</p>
+</section>
+<section id="lists" class="level3">
+<h3 class="anchored" data-anchor-id="lists">Lists</h3>
+<section id="unordered-lists" class="level4">
+<h4 class="anchored" data-anchor-id="unordered-lists">Unordered Lists</h4>
+<p>Use a dash <code>-</code> for unorderd list:</p>
+<ul>
+<li>An Unordered List Item <code>- An Unordered List Item</code>
+<ul>
+<li>Another List Item <code>- Another List Item</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="ordered-lists" class="level4">
+<h4 class="anchored" data-anchor-id="ordered-lists">Ordered Lists</h4>
+<ol type="1">
+<li>To create an order list, start the line with a number and a period. <code>1. To create an order list...</code></li>
+<li>If you need to use a number at the start of a list item, you <em>escape</em> the period by adding a backslash character <code>\</code> after the number, but before the period: <code>2022\. That's the year I wrote this.</code></li>
+</ol>
+
+
+</section>
+</section>
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://ericbaumel.com/posts/2022-01-22-jupyterlab-cheatsheet.html</guid>
+  <pubDate>Sat, 22 Jan 2022 05:00:00 GMT</pubDate>
+  <media:content url="https://ericbaumel.com/posts/interface_jupyterlab.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>Code Comments</title>
+  <dc:creator>Eric M. Baumel</dc:creator>
+  <link>https://ericbaumel.com/posts/2021-11-16-code-comments.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="code-comments" class="level2">
+<h2 class="anchored" data-anchor-id="code-comments">Code Comments</h2>
+<p>Be a good coding citizen, and be kind to your future self.</p>
+<blockquote class="blockquote">
+<p>This is yet another in a series of posts about development infrastructure basics.</p>
+</blockquote>
+<p>Some developers feel that code should be self-commenting; that the code should speak for itself. This might be an ideal, but for mere mortals comments helps explain the code and help aid future developers, including the future you.</p>
+<p>Stylistically, comments should be complete sentences. The first word should be capitalized, unless it is an identifier that begins with a lower case letter.</p>
+<p>Comments should be made at the same level of indent as the code it is commenting.</p>
+<p>Here are the basics of comments for Python, Swift and a number of other languages.</p>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python">Python</h3>
+<p>For a single line code, Python ignores everything after the hash mark ‘#’ and up to the end of the line.</p>
+<p>Inline comments occur on the same line of a statement, following the code itself. They are separated by two spaces from the statement. These begin with a hash mark and a single whitespace character.</p>
+<p>While PEP 8 https://www.python.org/dev/peps/pep-0008/#maximum-line-length advises keeping code at 79 characters or fewer per line, it suggests a max of 72 characters for inline comments and docstrings. If your comment is approaching or exceeding that length, then you’ll want to spread it out over multiple lines.</p>
+<p>You can comment out a block of code by selecting the lines and pressing Ctrl+/ on PC, or Cmd+/ on Mac.</p>
+<p>Docstring convention https://www.python.org/dev/peps/pep-0257/</p>
+<p>Docstrings are documentation comments which provide documentations for functions, classes and modules. These are defined by a pair of triple quotes (“”” ), just below the function or class declaration.</p>
+<p>This string will become the .__doc__ attribute of your function and will officially be associated with that specific method.</p>
+<p>There are tools (e.g., pdoc https://pdoc3.github.io/pdoc and pydoc https://docs.python.org/3/library/pydoc.html) that allow you to generate documentation from the multiline docstrings in your code.</p>
+<p>Imports (Not really about comments, but this is also good code hygiene.) Imports should be grouped from most generic to least generic: Python standard library imports third-party module or package imports Code repository sub-package imports</p>
+<p>Place a blank line between import sections. Alphabetize within each group.</p>
+<p>Python filenames must have a .py extension and must not contain dashes (-). You can use underscores instead.</p>
+</section>
+<section id="swift" class="level3">
+<h3 class="anchored" data-anchor-id="swift">Swift</h3>
+<p>Code Comments</p>
+<p>Code after double slashes, //, or in between slash stars, /* */ are code comments and are ignored by the compiler.</p>
+<p>Documentation Comments</p>
+<p>Option+Cmd+/, tells Xcode to insert a documentation comment placeholder for us. When your text cursor is above a function it will automatically add placeholders for parameters and return type.</p>
+</section>
+<section id="c-and-c" class="level3">
+<h3 class="anchored" data-anchor-id="c-and-c">C and C++</h3>
+<p>C++ uses // for single line and inline comments and the C style /* for multi line <em>/ comments. Some authors suggest ’/</em>’<br>
+and ’/**/’ for multi line commenting out of code, so you can then toggle the comments by deleting the initial comment characters to uncomment the lines.</p>
+<p>“C-style” or “multi-line” comments are /* Comment */.</p>
+<p>“C++-style” or “single-line” comments are // Comment.</p>
+</section>
+<section id="html" class="level3">
+<h3 class="anchored" data-anchor-id="html">HTML</h3>
+<p>HTML comments are <!-- --> for both single and multi line.</p>
+</section>
+<section id="css" class="level3">
+<h3 class="anchored" data-anchor-id="css">CSS</h3>
+<p>CSS comments are the C-style /* */</p>
+</section>
+<section id="javascript" class="level3">
+<h3 class="anchored" data-anchor-id="javascript">JavaScript</h3>
+<p>JavaScript uses the same comment style as Swift: // for single lines and: /* For multi lines */</p>
+<p>JSDoc comments are used to for documentation comments, as in Swift, immediately above the function call. These comments begin with /** and use tags starting with the “at” symbol, such as <span class="citation" data-cites="constructor">@constructor</span> and <span class="citation" data-cites="param">@param</span> .</p>
+</section>
+<section id="yaml" class="level3">
+<h3 class="anchored" data-anchor-id="yaml">YAML</h3>
+<p>YAML only supports single line comments, starting with the ‘#’ sign.</p>
+</section>
+<section id="json" class="level3">
+<h3 class="anchored" data-anchor-id="json">JSON</h3>
+<p>Nope. There are no comments in json.</p>
+</section>
+<section id="markdown" class="level3">
+<h3 class="anchored" data-anchor-id="markdown">Markdown</h3>
+<p><code>&lt;!--- Using 3 hyphens —-&gt;</code></p>
+<p>Alternative methods:</p>
+<p><code>[//]: # “Comment goes here.”</code> <code>[//]: # (Comment goes here.)</code></p>
+<p><code>[comment]: # (Yet another comment style.)</code></p>
+</section>
+<section id="jekyll" class="level3">
+<h3 class="anchored" data-anchor-id="jekyll">Jekyll</h3>
+<p><code>{% comment %}</code></p>
+<pre><code>These lines are commented out.</code></pre>
+<p><code>{% endcomment %}</code></p>
+</section>
+<section id="ruby" class="level3">
+<h3 class="anchored" data-anchor-id="ruby">Ruby</h3>
+<p>A single line comment starts with # character and they extend from # to the end of the line</p>
+<p>You comment multiple lines using =begin and =end syntax. These tokens should start at the beginning of the line and be the only thing on that line.</p>
+</section>
+<section id="sql" class="level3">
+<h3 class="anchored" data-anchor-id="sql">SQL</h3>
+<p>SQL comments use /* For both inline comments and multi lines. */ Single line comments start with ‘—’, a double dash.</p>
+<p>Now go forth and be excellent to each other (and youself).</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>python</category>
+  <category>swift</category>
+  <category>html</category>
+  <category>development</category>
+  <guid>https://ericbaumel.com/posts/2021-11-16-code-comments.html</guid>
+  <pubDate>Tue, 16 Nov 2021 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Built By Docs</title>
+  <dc:creator>Eric M. Baumel</dc:creator>
+  <link>https://ericbaumel.com/posts/2021-01-25-built-by-docs.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="because-the-future-doesnt-invent-itself" class="level2">
+<h2 class="anchored" data-anchor-id="because-the-future-doesnt-invent-itself">Because the future doesn’t invent itself</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ericbaumel.com/posts/Machine-Learning-CXR-1.png" class="img-fluid figure-img"></p>
+<figcaption>Machine learning - chest xray</figcaption>
+</figure>
+</div>
+<p>Let’s get the tired truisms out of the way first, the healthcare system as we know it is broken. There are multiple problems throughout the entire system, both large and small. Resources of course - time, personnel and money - are finite. Put all of this aside for the moment. What kind of healthcare system would you design, if you were doing it from the ground up? What kind of future do you want to build? Is it Star Trek or Blade Runner?</p>
+<blockquote class="blockquote">
+<p><em>“May I never see in the patient anything but a fellow creature in pain.”</em></p>
+<p>The Oath of Maimonides</p>
+</blockquote>
+<p>Our job in healthcare is to watch over the life and health of our patients, and by extension the public at large.</p>
+<p>Technology alone cannot accomplish a solution to all the problems in our communities, to insure their health and well-being. But it can set an infrastructure for us to support the building of a better system.</p>
+<p>Where do we go from here?</p>
+<p>What ingredients do we need to bake into healthcare design?</p>
+<ul>
+<li>Interoperability</li>
+<li>Access to information, clearly displayed</li>
+<li>Privacy protections</li>
+<li>Price transparency</li>
+<li>Involvement by clinical healthcare professionals - from the very start</li>
+</ul>
+<p>Start building!</p>
+<p><em>(originally published February 27, 2019 on builtbydocs.com)</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>digital health</category>
+  <guid>https://ericbaumel.com/posts/2021-01-25-built-by-docs.html</guid>
+  <pubDate>Mon, 25 Jan 2021 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Setting Up Virtual Environments in Python</title>
+  <dc:creator>Eric M. Baumel</dc:creator>
+  <link>https://ericbaumel.com/posts/2021-01-04-Setting-up-virtual-environments-in-python.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="a-clean-well-lighted-place" class="level2">
+<h2 class="anchored" data-anchor-id="a-clean-well-lighted-place">A Clean, Well-Lighted Place</h2>
+<blockquote class="blockquote">
+<p>This is an opinionated set of instructions to set up virtual environments for each project.</p>
+</blockquote>
+<p>A virtual environement is a clean sandbox without any installed python libraries. This allows you to add the libraries you need for your project, without conflicts from packages installed for other, unrelated projects on your system. This also helps you containerize you projects so they can be deployed cleanly or shared with other developers.</p>
+<p>After several other explorations, I use venv to manage the environments for all my projects. Know that venv is not the only method of setting up virtual environments, but is the officially suggested method by the folks at <a href="https://docs.python.org/3/tutorial/venv.html">python.org</a>.</p>
+<p>There are several other methods, such as using the Anaconda Navigator or conda via the command line, pipenv and pyenv.</p>
+<section id="to-get-started" class="level3">
+<h3 class="anchored" data-anchor-id="to-get-started">To get started:</h3>
+<ul>
+<li><p>Install Python on computer, if this isn’t already installed.</p></li>
+<li><p>Check instillation of Python on a clean Terminal window with <code>python —version</code> <em>(that is a double dash)</em>.</p></li>
+<li><p>Check instillation of pip with <code>pip —version</code>.</p></li>
+<li><p>Install virtualenv with <code>pip install virtualenv</code>.</p></li>
+<li><p>Confirm the instillation with <code>virtualenv —version</code>.</p></li>
+<li><p>In your development directory of choice (ex.: the Desktop, /Dev, /Documents, etc.), create a new directory with <code>mkdir &lt;Project_Name&gt;</code>.</p></li>
+<li><p>Navigate to the new project directory <code>cd &lt;Project_Name&gt;</code>.</p></li>
+<li><p>Create a new env environment with <code>python -m venv venv</code>.</p></li>
+<li><p>Activate with <code>. venv/bin/activate</code> <em>(don’t forget the ‘dot space’)</em>. You should see <code>(venv)</code> before the terminal prompt, confirming that you are in the active virtual environment.</p></li>
+<li><p>Add new packages with <code>pip install SomePackage</code>.</p></li>
+<li><p>Upgrade a package with <code>pip install --upgrade SomePackage</code>.</p></li>
+<li><p>After installing dependencies, use <code>pip freeze &gt; requirements.txt</code> to list the requirements and version numbers for that project. For a clean install of all of these dependencies into another fresh environment, use <code>pip install -r requirements.txt</code></p></li>
+</ul>
+<blockquote class="blockquote">
+<p>You can view the installed dependencies with <code>cat requirements.txt</code>.</p>
+</blockquote>
+<ul>
+<li>Deactivate the virtual environment with <code>deactivate venv</code>.</li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>python</category>
+  <category>data science</category>
+  <category>development</category>
+  <guid>https://ericbaumel.com/posts/2021-01-04-Setting-up-virtual-environments-in-python.html</guid>
+  <pubDate>Mon, 04 Jan 2021 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>git init 2021</title>
+  <dc:creator>Eric M. Baumel</dc:creator>
+  <link>https://ericbaumel.com/posts/2021-01-03-git-init-2021.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>by Eric M. Baumel</p>
+<section id="putting-your-project-under-source-control-with-github" class="level2">
+<h2 class="anchored" data-anchor-id="putting-your-project-under-source-control-with-github">Putting your project under source control with GitHub</h2>
+<blockquote class="blockquote">
+<p>This is the first of a series of mini-posts of various computer housekeeping tips, initially for my own use. Hopefully these may also be some some benefit for others.</p>
+</blockquote>
+<p>Source control with git serves several functions: - It provides a method of keeping track of changes made to your code, so you can roll back to a previous save if needed. - If used with a remote hosting service such as GitHub, gives a convenient back up of your code in the cloud. - Allows easy collaboration with other developers. - Can be used by many providers for managing deployment.</p>
+<section id="lets-get-started" class="level3">
+<h3 class="anchored" data-anchor-id="lets-get-started">Let’s Get Started</h3>
+<ul>
+<li><p>Install git on your system, if not alread done: <a href="https://github.com/git-guides/install-git">Git Install</a></p></li>
+<li><p>Make directory to hold project</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>For iOS development: Create Xcode Project - start with appropriate project type</p>
+</blockquote>
+<ul>
+<li><p>Navigate to your project folder using the command line.</p></li>
+<li><p>In Terminal, put project under source control.</p>
+<pre><code>  git init</code></pre></li>
+<li><p>Create a <code>.gitignore</code> file.</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>A .gitignore file lists the files and directories you do <em>not</em> want under source control, such as hidden files (.DS_Store on MacOS) , environment files (.env), secure credentials, venv and test directories, etc.</p>
+</blockquote>
+<ul>
+<li><p>Once you have files ready to be placed under source control, view the files that have been created or changed.</p>
+<pre><code>  git status</code></pre></li>
+<li><p>Track these files so they can be commited.</p>
+<pre><code>  git add .</code></pre></li>
+<li><p>Commit the waiting files.</p>
+<pre><code>  git commit -m “Project setup”</code></pre></li>
+</ul>
+<blockquote class="blockquote">
+<p>Only push commits that will build and run.</p>
+</blockquote>
+<ul>
+<li><p>Now that you have a local git repo on your system, get ready to save it on GitHub:</p></li>
+<li><p>Create new repository on GitHub. <a href="https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo">GitHub: Create a repo</a></p></li>
+<li><p>Push your local repo to the remote main branch.</p>
+<pre><code>  git remote add origin &lt;URL&gt;
+  git push origin main</code></pre></li>
+<li><p>Continue your work in a <code>dev</code> branch. This becomes your HEAD branch.</p>
+<pre><code>  git checkout -b &lt;new-branch&gt;</code></pre></li>
+</ul>
+</section>
+<section id="other-useful-git-commands" class="level3">
+<h3 class="anchored" data-anchor-id="other-useful-git-commands">Other Useful Git Commands</h3>
+<ul>
+<li><p><code>git log</code> Shows all commits.</p></li>
+<li><p><code>git branch -av</code> Lists all local branches.</p></li>
+<li><p><code>git remote -v</code> List all remote branches.</p></li>
+<li><p><code>git checkout &lt;branch&gt;</code> Switches your HEAD branch.</p></li>
+<li><p><code>git branch -m &lt;new-branch&gt;</code> Rename your HEAD branch.</p></li>
+<li><p><code>git branch -d &lt;local-branch&gt;</code> Delete local branch.</p></li>
+<li><p><code>git push origin --delete &lt;remote-branch-name&gt;</code> Delete remote branch.</p></li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>python</category>
+  <category>swift</category>
+  <category>data science</category>
+  <category>development</category>
+  <guid>https://ericbaumel.com/posts/2021-01-03-git-init-2021.html</guid>
+  <pubDate>Sun, 03 Jan 2021 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Probabilistic Universe</title>
+  <dc:creator>Eric M. Baumel, MD</dc:creator>
+  <link>https://ericbaumel.com/posts/2020-10-30-probabilistic-universe.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>We live in a probabilistic universe, with the obvious exception of death. Even taxes are probability weighted.</p>
+<p>There is no absolute certainty in markets or anything else in life. The outputs of all our calculations should be expressed in terms of percentages. Chance rules all. Risk is not just built into the system, it <em>IS</em> the system.</p>
+
+
+
+ ]]></description>
+  <category>markets</category>
+  <category>risk</category>
+  <guid>https://ericbaumel.com/posts/2020-10-30-probabilistic-universe.html</guid>
+  <pubDate>Fri, 30 Oct 2020 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>COVID-19 Datasets</title>
+  <link>https://ericbaumel.com/posts/2020-04-30-COVID-19-datasets.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Eric M. Baumel, MD</p>
+<p>If you are interested in exploring the data yourself for visualization, research, educational or machine learning purposes, here are a list of sources.</p>
+<section id="open-source-imaging-datasets-ct-and-x-rays" class="level3">
+<h3 class="anchored" data-anchor-id="open-source-imaging-datasets-ct-and-x-rays">Open Source Imaging Datasets (CT and X-rays)</h3>
+<p>COVID CT Scans</p>
+<p><a href="http://covidctscans.org" class="uri">http://covidctscans.org</a></p>
+<p>Open source repository of COVID-19 CT scans, segmented 3D models, simulation models and more</p>
+<p>(16 cases (includes the 10 from Coronacases.org))</p>
+<p>Kaggle : COVID-19 CT scans</p>
+<p><a href="https://www.kaggle.com/andrewmvd/covid19-ct-scans" class="uri">https://www.kaggle.com/andrewmvd/covid19-ct-scans</a></p>
+<p>(20 cases – confirmed)</p>
+<p>COVID-CT-Dataset: A CT Scan Dataset about COVID-19</p>
+<p><a href="https://github.com/UCSD-AI4H/COVID-CT" class="uri">https://github.com/UCSD-AI4H/COVID-CT</a></p>
+<p><a href="https://arxiv.org/pdf/2003.13865.pdf" class="uri">https://arxiv.org/pdf/2003.13865.pdf</a></p>
+<p>COVID-19 Radiology Dataset (chest XRay &amp; CT) for Annotation &amp; Collaboration</p>
+<p><a href="https://towardsdatascience.com/covid-19-imaging-dataset-chest-xray-ct-for-annotation-collaboration-5f6e076f5f22" class="uri">https://towardsdatascience.com/covid-19-imaging-dataset-chest-xray-ct-for-annotation-collaboration-5f6e076f5f22</a></p>
+<p>Coronacases.org</p>
+<p><a href="https://coronacases.org/forum/coronacases-org-helping-radiologists-to-help-people-in-more-than-100-countries-1" class="uri">https://coronacases.org/forum/coronacases-org-helping-radiologists-to-help-people-in-more-than-100-countries-1</a></p>
+<p>(10 cases – confirmed)</p>
+<p>COVID-19 image data collection</p>
+<p><a href="https://github.com/ieee8023/covid-chestxray-dataset" class="uri">https://github.com/ieee8023/covid-chestxray-dataset</a></p>
+<p>(Chest Xrays)</p>
+<p>COVID-19 CT segmentation dataset</p>
+<p><a href="http://medicalsegmentation.com/covid19/" class="uri">http://medicalsegmentation.com/covid19/</a></p>
+<p>COVID-19 CT Lung and Infection Segmentation Dataset</p>
+<p><a href="https://zenodo.org/record/3757476#.XqivsC2z3yw" class="uri">https://zenodo.org/record/3757476#.XqivsC2z3yw</a></p>
+<p>(20 labeled CT scans taken from cornacases and Radiopedia)</p>
+</section>
+<section id="general-covid-19-radiology-information" class="level3">
+<h3 class="anchored" data-anchor-id="general-covid-19-radiology-information">General COVID-19 Radiology Information</h3>
+<p>Radiopedia</p>
+<p><a href="https://radiopaedia.org/articles/covid-19-3" class="uri">https://radiopaedia.org/articles/covid-19-3</a></p>
+<p>Excellent overview of the disease and radiologic manifestations</p>
+<p>RSNA Special Focus: COVID-19</p>
+<p><a href="https://pubs.rsna.org/2019-ncov" class="uri">https://pubs.rsna.org/2019-ncov</a></p>
+</section>
+<section id="who-general-health-information" class="level3">
+<h3 class="anchored" data-anchor-id="who-general-health-information">WHO General Health Information</h3>
+<p>World Health Organization: Global research on coronavirus disease (COVID-19)</p>
+<p><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov" class="uri">https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov</a></p>
+</section>
+<section id="epidemiologic-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="epidemiologic-datasets">Epidemiologic Datasets</h3>
+<p>Johns Hopkins Coronavirus Resource Center</p>
+<p><a href="https://coronavirus.jhu.edu/us-map" class="uri">https://coronavirus.jhu.edu/us-map</a></p>
+<p>Johns Hopkins Github Data Repository</p>
+<p><a href="https://github.com/CSSEGISandData/COVID-19" class="uri">https://github.com/CSSEGISandData/COVID-19</a></p>
+<p>Tableau COVID-19 Data Hub</p>
+<p><a href="https://www.tableau.com/covid-19-coronavirus-data-resources" class="uri">https://www.tableau.com/covid-19-coronavirus-data-resources</a></p>
+<p>Nextstrain</p>
+<p><a href="https://github.com/nextstrain/ncov" class="uri">https://github.com/nextstrain/ncov</a></p>
+<p>Genomic epidemiology of novel coronavirus - Global subsampling</p>
+<p><a href="https://nextstrain.org/ncov/global" class="uri">https://nextstrain.org/ncov/global</a></p>
+<p>Kaggle COVID-19 Open Research Dataset Challenge (CORD-19)</p>
+<p><a href="https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge" class="uri">https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge</a></p>
+</section>
+<section id="research-papers-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="research-papers-dataset">Research papers dataset</h3>
+<p>CORD-19 COVID-19 Open Research Dataset</p>
+<p><a href="https://www.semanticscholar.org/cord19" class="uri">https://www.semanticscholar.org/cord19</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>COVID-19</category>
+  <category>datasets</category>
+  <category>radiology</category>
+  <guid>https://ericbaumel.com/posts/2020-04-30-COVID-19-datasets.html</guid>
+  <pubDate>Thu, 30 Apr 2020 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Think globally, act locally</title>
+  <link>https://ericbaumel.com/posts/2020-04-11-think-globally.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This expression originated in urban planning and environmentalism, but is can be applied broadly in many disciplines including business, politics and computer science.</p>
+<p>I like to think it also can be viewed with regards to our conduct towards our own family and our personal inner lives.</p>
+<p>Charity begins at home, both in being charitable in thoughts and deeds to those closest to us, and in caring for ourselves.</p>
+<p><em>Be kind to each other, and be kind to yourself.</em></p>
+
+
+
+ ]]></description>
+  <category>ethics</category>
+  <guid>https://ericbaumel.com/posts/2020-04-11-think-globally.html</guid>
+  <pubDate>Sat, 11 Apr 2020 04:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

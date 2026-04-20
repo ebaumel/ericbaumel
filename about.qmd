@@ -10,11 +10,11 @@ about:
     - icon: github
       text: Github
       href: https://github.com/ebaumel
-    - text: "{{< fa brands bluesky >}} Bluesky"
-      icon: fa-brands fa-bluesky
+    - text: Bluesky
+      icon: bluesky
       href: https://bsky.app/profile/ebaumel.bsky.social
-    - text: "{{< fa brands orcid >}} ORCID"
-      icon: fa-brands fa-orcid
+    - text: ORCID
+      icon: orcid
       href: https://orcid.org/0009-0006-0567-8250
 
 ---

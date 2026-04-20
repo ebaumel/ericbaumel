@@ -6,7 +6,7 @@ categories:
 - html
 - development
 date: '2024-09-01'
-description: A receipe for deploying your website to Firebase Hosting.
+description: A recipe for deploying your website to Firebase Hosting.
 layout: post
 title: Firebase Hosting Deployment
 toc: false

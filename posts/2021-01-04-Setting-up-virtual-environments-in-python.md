@@ -7,7 +7,7 @@ categories:
 - data science
 - development
 date: '2021-01-04'
-description: A receipe for setting up a virtual environment for Python projects.
+description: A recipe for setting up a virtual environment for Python projects.
 layout: post
 title: Setting Up Virtual Environments in Python
 toc: false

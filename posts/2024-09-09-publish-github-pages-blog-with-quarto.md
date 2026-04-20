@@ -6,7 +6,7 @@ categories:
 - html
 - development
 date: '2024-09-09'
-description: Adding to you GitHub Pages blog ith Jupyter Notebooks or Markdown generated HTML *à la* Fastpages using Quarto.
+description: Adding to your GitHub Pages blog with Jupyter Notebooks or Markdown generated HTML *à la* Fastpages using Quarto.
 layout: post
 title: Publishing a GitHub Pages Blog with Quarto
 toc: false

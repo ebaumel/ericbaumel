@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Eric M. Baumel, MD">
-<meta name="dcterms.date" content="2020-10-30">
-<meta name="description" content="Between 0.0 and 1.0.">
+<meta name="author" content="Eric M. Baumel">
+<meta name="dcterms.date" content="2026-05-25">
+<meta name="description" content="A Claude Code skill - /wrapup — a five-step end-of-session ritual that takes about five minutes and closes out a session properly.">
 
-<title>Probabilistic Universe – Eric M. Baumel, MD</title>
+<title>Claude Code End-of-Session Ritual – Eric M. Baumel, MD</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,15 +144,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Probabilistic Universe</h1>
+      <h1 class="title">Claude Code End-of-Session Ritual</h1>
                   <div>
         <div class="description">
-          Between 0.0 and 1.0.
+          A Claude Code skill - <code>/wrapup</code> — a five-step end-of-session ritual that takes about five minutes and closes out a session properly.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">markets</div>
-                <div class="quarto-category">risk</div>
+                <div class="quarto-category">claude</div>
+                <div class="quarto-category">development</div>
               </div>
                   </div>
   </div>
@@ -163,14 +163,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Eric M. Baumel, MD </p>
+               <p>Eric M. Baumel </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 30, 2020</p>
+        <p class="date">May 25, 2026</p>
       </div>
     </div>
     
@@ -189,10 +189,37 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>We live in a probabilistic universe, with the obvious exception of death. Even taxes are probability weighted.</p>
-<p>There is no absolute certainty in markets or anything else in life. The outputs of all our calculations should be expressed in terms of percentages. Chance rules all. Risk is not just built into the system, it <em>IS</em> the system.</p>
+<section id="claude-code-end-of-session-ritual" class="level1">
+<h1>Claude Code End-of-Session Ritual</h1>
+<p>Every Claude Code session starts with amnesia.</p>
+<p>You want to pick up where you left off, but you need to explain the project all over again or waste tokens having Claude look at the file structure. I would spend the first ten minutes re-explaining what I was doing, what I had already decided, and what the actual next step was.</p>
+<p>Claude Code is a blank slate at the start of every session. It doesn’t remember that I chose Firebase over CloudKit for HIPAA reasons. It doesn’t know I already solved the anonymous auth problem. It has no idea what I was about to do next.</p>
+<p>For a while I just lived with that friction. Then I got tired of it and built a fix.</p>
+<p>Each session is a fresh context window. So the question is: <em>how do I make sure the right context is always written down in a place Claude reads automatically?</em></p>
+<p>The answer is for Claude Code to read the <code>CLAUDE.md</code> at the start of every session. If that file has a clear, present-tense description of where the project is right now and exactly what comes next, the session starts in five seconds instead of ten minutes. It’s less like a memory and more like a standing briefing doc.</p>
+<section id="what-i-built" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-built">What I Built</h2>
+<p>I created a Claude skill called <code>/wrapup</code> — a five-step end-of-session ritual that takes about five minutes and closes out a session properly.</p>
+<p>Here’s what it does:</p>
+<p><strong>Step 1: Brain Dump.</strong> Before touching any files, it reads the git diff from the session and asks: <em>does this capture what you did today, or is there anything to add?</em> You might think of this as an answer to four questions: what did I complete, what’s still in progress, what’s the single next action, and were there any non-obvious decisions?</p>
+<p><strong>Step 2: Update <code>CLAUDE.md</code>.</strong> It proposes specific edits and waits for confirmation before writing. The file stays present-tense and forward-looking — a briefing doc, not a changelog.</p>
+<p><strong>Step 3: Update <code>DECISIONS.md</code>.</strong> Any architectural choices from the session get logged as a new append-only entry. This file never gets edited or deleted. Six months from now, when you’re wondering why you chose X over Y, this file is the answer.</p>
+<p><strong>Step 4: Commit to Git — with a <code>Next:</code> line.</strong> It drafts a conventional commit message from the session summary. The key addition is a <code>Next:</code> line at the bottom of the commit message that states the single immediate next action. Your git log becomes a resumption guide.</p>
+<p><strong>Step 5: Update Claude Memory.</strong> Claude Code can’t write directly to your Claude.ai memory, so the skill ends with a pre-filled copy-paste block you can drop into your Claude.ai chat to keep cross-project memory current.</p>
+<p>Now, when you want to pick a project back up, just type <code>claude</code>.</p>
+<hr>
+<p>The <code>DECISIONS.md</code> pattern deserves its own callout, because it is a gift for future you.</p>
+<p>When you’re building something over weeks or months, you make dozens of small architectural decisions. Some are obvious in retrospect. Others only made sense given constraints that existed at the time, and if you forget those constraints, the decision looks arbitrary or even wrong.</p>
+<p>In medicine, we document our clinical reasoning in the patient’s chart, not just our orders. The note captures <em>why</em> we chose this medication, not just that we chose it. <code>DECISIONS.md</code> is that note for your codebase. And because it’s append-only, you never accidentally overwrite history.</p>
+</section>
+<section id="the-bigger-picture" class="level2">
+<h2 class="anchored" data-anchor-id="the-bigger-picture">The Bigger Picture</h2>
+<p>Every session you end without a proper close is a small tax on the next one. Multiply that by fifty sessions on a project and you’ve spent hours just getting back up to speed.</p>
+<p>The <code>/wrapup</code> ritual makes each session a clean handoff to the next one. For anyone building something real with Claude Code — especially those of us doing it without a team around us — that’s worth five minutes at the end of every session.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -31,7 +31,7 @@
 <p>The answer is for Claude Code to read the <code>CLAUDE.md</code> at the start of every session. If that file has a clear, present-tense description of where the project is right now and exactly what comes next, the session starts in five seconds instead of ten minutes. It’s less like a memory and more like a standing briefing doc.</p>
 <section id="what-i-built" class="level2">
 <h2 class="anchored" data-anchor-id="what-i-built">What I Built</h2>
-<p>I created a Claude skill called <code>/wrapup</code> — a five-step end-of-session ritual that takes about five minutes and closes out a session properly.</p>
+<p>I created a Claude skill called <code>/wrapup</code> — a five-step end-of-session ritual that takes about five minutes and closes out a session properly. You can find it here for free on GitHub <a href="https://github.com/ebaumel/claude-wrapup">claude-wrapup</a>.</p>
 <p>Here’s what it does:</p>
 <p><strong>Step 1: Brain Dump.</strong> Before touching any files, it reads the git diff from the session and asks: <em>does this capture what you did today, or is there anything to add?</em> You might think of this as an answer to four questions: what did I complete, what’s still in progress, what’s the single next action, and were there any non-obvious decisions?</p>
 <p><strong>Step 2: Update <code>CLAUDE.md</code>.</strong> It proposes specific edits and waits for confirmation before writing. The file stays present-tense and forward-looking — a briefing doc, not a changelog.</p>
@@ -47,9 +47,12 @@
 <section id="the-bigger-picture" class="level2">
 <h2 class="anchored" data-anchor-id="the-bigger-picture">The Bigger Picture</h2>
 <p>Every session you end without a proper close is a small tax on the next one. Multiply that by fifty sessions on a project and you’ve spent hours just getting back up to speed.</p>
+<section id="please-give-it-a-try-claude-wrapup" class="level3">
+<h3 class="anchored" data-anchor-id="please-give-it-a-try-claude-wrapup">Please give it a try: <a href="https://github.com/ebaumel/claude-wrapup">claude-wrapup</a></h3>
 <p>The <code>/wrapup</code> ritual makes each session a clean handoff to the next one. For anyone building something real with Claude Code — especially those of us doing it without a team around us — that’s worth five minutes at the end of every session.</p>
 
 
+</section>
 </section>
 </section>
 

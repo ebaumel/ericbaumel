@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ericbaumel.com/about.html</loc>
-    <lastmod>2026-04-20T22:21:59.252Z</lastmod>
+    <loc>https://www.ericbaumel.com/about.html</loc>
+    <lastmod>2026-07-05T01:33:55.667Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2023-04-16-exploring-a-dicom-dataset.html</loc>
-    <lastmod>2024-11-02T18:45:24.797Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2023-04-16-exploring-a-dicom-dataset.html</loc>
+    <lastmod>2026-07-05T01:35:22.918Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2020-10-30-probabilistic-universe.html</loc>
-    <lastmod>2024-11-02T18:45:24.791Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2026-05-25-claude-code-end-of-session-ritual.html</loc>
+    <lastmod>2026-07-05T01:34:36.765Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2022-01-22-jupyterlab-cheatsheet.html</loc>
-    <lastmod>2025-02-17T03:47:11.388Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2021-01-03-git-init-2021.html</loc>
+    <lastmod>2026-07-05T01:34:36.760Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2024-09-01-Firebase-hosting-deployment.html</loc>
-    <lastmod>2026-04-20T22:16:35.780Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2020-04-30-COVID-19-datasets.html</loc>
+    <lastmod>2026-07-05T01:34:36.758Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2024-09-09-publish-github-pages-blog-with-quarto.html</loc>
-    <lastmod>2026-04-20T22:16:41.662Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2024-09-09-publish-github-pages-blog-with-quarto.html</loc>
+    <lastmod>2026-07-05T01:34:36.764Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2020-04-11-think-globally.html</loc>
-    <lastmod>2024-11-02T18:45:24.790Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2020-04-11-think-globally.html</loc>
+    <lastmod>2026-07-05T01:34:36.757Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2021-01-25-built-by-docs.html</loc>
-    <lastmod>2024-11-02T18:45:24.791Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2026-07-06-medical-ai-where-to-begin.html</loc>
+    <lastmod>2026-07-05T11:49:32.695Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2021-11-16-code-comments.html</loc>
-    <lastmod>2024-11-02T18:45:24.791Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2021-01-25-built-by-docs.html</loc>
+    <lastmod>2026-07-05T01:34:36.761Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2023-04-21-software-development-is-magic.html</loc>
-    <lastmod>2024-11-02T18:45:24.798Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2021-11-16-code-comments.html</loc>
+    <lastmod>2026-07-05T01:34:36.762Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2026-25-05-claude-code-end-of-session-ritual.html</loc>
-    <lastmod>2026-05-25T14:53:29.009Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2023-04-21-software-development-is-magic.html</loc>
+    <lastmod>2026-07-05T01:34:36.762Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2020-04-30-COVID-19-datasets.html</loc>
-    <lastmod>2024-11-02T18:45:24.791Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2024-09-01-Firebase-hosting-deployment.html</loc>
+    <lastmod>2026-07-05T01:34:36.763Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2021-01-03-git-init-2021.html</loc>
-    <lastmod>2026-04-20T22:16:33.489Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2022-01-22-jupyterlab-cheatsheet.html</loc>
+    <lastmod>2026-07-05T01:34:36.767Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/posts/2021-01-04-Setting-up-virtual-environments-in-python.html</loc>
-    <lastmod>2026-04-20T22:16:31.984Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2020-10-30-probabilistic-universe.html</loc>
+    <lastmod>2026-07-05T01:34:36.759Z</lastmod>
   </url>
   <url>
-    <loc>https://ericbaumel.com/index.html</loc>
-    <lastmod>2026-04-20T22:24:10.928Z</lastmod>
+    <loc>https://www.ericbaumel.com/posts/2021-01-04-Setting-up-virtual-environments-in-python.html</loc>
+    <lastmod>2026-07-05T01:34:36.760Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ericbaumel.com/index.html</loc>
+    <lastmod>2026-07-05T01:33:41.251Z</lastmod>
   </url>
 </urlset>

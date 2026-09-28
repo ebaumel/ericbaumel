@@ -70,21 +70,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.ericbaumel.com/#person",
+      "name": "Eric M. Baumel, MD",
+      "url": "https://www.ericbaumel.com/",
+      "image": "https://www.ericbaumel.com/Eric_Baumel.png",
+      "jobTitle": "Diagnostic Radiologist",
+      "description": "Board-certified diagnostic radiologist, app developer, medical 3D printing innovator, and digital health entrepreneur.",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Softcode Systems, LLC"
+      },
+      "knowsAbout": [
+        "Radiology",
+        "Medical imaging",
+        "Machine learning",
+        "iOS development",
+        "Medical 3D printing",
+        "Digital health"
+      ],
+      "sameAs": [
+        "https://linkedin.com/in/ericbaumel/",
+        "https://github.com/ebaumel",
+        "https://bsky.app/profile/ebaumel.bsky.social",
+        "https://www.instagram.com/ericbaumelmd/",
+        "https://www.youtube.com/@Coding4Docs",
+        "https://orcid.org/0009-0006-0567-8250"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ericbaumel.com/#website",
+      "url": "https://www.ericbaumel.com/",
+      "name": "Eric M. Baumel, MD",
+      "description": "Blog covering coding, data science, radiology, and digital health.",
+      "publisher": { "@id": "https://www.ericbaumel.com/#person" }
+    }
+  ]
+}
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Eric M. Baumel, MD">
-<meta property="og:description" content="Radiologist, app developer, and medical 3D printing innovator. Blog covering coding, data science, and digital health.">
-<meta property="og:image" content="https://ericbaumel.com/posts/Eric_Baumel.png">
+<meta property="og:title" content="git init 2021 – Eric M. Baumel, MD">
+<meta property="og:description" content="First of a series of recipes. Putting your project under source control with GitHub.">
+<meta property="og:image" content="https://www.ericbaumel.com/Eric_Baumel.png">
 <meta property="og:site_name" content="Eric M. Baumel, MD">
 <meta property="og:image:height" content="300">
 <meta property="og:image:width" content="300">
-<meta name="twitter:title" content="Eric M. Baumel, MD">
-<meta name="twitter:description" content="Radiologist, app developer, and medical 3D printing innovator. Blog covering coding, data science, and digital health.">
-<meta name="twitter:image" content="https://ericbaumel.com/posts/Eric_Baumel.png">
+<meta name="twitter:title" content="git init 2021 – Eric M. Baumel, MD">
+<meta name="twitter:description" content="First of a series of recipes. Putting your project under source control with GitHub.">
+<meta name="twitter:image" content="https://www.ericbaumel.com/Eric_Baumel.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="300">
 <meta name="twitter:image-width" content="300">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -109,27 +153,27 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://linkedin.com/in/ericbaumel/"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://linkedin.com/in/ericbaumel/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ebaumel"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/ebaumel"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://bsky.app/profile/ebaumel.bsky.social"> <i class="bi bi-bluesky" role="img">
+    <a class="nav-link" href="https://bsky.app/profile/ebaumel.bsky.social"> <i class="bi bi-bluesky" role="img" aria-label="Bluesky">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.instagram.com/ericbaumelmd/"> <i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://www.instagram.com/ericbaumelmd/"> <i class="bi bi-instagram" role="img" aria-label="Instagram">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="http://www.youtube.com/@Coding4Docs"> <i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/@Coding4Docs"> <i class="bi bi-youtube" role="img" aria-label="YouTube">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -248,6 +292,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p><code>git branch -d &lt;local-branch&gt;</code> Delete local branch.</p></li>
 <li><p><code>git push origin --delete &lt;remote-branch-name&gt;</code> Delete remote branch.</p></li>
 </ul>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 </section>
@@ -346,7 +392,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/ericbaumel\.com");
+      var filterRegex = new RegExp("https:\/\/www\.ericbaumel\.com");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -675,6 +721,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© Eric M. Baumel, MD · Built with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

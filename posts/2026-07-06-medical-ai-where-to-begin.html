@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Eric M. Baumel, MD">
-<meta name="dcterms.date" content="2022-01-22">
-<meta name="description" content="Tips and tricks for the next step in Project Jupyter evolution.">
+<meta name="dcterms.date" content="2026-07-06">
+<meta name="description" content="A radiologist’s map for clinicians who want to understand medical AI. Start with the concepts that matter, skip the hype, and build real intuition.">
 
-<title>JupyterLab Cheat Sheet – Eric M. Baumel, MD</title>
+<title>Medical AI Is Everywhere. Where Should a Clinician Begin? – Eric M. Baumel, MD</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,18 +117,16 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="JupyterLab Cheat Sheet – Eric M. Baumel, MD">
-<meta property="og:description" content="Tips and tricks for the next step in Project Jupyter evolution.">
-<meta property="og:image" content="https://www.ericbaumel.com/posts/interface_jupyterlab.png">
+<meta property="og:title" content="Medical AI Is Everywhere. Where Should a Clinician Begin? – Eric M. Baumel, MD">
+<meta property="og:description" content="A radiologist’s map for clinicians who want to understand medical AI. Start with the concepts that matter, skip the hype, and build real intuition.">
+<meta property="og:image" content="https://www.ericbaumel.com/posts/thumb-medical-ai-where-to-begin.jpg">
 <meta property="og:site_name" content="Eric M. Baumel, MD">
-<meta property="og:image:height" content="720">
-<meta property="og:image:width" content="1280">
-<meta name="twitter:title" content="JupyterLab Cheat Sheet – Eric M. Baumel, MD">
-<meta name="twitter:description" content="Tips and tricks for the next step in Project Jupyter evolution.">
-<meta name="twitter:image" content="https://www.ericbaumel.com/posts/interface_jupyterlab.png">
+<meta property="og:image:alt" content="Video thumbnail: Medical AI Is Everywhere - Where to Begin, from the Coding4Docs YouTube channel">
+<meta name="twitter:title" content="Medical AI Is Everywhere. Where Should a Clinician Begin? – Eric M. Baumel, MD">
+<meta name="twitter:description" content="A radiologist’s map for clinicians who want to understand medical AI. Start with the concepts that matter, skip the hype, and build real intuition.">
+<meta name="twitter:image" content="https://www.ericbaumel.com/posts/thumb-medical-ai-where-to-begin.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="720">
-<meta name="twitter:image-width" content="1280">
+<meta name="twitter:image:alt" content="Video thumbnail: Medical AI Is Everywhere - Where to Begin, from the Coding4Docs YouTube channel">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -188,13 +186,17 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">JupyterLab Cheat Sheet</h1>
+      <h1 class="title">Medical AI Is Everywhere. Where Should a Clinician Begin?</h1>
                   <div>
         <div class="description">
-          Tips and tricks for the next step in Project Jupyter evolution.
+          A radiologist’s map for clinicians who want to understand medical AI. Start with the concepts that matter, skip the hype, and build real intuition.
         </div>
       </div>
-                </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">digital health</div>
+                <div class="quarto-category">data science</div>
+              </div>
+                  </div>
   </div>
     
   
@@ -210,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 22, 2022</p>
+        <p class="date">July 6, 2026</p>
       </div>
     </div>
     
@@ -229,138 +231,35 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="jupyterlab-cheat-sheet" class="level1">
-<h1>JupyterLab Cheat Sheet</h1>
-<section id="by-eric-m.-baumel" class="level3">
-<h3 class="anchored" data-anchor-id="by-eric-m.-baumel">by Eric M. Baumel</h3>
-<p>JupyterLab is the latest iteration of the popular interactive Python notebook environment, inheriting from iPython and Jupyter Notebooks. See <a href="https://jupyter.org">Project Jupyter</a>.<br>
-JupyterLab provides the interactive notebook format of Jupyter Notebooks, with an integrated file borwser, console and more.</p>
-<p>You install JupyterLab either from Anaconda or via pip with: <code>pip install jupyterlab</code>.</p>
-<p>You launch the JupyterLab server from the command line with <code>jupyter lab</code>.</p>
-<p>If your browser doesn’t launch by itself, you go to <code>http://localhost:8888/lab</code></p>
-<p>A iPython notebook file <code>.ipynb</code> can be opened with either Jupyter Notebok or JupyterLab.</p>
+<p>How did you learn your first imaging modality?</p>
+<p>Nobody handed you a physics textbook and wished you luck. You learned what the machine was for, what it could see, what it could miss, and only then how it worked under the hood. Learning medical AI works the same way. You don’t need a PhD in mathematics. You need a working intuition for what these tools can see and what they can miss.</p>
+<p>That’s the goal of this video, and this companion post is the written version you can come back to.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/54I_ZMan7Hw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<section id="the-landscape-without-the-hype" class="level2">
+<h2 class="anchored" data-anchor-id="the-landscape-without-the-hype">The landscape, without the hype</h2>
+<p>Medical AI is already reading alongside us. It flags intracranial hemorrhages in the worklist, measures ejection fractions, drafts patient messages, and summarizes charts. The question stopped being “will AI come to medicine?” years ago. The question now is whether the clinicians using it understand it well enough to supervise it.</p>
+<p>Because that’s the real job. AI in medicine is not a replacement. It’s a very fast resident with no license, no judgment, and no memory of yesterday’s mistake. You are still the attending. And no attending signs a report they don’t understand.</p>
 </section>
-<section id="jupyterlab-interface-shortcuts" class="level2">
-<h2 class="anchored" data-anchor-id="jupyterlab-interface-shortcuts">JupyterLab Interface Shortcuts</h2>
-<ul>
-<li>Toggle the sidebar with <code>Cmd + B</code></li>
-<li>Save the notebook with <code>Cmd + S</code></li>
-<li>Save As with <code>Shift + Cmd + S</code></li>
-<li>Close a tab with <code>Option + W</code> or <code>Alt + W</code></li>
-</ul>
+<section id="three-terms-that-do-most-of-the-work" class="level2">
+<h2 class="anchored" data-anchor-id="three-terms-that-do-most-of-the-work">Three terms that do most of the work</h2>
+<p><strong>Machine learning</strong> is pattern recognition at scale. Show a system enough labeled chest X-rays and it learns the statistical fingerprint of pneumonia the way you learned it: from examples, not from rules.</p>
+<p><strong>Deep learning</strong> is machine learning with many stacked layers, which is what lets a model go from pixels to “probable pneumothorax” without a human writing the intermediate steps.</p>
+<p><strong>Large language models</strong> (the engines behind ChatGPT and Claude) are pattern learners trained on text instead of pixels. They predict the next word, astonishingly well. That’s why they draft a discharge summary beautifully and why they can also state a wrong drug dose with perfect confidence. Fluency is not accuracy.</p>
 </section>
-<section id="running-a-cell" class="level2">
-<h2 class="anchored" data-anchor-id="running-a-cell">Running a Cell</h2>
-<ul>
-<li><p>To execute a cell and move tho the next cell in command mode click the run button <code>▸</code> in the toolbar or use <code>Shift + Enter</code> on the keyboard</p></li>
-<li><p>To execute the cell and stay on that cell use <code>Ctl + Enter</code></p></li>
-<li><p>Interupt a Running Cell with <code>II</code></p></li>
-</ul>
+<section id="where-to-actually-begin" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-actually-begin">Where to actually begin</h2>
+<p>Start with use, not theory. Pick one AI tool that touches your daily work and pay attention to it like you’d pay attention to a new contrast protocol: when does it help, when does it fail, and what are its failure modes?</p>
+<p>Then add just enough theory to ask sharp questions. What data was this trained on? Does that population look like my patients? What’s the sensitivity and specificity, and against what gold standard? These are questions you already know how to ask. You’ve been appraising studies your whole career; a model card is just a new kind of methods section.</p>
+<p>If you want to go deeper, I wrote a starting roadmap for the technical side in <a href="https://medium.com/data-science/machine-learning-for-radiology-where-to-begin-3a205db8718f">Machine Learning for Radiology — Where to Begin</a>, and the tools in this blog’s Python posts are the same ones the field is built on.</p>
 </section>
-<section id="toggle-between-command-and-edit-modes" class="level2">
-<h2 class="anchored" data-anchor-id="toggle-between-command-and-edit-modes">Toggle Between Command and Edit Modes</h2>
-<ul>
-<li>Change to Command mode with the <code>ESC</code> key</li>
-<li>Change to the Edit mode with the <code>Enter</code> key</li>
-</ul>
-<section id="command-mode-keyboard-shortcuts" class="level3">
-<h3 class="anchored" data-anchor-id="command-mode-keyboard-shortcuts">Command Mode Keyboard Shortcuts</h3>
-<p>Move between cells with the up <code>↑</code> and down <code>↓</code> arrow keys</p>
-<ul>
-<li><p>Create a cell <em>above</em> the active cell with the <code>A</code> key</p></li>
-<li><p>Create a cell <em>below</em> the active cell with the <code>B</code> key</p></li>
-<li><p>Delete the active cell with <code>DD</code></p></li>
-<li><p>Undo a cell with the <code>Z</code> key</p></li>
-<li><p>Copy a cell with the <code>C</code> key</p></li>
-<li><p>Paste a cell with the <code>V</code> key</p></li>
-<li><p>Change to <em>markdown</em> mode with the <code>M</code> key</p></li>
-<li><p>Change to <em>code</em> mode with the <code>Y</code> key</p></li>
-</ul>
-</section>
-</section>
-<section id="code-completion" class="level2">
-<h2 class="anchored" data-anchor-id="code-completion">Code Completion</h2>
-<p>The <code>Tab</code> key gives you a list of possible class or function choices.</p>
-<p><code>Shift + Tab</code> shows a tooltip of the fucion or class the cursor is on.</p>
-</section>
-<section id="markdown-basics" class="level2">
-<h2 class="anchored" data-anchor-id="markdown-basics">Markdown Basics</h2>
-<p>Adapted from: <a href="https://www.markdownguide.org/basic-syntax/">Markdown Guide</a></p>
-<section id="headings" class="level3">
-<h3 class="anchored" data-anchor-id="headings">Headings</h3>
-<p>To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level.</p>
-<p>For compatibility, always put a space between the number signs and the heading name. Also, put blank lines before and after a heading for compatibility.</p>
-<p>Example:</p>
-<p><code># Heading 1: Document Title</code></p>
-<p><code>## Heading 2: A subtitle</code></p>
-</section>
-</section>
-</section>
-<section id="heading-1-document-title" class="level1">
-<h1>Heading 1: Document Title</h1>
-<section id="heading-2-a-subtitle" class="level2">
-<h2 class="anchored" data-anchor-id="heading-2-a-subtitle">Heading 2: A subtitle</h2>
-<section id="line-breaks" class="level3">
-<h3 class="anchored" data-anchor-id="line-breaks">Line Breaks</h3>
-<p>To create a line break or new line <code>&lt;br&gt;</code>, end a line with two or more spaces, and then type return.</p>
-<p>Example:<br>
-<code>A line break &lt;br&gt; here.</code><br>
-A line break <br> here.</p>
-</section>
-<section id="text-formatting" class="level3">
-<h3 class="anchored" data-anchor-id="text-formatting">Text Formatting</h3>
-<p><strong>Bold Text</strong> - <code>**Bold Text**</code><br>
-<em>Italics Text</em> - <code>*Italic Text*</code><br>
-<strong><em>BoldItalics</em></strong> - <code>***BoldItalic Text***</code></p>
-</section>
-<section id="code" class="level3">
-<h3 class="anchored" data-anchor-id="code">Code</h3>
-<p>To show a word or phrase as code, enclose it in backticks (`).</p>
-<p>Example:</p>
-<p>Install a library with, <code>pip install jupyterlabs</code>.</p>
-<p>Code blocks are normally indented four spaces or one tab. When they’re in a list, indent them eight spaces or two tabs. You can also enclose the codeblock thith three backticks (``<code>), or three tildes</code>~~~`.</p>
-<pre><code># Imports
-import pandas
-import numpy</code></pre>
-</section>
-<section id="links" class="level3">
-<h3 class="anchored" data-anchor-id="links">Links</h3>
-<p><code>[title](https://www.example.com)</code></p>
-</section>
-<section id="images" class="level3">
-<h3 class="anchored" data-anchor-id="images">Images</h3>
-<p><code>![alt text](image.jpg)</code></p>
-</section>
-<section id="blockquotes" class="level3">
-<h3 class="anchored" data-anchor-id="blockquotes">Blockquotes</h3>
-<p>The <em>Greater Than</em> sign <code>&gt;</code> offsets blockquotes.</p>
-<p><code>&gt; Think globally, act locally.</code> is rendered as: &gt; Think globally, act locally.</p>
-</section>
-<section id="lists" class="level3">
-<h3 class="anchored" data-anchor-id="lists">Lists</h3>
-<section id="unordered-lists" class="level4">
-<h4 class="anchored" data-anchor-id="unordered-lists">Unordered Lists</h4>
-<p>Use a dash <code>-</code> for unorderd list:</p>
-<ul>
-<li>An Unordered List Item <code>- An Unordered List Item</code>
-<ul>
-<li>Another List Item <code>- Another List Item</code></li>
-</ul></li>
-</ul>
-</section>
-<section id="ordered-lists" class="level4">
-<h4 class="anchored" data-anchor-id="ordered-lists">Ordered Lists</h4>
-<ol type="1">
-<li>To create an order list, start the line with a number and a period. <code>1. To create an order list...</code></li>
-<li>If you need to use a number at the start of a list item, you <em>escape</em> the period by adding a backslash character <code>\</code> after the number, but before the period: <code>2022\. That's the year I wrote this.</code></li>
-</ol>
+<section id="recap" class="level2">
+<h2 class="anchored" data-anchor-id="recap">Recap</h2>
+<p>You don’t need to become an engineer. You need modality-level intuition: what the tool is for, what it can see, what it misses, and how to supervise it. Watch the video, pick one tool you already encounter, and start asking it the questions you’d ask any new technology in your department.</p>
+<p>The machines are already in the reading room. Be the attending.</p>
 <hr>
 <p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
-</section>
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->

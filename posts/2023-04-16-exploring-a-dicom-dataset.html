@@ -8,7 +8,7 @@
 
 <meta name="author" content="Eric M. Baumel">
 <meta name="dcterms.date" content="2023-04-16">
-<meta name="description" content="Tips and tricks for the next stup in Project Jupyter evolution.">
+<meta name="description" content="A hands-on tour of a DICOM dataset with Python and pydicom, from file structure to pixel data.">
 
 <title>Exploring a DICOM dataset – Eric M. Baumel, MD</title>
 <style>
@@ -104,6 +104,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.ericbaumel.com/#person",
+      "name": "Eric M. Baumel, MD",
+      "url": "https://www.ericbaumel.com/",
+      "image": "https://www.ericbaumel.com/Eric_Baumel.png",
+      "jobTitle": "Diagnostic Radiologist",
+      "description": "Board-certified diagnostic radiologist, app developer, medical 3D printing innovator, and digital health entrepreneur.",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Softcode Systems, LLC"
+      },
+      "knowsAbout": [
+        "Radiology",
+        "Medical imaging",
+        "Machine learning",
+        "iOS development",
+        "Medical 3D printing",
+        "Digital health"
+      ],
+      "sameAs": [
+        "https://linkedin.com/in/ericbaumel/",
+        "https://github.com/ebaumel",
+        "https://bsky.app/profile/ebaumel.bsky.social",
+        "https://www.instagram.com/ericbaumelmd/",
+        "https://www.youtube.com/@Coding4Docs",
+        "https://orcid.org/0009-0006-0567-8250"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ericbaumel.com/#website",
+      "url": "https://www.ericbaumel.com/",
+      "name": "Eric M. Baumel, MD",
+      "description": "Blog covering coding, data science, radiology, and digital health.",
+      "publisher": { "@id": "https://www.ericbaumel.com/#person" }
+    }
+  ]
+}
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
@@ -111,18 +155,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Eric M. Baumel, MD">
-<meta property="og:description" content="Radiologist, app developer, and medical 3D printing innovator. Blog covering coding, data science, and digital health.">
-<meta property="og:image" content="https://ericbaumel.com/posts/Eric_Baumel.png">
+<meta property="og:title" content="Exploring a DICOM dataset – Eric M. Baumel, MD">
+<meta property="og:description" content="A hands-on tour of a DICOM dataset with Python and pydicom, from file structure to pixel data.">
+<meta property="og:image" content="https://www.ericbaumel.com/posts/Machine-Learning-CXR-1.png">
 <meta property="og:site_name" content="Eric M. Baumel, MD">
-<meta property="og:image:height" content="300">
-<meta property="og:image:width" content="300">
-<meta name="twitter:title" content="Eric M. Baumel, MD">
-<meta name="twitter:description" content="Radiologist, app developer, and medical 3D printing innovator. Blog covering coding, data science, and digital health.">
-<meta name="twitter:image" content="https://ericbaumel.com/posts/Eric_Baumel.png">
-<meta name="twitter:image-height" content="300">
-<meta name="twitter:image-width" content="300">
+<meta property="og:image:height" content="900">
+<meta property="og:image:width" content="1600">
+<meta name="twitter:title" content="Exploring a DICOM dataset – Eric M. Baumel, MD">
+<meta name="twitter:description" content="A hands-on tour of a DICOM dataset with Python and pydicom, from file structure to pixel data.">
+<meta name="twitter:image" content="https://www.ericbaumel.com/posts/Machine-Learning-CXR-1.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="900">
+<meta name="twitter:image-width" content="1600">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -147,27 +191,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://linkedin.com/in/ericbaumel/"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://linkedin.com/in/ericbaumel/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ebaumel"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/ebaumel"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://bsky.app/profile/ebaumel.bsky.social"> <i class="bi bi-bluesky" role="img">
+    <a class="nav-link" href="https://bsky.app/profile/ebaumel.bsky.social"> <i class="bi bi-bluesky" role="img" aria-label="Bluesky">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.instagram.com/ericbaumelmd/"> <i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://www.instagram.com/ericbaumelmd/"> <i class="bi bi-instagram" role="img" aria-label="Instagram">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="http://www.youtube.com/@Coding4Docs"> <i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/@Coding4Docs"> <i class="bi bi-youtube" role="img" aria-label="YouTube">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -185,7 +229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <h1 class="title">Exploring a DICOM dataset</h1>
                   <div>
         <div class="description">
-          Tips and tricks for the next stup in Project Jupyter evolution.
+          A hands-on tour of a DICOM dataset with Python and pydicom, from file structure to pixel data.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -228,8 +272,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="dicom-introduction" class="level1">
-<h1>DICOM Introduction</h1>
+<section id="dicom-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="dicom-introduction">DICOM Introduction</h2>
 <p>Exploring a DICOM dataset</p>
 <p>Adapted from :</p>
 <p>Kaggle Kernel: Getting to know DICOM and the Data by schlerp</p>
@@ -762,6 +806,8 @@ maximum value =  248</code></pre>
 <div id="cell-42" class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 </section>
@@ -860,7 +906,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/ericbaumel\.com");
+      var filterRegex = new RegExp("https:\/\/www\.ericbaumel\.com");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -1189,6 +1235,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© Eric M. Baumel, MD · Built with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

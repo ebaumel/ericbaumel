@@ -15,55 +15,7 @@
 <link>https://www.ericbaumel.com/</link>
 </image>
 <generator>quarto-1.6.32</generator>
-<lastBuildDate>Mon, 06 Jul 2026 04:00:00 GMT</lastBuildDate>
-<item>
-  <title>Medical AI Is Everywhere. Where Should a Clinician Begin?</title>
-  <dc:creator>Eric M. Baumel, MD</dc:creator>
-  <link>https://www.ericbaumel.com/posts/2026-07-06-medical-ai-where-to-begin.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>How did you learn your first imaging modality?</p>
-<p>Nobody handed you a physics textbook and wished you luck. You learned what the machine was for, what it could see, what it could miss, and only then how it worked under the hood. Learning medical AI works the same way. You don’t need a PhD in mathematics. You need a working intuition for what these tools can see and what they can miss.</p>
-<p>That’s the goal of this video, and this companion post is the written version you can come back to.</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/54I_ZMan7Hw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<section id="the-landscape-without-the-hype" class="level2">
-<h2 class="anchored" data-anchor-id="the-landscape-without-the-hype">The landscape, without the hype</h2>
-<p>Medical AI is already reading alongside us. It flags intracranial hemorrhages in the worklist, measures ejection fractions, drafts patient messages, and summarizes charts. The question stopped being “will AI come to medicine?” years ago. The question now is whether the clinicians using it understand it well enough to supervise it.</p>
-<p>Because that’s the real job. AI in medicine is not a replacement. It’s a very fast resident with no license, no judgment, and no memory of yesterday’s mistake. You are still the attending. And no attending signs a report they don’t understand.</p>
-</section>
-<section id="three-terms-that-do-most-of-the-work" class="level2">
-<h2 class="anchored" data-anchor-id="three-terms-that-do-most-of-the-work">Three terms that do most of the work</h2>
-<p><strong>Machine learning</strong> is pattern recognition at scale. Show a system enough labeled chest X-rays and it learns the statistical fingerprint of pneumonia the way you learned it: from examples, not from rules.</p>
-<p><strong>Deep learning</strong> is machine learning with many stacked layers, which is what lets a model go from pixels to “probable pneumothorax” without a human writing the intermediate steps.</p>
-<p><strong>Large language models</strong> (the engines behind ChatGPT and Claude) are pattern learners trained on text instead of pixels. They predict the next word, astonishingly well. That’s why they draft a discharge summary beautifully and why they can also state a wrong drug dose with perfect confidence. Fluency is not accuracy.</p>
-</section>
-<section id="where-to-actually-begin" class="level2">
-<h2 class="anchored" data-anchor-id="where-to-actually-begin">Where to actually begin</h2>
-<p>Start with use, not theory. Pick one AI tool that touches your daily work and pay attention to it like you’d pay attention to a new contrast protocol: when does it help, when does it fail, and what are its failure modes?</p>
-<p>Then add just enough theory to ask sharp questions. What data was this trained on? Does that population look like my patients? What’s the sensitivity and specificity, and against what gold standard? These are questions you already know how to ask. You’ve been appraising studies your whole career; a model card is just a new kind of methods section.</p>
-<p>If you want to go deeper, I wrote a starting roadmap for the technical side in <a href="https://medium.com/data-science/machine-learning-for-radiology-where-to-begin-3a205db8718f">Machine Learning for Radiology — Where to Begin</a>, and the tools in this blog’s Python posts are the same ones the field is built on.</p>
-</section>
-<section id="recap" class="level2">
-<h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<p>You don’t need to become an engineer. You need modality-level intuition: what the tool is for, what it can see, what it misses, and how to supervise it. Watch the video, pick one tool you already encounter, and start asking it the questions you’d ask any new technology in your department.</p>
-<p>The machines are already in the reading room. Be the attending.</p>
-<hr>
-<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
-
-
-</section>
-
- ]]></description>
-  <category>digital health</category>
-  <category>data science</category>
-  <guid>https://www.ericbaumel.com/posts/2026-07-06-medical-ai-where-to-begin.html</guid>
-  <pubDate>Mon, 06 Jul 2026 04:00:00 GMT</pubDate>
-  <media:content url="https://www.ericbaumel.com/posts/thumb-medical-ai-where-to-begin.jpg" medium="image" type="image/jpeg"/>
-</item>
+<lastBuildDate>Mon, 25 May 2026 04:00:00 GMT</lastBuildDate>
 <item>
   <title>Claude Code End-of-Session Ritual</title>
   <dc:creator>Eric M. Baumel</dc:creator>

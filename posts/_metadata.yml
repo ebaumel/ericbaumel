@@ -6,3 +6,8 @@ freeze: true
 
 # Enable banner style title blocks
 title-block-banner: true
+
+# Default author for all posts (per-post front matter overrides)
+author:
+  name: Eric M. Baumel, MD
+  url: https://www.ericbaumel.com/about.html

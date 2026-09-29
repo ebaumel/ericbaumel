@@ -114,3 +114,7 @@ Kaggle COVID-19 Open Research Dataset Challenge (CORD-19)
 CORD-19 COVID-19 Open Research Dataset
 
 <https://www.semanticscholar.org/cord19>
+
+---
+
+*__About the author:__ Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at [Coding4Docs](https://www.youtube.com/@Coding4Docs). Read more on the [About page](/about.html).*

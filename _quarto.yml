@@ -1,31 +1,42 @@
 project:
   type: website
+  resources:
+    - logo.png
+    - blank.png
 
 website:
   title: "Eric M. Baumel, MD"
-  site-url: https://ericbaumel.com
+  description: "Radiologist, app developer, and medical 3D printing innovator. Blog covering coding, data science, and digital health."
+  site-url: https://www.ericbaumel.com
   favicon: favicon.ico
-  open-graph:
-    title: "Eric M. Baumel, MD"
-    description: "Radiologist, app developer, and medical 3D printing innovator. Blog covering coding, data science, and digital health."
-    image: Eric_Baumel.png
+  image: /Eric_Baumel.png
+  search: true
+  open-graph: true
   twitter-card:
-    title: "Eric M. Baumel, MD"
-    description: "Radiologist, app developer, and medical 3D printing innovator. Blog covering coding, data science, and digital health."
-    image: Eric_Baumel.png
+    card-style: summary_large_image
   navbar:
     right:
       - about.qmd
       - icon: linkedin
         href: https://linkedin.com/in/ericbaumel/
+        aria-label: LinkedIn
       - icon: github
         href: https://github.com/ebaumel
+        aria-label: GitHub
       - icon: bluesky
         href: https://bsky.app/profile/ebaumel.bsky.social
+        aria-label: Bluesky
+      - icon: instagram
+        href: https://www.instagram.com/ericbaumelmd/
+        aria-label: Instagram
+      - icon: youtube
+        href: https://www.youtube.com/@Coding4Docs
+        aria-label: YouTube
+  page-footer:
+    center: |
+      © Eric M. Baumel, MD · Built with [Quarto](https://quarto.org/)
 format:
   html:
     theme: cosmo
     css: styles.css
-
-
-
+    include-in-header: seo-header.html

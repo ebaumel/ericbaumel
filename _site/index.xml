@@ -6,15 +6,70 @@
       version="2.0">
 <channel>
 <title>Eric M. Baumel, MD</title>
-<link>https://ericbaumel.com/</link>
-<atom:link href="https://ericbaumel.com/index.xml" rel="self" type="application/rss+xml"/>
-<description></description>
+<link>https://www.ericbaumel.com/</link>
+<atom:link href="https://www.ericbaumel.com/index.xml" rel="self" type="application/rss+xml"/>
+<description>Board-certified diagnostic radiologist writing about coding, data science, machine learning, and digital health. Creator of Radiology Toolbox Pro and Coding4Docs.</description>
+<image>
+<url>https://www.ericbaumel.com/Eric_Baumel.png</url>
+<title>Eric M. Baumel, MD</title>
+<link>https://www.ericbaumel.com/</link>
+</image>
 <generator>quarto-1.6.32</generator>
-<lastBuildDate>Mon, 09 Sep 2024 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 25 May 2026 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Claude Code End-of-Session Ritual</title>
+  <dc:creator>Eric M. Baumel</dc:creator>
+  <link>https://www.ericbaumel.com/posts/2026-05-25-claude-code-end-of-session-ritual.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Every Claude Code session starts with amnesia.</p>
+<p>You want to pick up where you left off, but you need to explain the project all over again or waste tokens having Claude look at the file structure. I would spend the first ten minutes re-explaining what I was doing, what I had already decided, and what the actual next step was.</p>
+<p>Claude Code is a blank slate at the start of every session. It doesn’t remember that I chose Firebase over CloudKit for HIPAA reasons. It doesn’t know I already solved the anonymous auth problem. It has no idea what I was about to do next.</p>
+<p>For a while I just lived with that friction. Then I got tired of it and built a fix.</p>
+<p>Each session is a fresh context window. So the question is: <em>how do I make sure the right context is always written down in a place Claude reads automatically?</em></p>
+<p>The answer is for Claude Code to read the <code>CLAUDE.md</code> at the start of every session. If that file has a clear, present-tense description of where the project is right now and exactly what comes next, the session starts in five seconds instead of ten minutes. It’s less like a memory and more like a standing briefing doc.</p>
+<section id="what-i-built" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-built">What I Built</h2>
+<p>I created a Claude skill called <code>/wrapup</code> — a five-step end-of-session ritual that takes about five minutes and closes out a session properly. You can find it here for free on GitHub <a href="https://github.com/ebaumel/claude-wrapup">claude-wrapup</a>.</p>
+<p>Here’s what it does:</p>
+<p><strong>Step 1: Brain Dump.</strong> Before touching any files, it reads the git diff from the session and asks: <em>does this capture what you did today, or is there anything to add?</em> You might think of this as an answer to four questions: what did I complete, what’s still in progress, what’s the single next action, and were there any non-obvious decisions?</p>
+<p><strong>Step 2: Update <code>CLAUDE.md</code>.</strong> It proposes specific edits and waits for confirmation before writing. The file stays present-tense and forward-looking — a briefing doc, not a changelog.</p>
+<p><strong>Step 3: Update <code>DECISIONS.md</code>.</strong> Any architectural choices from the session get logged as a new append-only entry. This file never gets edited or deleted. Six months from now, when you’re wondering why you chose X over Y, this file is the answer.</p>
+<p><strong>Step 4: Commit to Git — with a <code>Next:</code> line.</strong> It drafts a conventional commit message from the session summary. The key addition is a <code>Next:</code> line at the bottom of the commit message that states the single immediate next action. Your git log becomes a resumption guide.</p>
+<p><strong>Step 5: Update Claude Memory.</strong> Claude Code can’t write directly to your Claude.ai memory, so the skill ends with a pre-filled copy-paste block you can drop into your Claude.ai chat to keep cross-project memory current.</p>
+<p>Now, when you want to pick a project back up, just type <code>claude</code>.</p>
+<hr>
+<p>The <code>DECISIONS.md</code> pattern deserves its own callout, because it is a gift for future you.</p>
+<p>When you’re building something over weeks or months, you make dozens of small architectural decisions. Some are obvious in retrospect. Others only made sense given constraints that existed at the time, and if you forget those constraints, the decision looks arbitrary or even wrong.</p>
+<p>In medicine, we document our clinical reasoning in the patient’s chart, not just our orders. The note captures <em>why</em> we chose this medication, not just that we chose it. <code>DECISIONS.md</code> is that note for your codebase. And because it’s append-only, you never accidentally overwrite history.</p>
+</section>
+<section id="the-bigger-picture" class="level2">
+<h2 class="anchored" data-anchor-id="the-bigger-picture">The Bigger Picture</h2>
+<p>Every session you end without a proper close is a small tax on the next one. Multiply that by fifty sessions on a project and you’ve spent hours just getting back up to speed.</p>
+<section id="please-give-it-a-try-claude-wrapup" class="level3">
+<h3 class="anchored" data-anchor-id="please-give-it-a-try-claude-wrapup">Please give it a try: <a href="https://github.com/ebaumel/claude-wrapup">claude-wrapup</a></h3>
+<p>The <code>/wrapup</code> ritual makes each session a clean handoff to the next one. For anyone building something real with Claude Code — especially those of us doing it without a team around us — that’s worth five minutes at the end of every session.</p>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>claude</category>
+  <category>development</category>
+  <guid>https://www.ericbaumel.com/posts/2026-05-25-claude-code-end-of-session-ritual.html</guid>
+  <pubDate>Mon, 25 May 2026 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Publishing a GitHub Pages Blog with Quarto</title>
   <dc:creator>Eric M. Baumel</dc:creator>
-  <link>https://ericbaumel.com/posts/2024-09-09-publish-github-pages-blog-with-quarto.html</link>
+  <link>https://www.ericbaumel.com/posts/2024-09-09-publish-github-pages-blog-with-quarto.html</link>
   <description><![CDATA[ 
 
 
@@ -37,6 +92,8 @@
 <p>your blog posts are rendered, and the rendered versions are pushed to git in branch <em>gh-pages</em></p>
 <p>To backup your local copy of the unrendered files, save to the git main branch. For details see the GitHub cheatsheet, <a href="https://www.ericbaumel.com/posts/2021-01-03-git-init-2021.html">git init 2021</a></p>
 <p><a href="https://www.markdownguide.org/cheat-sheet/">Markdown Cheat Sheet</a></p>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 </section>
@@ -44,13 +101,13 @@
  ]]></description>
   <category>html</category>
   <category>development</category>
-  <guid>https://ericbaumel.com/posts/2024-09-09-publish-github-pages-blog-with-quarto.html</guid>
+  <guid>https://www.ericbaumel.com/posts/2024-09-09-publish-github-pages-blog-with-quarto.html</guid>
   <pubDate>Mon, 09 Sep 2024 04:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Firebase Hosting Deployment</title>
   <dc:creator>Eric M. Baumel</dc:creator>
-  <link>https://ericbaumel.com/posts/2024-09-01-Firebase-hosting-deployment.html</link>
+  <link>https://www.ericbaumel.com/posts/2024-09-01-Firebase-hosting-deployment.html</link>
   <description><![CDATA[ 
 
 
@@ -84,6 +141,8 @@
 <p>Will setup a local test server on you computer at http://localhost:5002 where you can view your site before deployment.</p>
 <p>Deploy the site to the Firebase Hosting server with <code>firebase deploy</code></p>
 <p>After you are done editing your deployment, don’t forget to save your changes to GitHub.</p>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 </section>
@@ -92,13 +151,13 @@
  ]]></description>
   <category>html</category>
   <category>development</category>
-  <guid>https://ericbaumel.com/posts/2024-09-01-Firebase-hosting-deployment.html</guid>
+  <guid>https://www.ericbaumel.com/posts/2024-09-01-Firebase-hosting-deployment.html</guid>
   <pubDate>Sun, 01 Sep 2024 04:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Software Development is Magic</title>
   <dc:creator>Eric M. Baumel</dc:creator>
-  <link>https://ericbaumel.com/posts/2023-04-21-software-development-is-magic.html</link>
+  <link>https://www.ericbaumel.com/posts/2023-04-21-software-development-is-magic.html</link>
   <description><![CDATA[ 
 
 
@@ -106,8 +165,6 @@
 
 
 <p>by Eric M. Baumel</p>
-<section id="software-development-is-magic" class="level1">
-<h1>Software Development is Magic</h1>
 <p>Developers are magicians<br>
 Asking sand to do their bidding<br>
 </p>
@@ -133,27 +190,28 @@ Is what separates a true wizard from an acolyte<br>
 </p>
 <p>Remember to be careful what you wish for<br>
 </p>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
-</section>
 
  ]]></description>
   <category>development</category>
-  <guid>https://ericbaumel.com/posts/2023-04-21-software-development-is-magic.html</guid>
+  <guid>https://www.ericbaumel.com/posts/2023-04-21-software-development-is-magic.html</guid>
   <pubDate>Fri, 21 Apr 2023 04:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Exploring a DICOM dataset</title>
   <dc:creator>Eric M. Baumel</dc:creator>
-  <link>https://ericbaumel.com/posts/2023-04-16-exploring-a-dicom-dataset.html</link>
+  <link>https://www.ericbaumel.com/posts/2023-04-16-exploring-a-dicom-dataset.html</link>
   <description><![CDATA[ 
 
 
 
 
 
-<section id="dicom-introduction" class="level1">
-<h1>DICOM Introduction</h1>
+<section id="dicom-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="dicom-introduction">DICOM Introduction</h2>
 <p>Exploring a DICOM dataset</p>
 <p>Adapted from :</p>
 <p>Kaggle Kernel: Getting to know DICOM and the Data by schlerp</p>
@@ -455,7 +513,7 @@ Pixel spacing....:  [0.139, 0.139]</code></pre>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="https://www.ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -477,7 +535,7 @@ Pixel spacing....:  [0.14300000000000002, 0.14300000000000002]</code></pre>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-4.png" class="img-fluid figure-img"></p>
+<p><img src="https://www.ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-4.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -499,7 +557,7 @@ Pixel spacing....:  [0.14300000000000002, 0.14300000000000002]</code></pre>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-6.png" class="img-fluid figure-img"></p>
+<p><img src="https://www.ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-6.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -521,7 +579,7 @@ Pixel spacing....:  [0.171, 0.171]</code></pre>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-8.png" class="img-fluid figure-img"></p>
+<p><img src="https://www.ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-8.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -543,7 +601,7 @@ Pixel spacing....:  [0.171, 0.171]</code></pre>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-10.png" class="img-fluid figure-img"></p>
+<p><img src="https://www.ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-5-output-10.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1224,7 +1282,7 @@ font-style: inherit;">=</span>plt.cm.gist_yarg)</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-27-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="https://www.ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-27-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1237,7 +1295,7 @@ font-style: inherit;">=</span>plt.cm.gray)</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-28-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="https://www.ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-28-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1250,7 +1308,7 @@ font-style: inherit;">=</span>plt.cm.gray)</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-29-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="https://www.ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-29-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1286,7 +1344,7 @@ font-style: inherit;"># Find maximum value in pixel array</span></span></code></
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-30-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="https://www.ericbaumel.com/posts/2023-04-16-Dicom_files/figure-html/cell-30-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1299,6 +1357,8 @@ maximum value =  248</code></pre>
 <div id="cell-42" class="cell">
 <div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"></span></code></pre></div>
 </div>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 </section>
@@ -1308,12 +1368,14 @@ maximum value =  248</code></pre>
   <category>python</category>
   <category>development</category>
   <category>DICOM</category>
-  <guid>https://ericbaumel.com/posts/2023-04-16-exploring-a-dicom-dataset.html</guid>
+  <guid>https://www.ericbaumel.com/posts/2023-04-16-exploring-a-dicom-dataset.html</guid>
   <pubDate>Sun, 16 Apr 2023 04:00:00 GMT</pubDate>
+  <media:content url="https://www.ericbaumel.com/posts/Machine-Learning-CXR-1.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>JupyterLab Cheat Sheet</title>
-  <link>https://ericbaumel.com/posts/2022-01-22-jupyterlab-cheatsheet.html</link>
+  <dc:creator>Eric M. Baumel, MD</dc:creator>
+  <link>https://www.ericbaumel.com/posts/2022-01-22-jupyterlab-cheatsheet.html</link>
   <description><![CDATA[ 
 
 
@@ -1445,6 +1507,8 @@ import numpy</code></pre>
 <li>To create an order list, start the line with a number and a period. <code>1. To create an order list...</code></li>
 <li>If you need to use a number at the start of a list item, you <em>escape</em> the period by adding a backslash character <code>\</code> after the number, but before the period: <code>2022\. That's the year I wrote this.</code></li>
 </ol>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 </section>
@@ -1453,14 +1517,14 @@ import numpy</code></pre>
 </section>
 
  ]]></description>
-  <guid>https://ericbaumel.com/posts/2022-01-22-jupyterlab-cheatsheet.html</guid>
+  <guid>https://www.ericbaumel.com/posts/2022-01-22-jupyterlab-cheatsheet.html</guid>
   <pubDate>Sat, 22 Jan 2022 05:00:00 GMT</pubDate>
-  <media:content url="https://ericbaumel.com/posts/interface_jupyterlab.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://www.ericbaumel.com/posts/interface_jupyterlab.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>Code Comments</title>
   <dc:creator>Eric M. Baumel</dc:creator>
-  <link>https://ericbaumel.com/posts/2021-11-16-code-comments.html</link>
+  <link>https://www.ericbaumel.com/posts/2021-11-16-code-comments.html</link>
   <description><![CDATA[ 
 
 
@@ -1548,6 +1612,8 @@ and ’/**/’ for multi line commenting out of code, so you can then toggle the
 <h3 class="anchored" data-anchor-id="sql">SQL</h3>
 <p>SQL comments use /* For both inline comments and multi lines. */ Single line comments start with ‘—’, a double dash.</p>
 <p>Now go forth and be excellent to each other (and youself).</p>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 </section>
@@ -1558,13 +1624,13 @@ and ’/**/’ for multi line commenting out of code, so you can then toggle the
   <category>swift</category>
   <category>html</category>
   <category>development</category>
-  <guid>https://ericbaumel.com/posts/2021-11-16-code-comments.html</guid>
+  <guid>https://www.ericbaumel.com/posts/2021-11-16-code-comments.html</guid>
   <pubDate>Tue, 16 Nov 2021 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Built By Docs</title>
   <dc:creator>Eric M. Baumel</dc:creator>
-  <link>https://ericbaumel.com/posts/2021-01-25-built-by-docs.html</link>
+  <link>https://www.ericbaumel.com/posts/2021-01-25-built-by-docs.html</link>
   <description><![CDATA[ 
 
 
@@ -1575,7 +1641,7 @@ and ’/**/’ for multi line commenting out of code, so you can then toggle the
 <h2 class="anchored" data-anchor-id="because-the-future-doesnt-invent-itself">Because the future doesn’t invent itself</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://ericbaumel.com/posts/Machine-Learning-CXR-1.png" class="img-fluid figure-img"></p>
+<p><img src="https://www.ericbaumel.com/posts/Machine-Learning-CXR-1.png" class="img-fluid figure-img"></p>
 <figcaption>Machine learning - chest xray</figcaption>
 </figure>
 </div>
@@ -1597,19 +1663,21 @@ and ’/**/’ for multi line commenting out of code, so you can then toggle the
 </ul>
 <p>Start building!</p>
 <p><em>(originally published February 27, 2019 on builtbydocs.com)</em></p>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 </section>
 
  ]]></description>
   <category>digital health</category>
-  <guid>https://ericbaumel.com/posts/2021-01-25-built-by-docs.html</guid>
+  <guid>https://www.ericbaumel.com/posts/2021-01-25-built-by-docs.html</guid>
   <pubDate>Mon, 25 Jan 2021 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Setting Up Virtual Environments in Python</title>
   <dc:creator>Eric M. Baumel</dc:creator>
-  <link>https://ericbaumel.com/posts/2021-01-04-Setting-up-virtual-environments-in-python.html</link>
+  <link>https://www.ericbaumel.com/posts/2021-01-04-Setting-up-virtual-environments-in-python.html</link>
   <description><![CDATA[ 
 
 
@@ -1646,6 +1714,8 @@ and ’/**/’ for multi line commenting out of code, so you can then toggle the
 <ul>
 <li>Deactivate the virtual environment with <code>deactivate venv</code>.</li>
 </ul>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 </section>
@@ -1655,13 +1725,13 @@ and ’/**/’ for multi line commenting out of code, so you can then toggle the
   <category>python</category>
   <category>data science</category>
   <category>development</category>
-  <guid>https://ericbaumel.com/posts/2021-01-04-Setting-up-virtual-environments-in-python.html</guid>
+  <guid>https://www.ericbaumel.com/posts/2021-01-04-Setting-up-virtual-environments-in-python.html</guid>
   <pubDate>Mon, 04 Jan 2021 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>git init 2021</title>
   <dc:creator>Eric M. Baumel</dc:creator>
-  <link>https://ericbaumel.com/posts/2021-01-03-git-init-2021.html</link>
+  <link>https://www.ericbaumel.com/posts/2021-01-03-git-init-2021.html</link>
   <description><![CDATA[ 
 
 
@@ -1725,6 +1795,8 @@ and ’/**/’ for multi line commenting out of code, so you can then toggle the
 <li><p><code>git branch -d &lt;local-branch&gt;</code> Delete local branch.</p></li>
 <li><p><code>git push origin --delete &lt;remote-branch-name&gt;</code> Delete remote branch.</p></li>
 </ul>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 </section>
@@ -1735,13 +1807,13 @@ and ’/**/’ for multi line commenting out of code, so you can then toggle the
   <category>swift</category>
   <category>data science</category>
   <category>development</category>
-  <guid>https://ericbaumel.com/posts/2021-01-03-git-init-2021.html</guid>
+  <guid>https://www.ericbaumel.com/posts/2021-01-03-git-init-2021.html</guid>
   <pubDate>Sun, 03 Jan 2021 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Probabilistic Universe</title>
   <dc:creator>Eric M. Baumel, MD</dc:creator>
-  <link>https://ericbaumel.com/posts/2020-10-30-probabilistic-universe.html</link>
+  <link>https://www.ericbaumel.com/posts/2020-10-30-probabilistic-universe.html</link>
   <description><![CDATA[ 
 
 
@@ -1750,18 +1822,21 @@ and ’/**/’ for multi line commenting out of code, so you can then toggle the
 
 <p>We live in a probabilistic universe, with the obvious exception of death. Even taxes are probability weighted.</p>
 <p>There is no absolute certainty in markets or anything else in life. The outputs of all our calculations should be expressed in terms of percentages. Chance rules all. Risk is not just built into the system, it <em>IS</em> the system.</p>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 
  ]]></description>
   <category>markets</category>
   <category>risk</category>
-  <guid>https://ericbaumel.com/posts/2020-10-30-probabilistic-universe.html</guid>
+  <guid>https://www.ericbaumel.com/posts/2020-10-30-probabilistic-universe.html</guid>
   <pubDate>Fri, 30 Oct 2020 04:00:00 GMT</pubDate>
 </item>
 <item>
   <title>COVID-19 Datasets</title>
-  <link>https://ericbaumel.com/posts/2020-04-30-COVID-19-datasets.html</link>
+  <dc:creator>Eric M. Baumel, MD</dc:creator>
+  <link>https://www.ericbaumel.com/posts/2020-04-30-COVID-19-datasets.html</link>
   <description><![CDATA[ 
 
 
@@ -1828,6 +1903,8 @@ and ’/**/’ for multi line commenting out of code, so you can then toggle the
 <h3 class="anchored" data-anchor-id="research-papers-dataset">Research papers dataset</h3>
 <p>CORD-19 COVID-19 Open Research Dataset</p>
 <p><a href="https://www.semanticscholar.org/cord19" class="uri">https://www.semanticscholar.org/cord19</a></p>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 </section>
@@ -1836,28 +1913,31 @@ and ’/**/’ for multi line commenting out of code, so you can then toggle the
   <category>COVID-19</category>
   <category>datasets</category>
   <category>radiology</category>
-  <guid>https://ericbaumel.com/posts/2020-04-30-COVID-19-datasets.html</guid>
+  <guid>https://www.ericbaumel.com/posts/2020-04-30-COVID-19-datasets.html</guid>
   <pubDate>Thu, 30 Apr 2020 04:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Think globally, act locally</title>
-  <link>https://ericbaumel.com/posts/2020-04-11-think-globally.html</link>
+  <dc:creator>Eric M. Baumel, MD</dc:creator>
+  <link>https://www.ericbaumel.com/posts/2020-04-11-think-globally.html</link>
   <description><![CDATA[ 
 
 
 
 
 
-<p>This expression originated in urban planning and environmentalism, but is can be applied broadly in many disciplines including business, politics and computer science.</p>
+<p>This expression originated in urban planning and environmentalism, but it can be applied broadly in many disciplines including business, politics and computer science.</p>
 <p>I like to think it also can be viewed with regards to our conduct towards our own family and our personal inner lives.</p>
 <p>Charity begins at home, both in being charitable in thoughts and deeds to those closest to us, and in caring for ourselves.</p>
 <p><em>Be kind to each other, and be kind to yourself.</em></p>
+<hr>
+<p><em><strong>About the author:</strong> Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at <a href="https://www.youtube.com/@Coding4Docs">Coding4Docs</a>. Read more on the <a href="../about.html">About page</a>.</em></p>
 
 
 
  ]]></description>
   <category>ethics</category>
-  <guid>https://ericbaumel.com/posts/2020-04-11-think-globally.html</guid>
+  <guid>https://www.ericbaumel.com/posts/2020-04-11-think-globally.html</guid>
   <pubDate>Sat, 11 Apr 2020 04:00:00 GMT</pubDate>
 </item>
 </channel>

@@ -1,6 +1,6 @@
 ---
 aliases:
-- /html/development/2024/09/09/Firebase-hosting-deployment
+- /html/development/2024/09/09/publish-github-pages-blog-with-quarto
 author: Eric M. Baumel
 categories:
 - html
@@ -44,5 +44,6 @@ To backup your local copy of the unrendered files, save to the git main branch. 
 
 [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
+---
 
-
+*__About the author:__ Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at [Coding4Docs](https://www.youtube.com/@Coding4Docs). Read more on the [About page](/about.html).*

@@ -15,7 +15,6 @@ toc: false
 
 by Eric M. Baumel
 
-# Software Development is Magic
 
 Developers are magicians \
 Asking sand to do their bidding \
@@ -42,4 +41,6 @@ Is what separates a true wizard from an acolyte \
 
 Remember to be careful what you wish for \
 
+---
 
+*__About the author:__ Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at [Coding4Docs](https://www.youtube.com/@Coding4Docs). Read more on the [About page](/about.html).*

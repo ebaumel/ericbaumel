@@ -58,3 +58,7 @@ Start building!
 
 
 *(originally published February 27, 2019 on builtbydocs.com)*
+
+---
+
+*__About the author:__ Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at [Coding4Docs](https://www.youtube.com/@Coding4Docs). Read more on the [About page](/about.html).*

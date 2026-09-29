@@ -146,3 +146,7 @@ Single line comments start with ‘—’, a double dash.
 
 
 Now go forth and be excellent to each other (and youself).
+
+---
+
+*__About the author:__ Eric M. Baumel, MD is a board-certified diagnostic radiologist, app developer, and digital health entrepreneur. He teaches technology to healthcare professionals at [Coding4Docs](https://www.youtube.com/@Coding4Docs). Read more on the [About page](/about.html).*

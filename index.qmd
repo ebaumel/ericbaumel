@@ -1,5 +1,7 @@
 ---
 title: "Eric M. Baumel, MD"
+pagetitle: "Eric M. Baumel, MD | Radiology, Coding, and Digital Health"
+description: "Board-certified diagnostic radiologist writing about coding, data science, machine learning, and digital health. Creator of Radiology Toolbox Pro and Coding4Docs."
 listing:
   contents: posts
   sort: "date desc"
@@ -8,6 +10,7 @@ listing:
   sort-ui: false
   filter-ui: false
   feed: true
+  image-placeholder: blank.png
 page-layout: full
 title-block-banner: true
 ---
@@ -15,7 +18,7 @@ title-block-banner: true
 ::: {.grid}
 
 ::: {.g-col-4}
-![](Eric_Baumel.png)
+![](Eric_Baumel.png){fig-alt="Portrait of Eric M. Baumel, MD"}
 
 
 ##### Board-certified diagnostic radiologist, award winning app developer, medical 3D printing innovator and digital health entrepreneur
@@ -48,8 +51,6 @@ Winner 2014 Minnie Award - Best Mobile Radiology App
 [Desktop 3D Printing of CT Scan Images](https://www.embodi3d.com/blogs/entry/124-desktop-3d-printing-of-ct-scan-images/)
 
 [3D Printing of Renal Mass from MRI Images](https://www.embodi3d.com/blogs/entry/268-3d-printing-of-renal-mass-from-mri-images/)
-
-This site is built with [Quarto](https://quarto.org/), An easy to use blogging platform with extra features for Jupyter Notebooks.
 :::
 
 
